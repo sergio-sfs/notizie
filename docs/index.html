@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0f172a">
+<title>Notizie</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#111827;--mu:#6b7280;--ac:#2563eb;--bd:#e5e7eb;--of:#16a34a}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#131c2e;--tx:#e5e7eb;--mu:#94a3b8;--ac:#60a5fa;--bd:#22304a;--of:#4ade80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 -apple-system,system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+header{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 12px 6px;border-bottom:1px solid var(--bd)}
+.top{display:flex;gap:8px;align-items:center}
+h1{font-size:18px;margin:0;flex:0 0 auto}
+input[type=search]{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font-size:16px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:8px 0 4px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab,.chip{flex:0 0 auto;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:999px;padding:6px 12px;font-size:14px;cursor:pointer}
+.tab.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.chip.on{background:var(--of);border-color:var(--of);color:#fff}
+.tab small{opacity:.7;margin-left:4px}
+.bar{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:12px;padding:4px 0}
+main{max-width:720px;margin:0 auto;padding:8px 12px 40px}
+.day{font-size:12px;font-weight:600;color:var(--mu);text-transform:uppercase;letter-spacing:.04em;margin:14px 2px 6px}
+a.n{display:block;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px;color:inherit;text-decoration:none}
+a.n:active{opacity:.7}
+a.n.read .t{color:var(--mu);font-weight:400}
+.t{font-weight:600;font-size:15.5px}
+.m{display:flex;gap:8px;flex-wrap:wrap;margin-top:5px;font-size:12px;color:var(--mu);align-items:center}
+.of{color:var(--of);font-weight:600}
+.tp{background:var(--bd);border-radius:6px;padding:0 6px}
+.empty{text-align:center;color:var(--mu);padding:40px 10px}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="bar"><span id="upd"></span><button class="chip" id="off">✔ Solo ufficiali</button></div>
+</header>
+<main id="list"><div class="empty">Caricamento…</div></main>
+<script>
+const $=s=>document.querySelector(s);
+let data={topics:[]},cur="all",onlyOff=false,q="";
+let read={};try{read=JSON.parse(localStorage.getItem("read")||"{}")}catch(e){}
+const saveRead=()=>{try{localStorage.setItem("read",JSON.stringify(read))}catch(e){}};
+const esc=s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtT=d=>d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});
+function dayLabel(d){
+  const t=new Date(),y=new Date(Date.now()-864e5),same=(a,b)=>a.toDateString()===b.toDateString();
+  if(same(d,t))return"Oggi";if(same(d,y))return"Ieri";
+  return d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"});
+}
+function items(){
+  let out=[];
+  data.topics.forEach(t=>{if(cur==="all"||cur===t.id)t.items.forEach(i=>out.push({...i,tp:t}))});
+  if(onlyOff)out=out.filter(i=>i.o);
+  if(q){const k=q.toLowerCase();out=out.filter(i=>(i.t+" "+i.s).toLowerCase().includes(k))}
+  return out.sort((a,b)=>b.d.localeCompare(a.d));
+}
+function render(){
+  $("#tabs").innerHTML=[{id:"all",name:"Tutte",emoji:"📰",n:data.topics.reduce((a,t)=>a+t.items.length,0)},
+    ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length}))]
+    .map(t=>`<button class="tab ${t.id===cur?"on":""}" data-id="${t.id}">${t.emoji} ${esc(t.name)}<small>${t.n}</small></button>`).join("");
+  $("#off").classList.toggle("on",onlyOff);
+  $("#upd").textContent=data.updated?"Aggiornato "+new Date(data.updated).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"";
+  const L=items();let last="",h="";
+  L.forEach(i=>{
+    const d=new Date(i.d),dl=dayLabel(d);
+    if(dl!==last){h+=`<div class="day">${dl}</div>`;last=dl}
+    h+=`<a class="n ${read[i.u]?"read":""}" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer" data-u="${esc(i.u)}">
+      <div class="t">${esc(i.t)}</div>
+      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span><span>${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}</div></a>`;
+  });
+  $("#list").innerHTML=h||'<div class="empty">Nessuna notizia.</div>';
+}
+document.addEventListener("click",e=>{
+  const tb=e.target.closest(".tab");if(tb){cur=tb.dataset.id;render();scrollTo(0,0);return}
+  if(e.target.closest("#off")){onlyOff=!onlyOff;render();return}
+  const a=e.target.closest("a.n");if(a){read[a.dataset.u]=Date.now();saveRead();a.classList.add("read")}
+});
+$("#q").addEventListener("input",e=>{q=e.target.value.trim();render()});
+fetch("news.json?"+Date.now()).then(r=>r.json()).then(j=>{data=j;render()}).catch(()=>{$("#list").innerHTML='<div class="empty">Errore di caricamento.</div>'});
+</script>
+</body>
+</html>
