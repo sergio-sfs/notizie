@@ -71,7 +71,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v11</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v12</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -138,6 +138,8 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#prst")){try{localStorage.removeItem("places")}catch(x){}wx=null;renderWeather();return}
   const tb=e.target.closest(".tab");if(tb){cur=tb.dataset.id;render();scrollTo(0,0);return}
   if(e.target.closest("#off")){onlyOff=!onlyOff;render();return}
+  const st=e.target.closest(".sht");if(st){const n=st.closest(".n"),b=n.querySelector(".b"),ti=n.querySelector(".t").textContent,tx=[...b.querySelectorAll("p,h3")].map(x=>x.textContent).join("\n\n"),all=ti+"\n\n"+tx+"\n\n"+n.dataset.u;
+    (navigator.share?navigator.share({title:ti,text:all}):navigator.clipboard.writeText(all).then(()=>{st.textContent="✅ Copiato";setTimeout(()=>st.textContent="⤴ Condividi testo",2000)})).catch(()=>{});return}
   const sh=e.target.closest(".sh");if(sh){const n=sh.closest(".n"),u=n.dataset.u,ti=n.querySelector(".t").textContent;
     (navigator.share?navigator.share({title:ti,url:u}):navigator.clipboard.writeText(ti+"\n"+u).then(()=>{sh.textContent="✅ Copiato";setTimeout(()=>sh.textContent="⤴ Condividi",2000)})).catch(()=>{});return}
   const ex=e.target.closest("a.ext");if(ex){const n=ex.closest(".n");read[n.dataset.u]=Date.now();saveRead();n.classList.add("read");return}
@@ -221,7 +223,8 @@ async function toggle(a){
   const en='<p style="color:var(--mu)">Testo in lingua straniera: apri la versione tradotta o il sito.</p>';
   const link=`<a class="go" href="${esc(u)}" target="_blank" rel="noopener noreferrer">↗ Apri sul sito originale</a>`;
   if(a.dataset.l==="1"){b.innerHTML=en+tr+link;return}
-  if(cache[u]){b.innerHTML=cache[u]+link;return}
+  const SB='<button class="chip sm sht" style="margin:0 0 10px">⤴ Condividi testo</button>';
+  if(cache[u]){b.innerHTML=SB+cache[u]+link;return}
   b.innerHTML='<p style="color:var(--mu)">Carico l\'articolo…</p>'+link;
   try{
     const r=await fetch("https://r.jina.ai/"+u);if(!r.ok)throw 0;
@@ -230,7 +233,7 @@ async function toggle(a){
     let ni=0,ne=0;w.forEach(x=>{if(IT.has(x))ni++;if(EN.has(x))ne++});
     if(ne>ni)throw "en";if(ps.length<2)throw 0;
     cache[u]=ps.map(x=>/^#{1,4} /.test(x)?`<h3>${esc(x.replace(/^#+ /,""))}</h3>`:`<p>${esc(x)}</p>`).join("");
-    b.innerHTML=cache[u]+link;
+    b.innerHTML=SB+cache[u]+link;
   }catch(e){b.innerHTML=e==="en"?en+tr+link:'<p style="color:var(--mu)">Impossibile leggere qui (sito a pagamento o protetto).</p>'+link}
 }
 const load=()=>fetch("news.json?"+Date.now()).then(r=>r.json()).then(j=>{const ch=j.updated!==data.updated;data=j;render();return ch});
