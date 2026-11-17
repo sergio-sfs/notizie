@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-17 (aggiornato 14:50)",
  "window": "18/11/2026 – 17/02/2027",
  "notes": [
-  "Fotografia del 17 nov 2026, 1 persona, andata e ritorno. Voli A/R cercati con 2–7 notti di permanenza; prezzi con bagaglio a mano/personale (bagaglio da stiva escluso).",
+  "Aggiornamento del 17 nov 2026 14:50, 1 persona, andata e ritorno, 2–7 notti. Fonti: Kiwi (voli Ryanair/easyJet/ITA/Wizz), Omio/Virail/Kombo (treni e bus), Trenord. Prezzi con solo bagaglio piccolo.",
   "Guanzate → aeroporto/stazione di Milano non è incluso nei costi.",
   "Prezzi e orari non si aggiornano da soli: scrivimi «aggiorna viaggi». Ordine di ricerca: 1) siti degli operatori (Ryanair, easyJet, ITA, Wizz Air; Trenitalia, Italo, FSE, FlixBus), 2) Omio (voli, treni, bus), 3) Volagratis, 4) Skyscanner, 5) Kiwi e altri motori.",
   "Costo e tempi del primo tratto Guanzate→Milano non sono inclusi nelle stime."
@@ -45,11 +45,16 @@
    "id": "noci",
    "name": "Noci (BA)",
    "emoji": "📍",
-   "est": "Stima A/R da Milano: volo su Bari circa 120–130 € (113–117 + bus/treno FSE); treno Milano–Bari A/R circa 150–280 € + 10 €.",
+   "est": "Stima A/R da Milano: volo Ryanair su Bari da 36 € (easyJet 113 €, ITA 115 €) + bus/treno Bari–Noci circa 8–12 € A/R = circa 45–130 €. Treno Milano–Bari A/R circa 150–280 €.",
    "modes": [
     {
      "title": "✈️ Voli A/R verso Bari (BRI)",
      "items": [
+      {
+       "t": "Ryanair · Bergamo/Malpensa → Bari · A/R da 36 €",
+       "d": "Es. lun 14 dic Bergamo 05:55→07:30, ritorno ven 18 dic 23:10→00:40 (FR3653/FR4659). Altri: Malpensa 11 dic 06:15 / ritorno 18 dic 23:10 (38 €); 29 gen Malpensa 06:15 / 4 feb Bari→Bergamo 21:35 (36 €); 23–29 gen Bergamo 05:55 (39 €). Solo bagaglio piccolo (zaino) incluso. Voli Ryanair Bari→Milano: 06:05–06:10, 08:50, 21:35, 22:55–23:20.",
+       "l": "https://kiwi.com/u/y5632tk"
+      },
       {
        "t": "easyJet · Malpensa → Bari · A/R da 113 €",
        "d": "Andata dom 22 nov 06:50→08:35 · ritorno gio 26 nov 21:55→23:30. Orari easyJet visti: andata 05:10, 06:30, 19:30–19:35; ritorno 21:55.",
@@ -153,7 +158,7 @@
    "id": "chieti",
    "name": "Chieti Scalo",
    "emoji": "📍",
-   "est": "Stima A/R da Milano: volo diretto Ryanair circa 35–100 € (più trasferimento aeroporto→Chieti da verificare); treno circa 90–145 €.",
+   "est": "Stima A/R da Milano: volo diretto Ryanair da 36 € (poi aeroporto→Chieti da verificare); treno circa 90–145 €.",
    "modes": [
     {
      "title": "🚆 Treno (consigliato)",
@@ -179,9 +184,9 @@
      "title": "✈️ Voli verso Pescara (PSR)",
      "items": [
       {
-       "t": "Ryanair diretto Milano ⇄ Pescara (Malpensa e Bergamo)",
-       "d": "Correzione: i voli diretti esistono (Kiwi non mostrava Ryanair). Orari visti (estate, da riverificare per l'inverno): Pescara→Malpensa 07:40, 07:55 e 20:00; Malpensa→Pescara 08:25 e 21:55; Bergamo→Pescara 21:10 e 22:25; durata circa 1h15–1h20. A/R da circa 34 € (Kayak, 30 € da Bergamo). Lufthansa non vola diretto: solo con scali, molto più cara.",
-       "l": "https://www.kayak.it/voli/Milano-MIL/Pescara-Liberi-PSR"
+       "t": "Ryanair diretto Milano ⇄ Pescara · A/R da 36 €",
+       "d": "Es. ven 11 dic Bergamo 15:55→17:05, ritorno lun 14 dic Pescara 13:25→14:35 (FR2293/FR2294); oppure Malpensa 13 dic 06:05→07:25 (FR6401), ritorno 20 dic Pescara→Bergamo 09:05 o 17:25; Malpensa 7 dic 08:15, ritorno 14 dic 13:25. Voli diretti da 1h10–1h20. Solo bagaglio piccolo incluso.",
+       "l": "https://kiwi.com/u/8cwtv82"
       },
       {
        "t": "Orari e prezzi su Omio",
