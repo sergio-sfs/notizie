@@ -8,7 +8,8 @@
   "Date da TicketOne, calendari regionali, siti turistici e portali di sagre: conferma sempre sul sito dell'organizzatore. Dove scrivo «da confermare» è l'edizione precedente.",
   "Seconda passata sui siti istituzionali: calendario fiere Regione Piemonte e Visit Tuscany. Per le altre regioni i portali ufficiali non mostravano elenchi leggibili, quindi restano aggregatori e siti turistici.",
   "Frecce Tricolori: il calendario 2026 è concluso (ultimo air show a Salerno, 25–27/9) e quello 2027 non risulta ancora pubblicato.",
-  "EICMA (5–8/11) e Auto e Moto d'Epoca (22–25/10) si sono già svolti."
+  "EICMA (5–8/11) e Auto e Moto d'Epoca (22–25/10) si sono già svolti.",
+  "🏰 Castelli e luoghi da visitare: dove la pagina lo riporta, ho indicato l'evento in corso nello stesso posto."
  ],
  "cats": [
   {
@@ -881,6 +882,140 @@
      ""
     ]
    ]
+  },
+  {
+   "id": "visitare",
+   "name": "Castelli e luoghi da visitare",
+   "emoji": "🏰",
+   "items": [
+    {
+     "r": "ER",
+     "t": "Grazzano Visconti (PC) · villaggio di Natale · 14/11/2026 – 6/01/2027",
+     "d": "Borgo neomedievale intorno al castello del 1395. Camminata dei Babbi Natale il 20/12/2026.",
+     "l": "https://www.viaggiando-italia.it/?p=106673"
+    },
+    {
+     "r": "PIE",
+     "t": "Castello Reale di Govone + Magico Paese di Natale · fino al 20/12/2026",
+     "d": "Il Magico Paese di Natale (Asti, Govone, San Damiano) è stato eletto «Most Fairytale Christmas Market in Europe» 2026. Ingresso ai mercatini gratuito.",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-piu-belli-italia-classifica.html"
+    },
+    {
+     "r": "TAA",
+     "t": "Castel Thun (Val di Non) · aperture 5–8/12/2026 e 19/12/2026 – 6/01/2027",
+     "d": "Ingresso gratuito domenica 6 dicembre. Si raggiunge da Trento.",
+     "l": "https://travel.thewom.it/italia/trentino-alto-adige/castel-thun-inverno.html"
+    },
+    {
+     "r": "TAA",
+     "t": "Natale al Castello di Avio · 21/11 – 20/12/2026 (solo weekend)",
+     "d": "Bene FAI con mercatino natalizio.",
+     "l": "https://www.iltrentinodeibambini.it/de/?p=223622"
+    },
+    {
+     "r": "TAA",
+     "t": "Ala · Natale nei Palazzi Barocchi · 28/11 – 20/12/2026 (weekend)",
+     "d": "Mercatino tra palazzi storici.",
+     "l": "https://www.iltrentinodeibambini.it/de/?p=223622"
+    },
+    {
+     "r": "TAA",
+     "t": "Levico Terme · Mercatino Asburgico · 21/11/2026 – 6/01/2027",
+     "d": "Nel Parco Secolare degli Asburgo.",
+     "l": "https://www.iltrentinodeibambini.it/de/?p=223622"
+    },
+    {
+     "r": "TAA",
+     "t": "Castel Valer (Tassullo) · Babbo Natale ogni domenica di dicembre",
+     "d": "Caccia al tesoro e visite guidate. Anno non indicato nella pagina: da verificare.",
+     "l": "https://www.visittrentino.info/it/articoli/inverno/val-di-non"
+    },
+    {
+     "r": "TAA",
+     "t": "Trenino dei Castelli · edizione invernale · Val di Non, Val di Sole, Trento",
+     "d": "Giornata in treno tra castelli e presepi, con mercatino finale. Date non indicate nel testo letto.",
+     "l": "https://siviaggia.it/notizie/trentino-trenino-castelli-winter-edition/608384/"
+    },
+    {
+     "r": "MAR",
+     "t": "Gradara · «Castello di Natale» · da confermare",
+     "d": "Date 2026 non confermate dalle fonti ufficiali; un portale indica 22/11/2026 – 6/01/2027 senza aggiornamenti.",
+     "l": "https://www.viaggiando-italia.it/?p=106899"
+    },
+    {
+     "r": "MAR",
+     "t": "Candele a Candelara e Mombaroccio (PU) · date 2026 da confermare",
+     "d": "Nel 2025 Candelara era 22–23 e 29–30 novembre, 6–8 dicembre. «Il Natale che non ti aspetti» unisce oltre 20 borghi.",
+     "l": "https://travel.thewom.it/italia/marche/pesaro-e-urbino/candelara-mercatino-di-natale.html"
+    },
+    {
+     "r": "VDA",
+     "t": "Forte di Bard · videomapping «Luci di Natale»",
+     "d": "Nel 2025 dal 7/12 al 6/01. Date 2026 da confermare.",
+     "l": "https://www.visititaly.eu/it/luoghi-e-itinerari/capodanno-in-valle-d-aosta"
+    },
+    {
+     "r": "FVG",
+     "t": "Castelli Aperti FVG · Consorzio castelli storici",
+     "d": "Edizioni 2026: 28–29 marzo e 3–4 ottobre. Date 2027 da annunciare.",
+     "l": "https://siviaggia.it/notizie/castelli-aperti-6-settembre-2026/601622/"
+    },
+    {
+     "r": "PIE",
+     "t": "Castelli Aperti Piemonte · domeniche primavera-estate",
+     "d": "Nel 2026 più giornate (17 maggio, 19 e 26 luglio, 2 e 23 agosto, 13 settembre). Calendario 2027 da pubblicare.",
+     "l": "https://siviaggia.it/notizie/castelli-aperti-piemonte-13-settembre/602427/"
+    },
+    {
+     "r": "PUG",
+     "t": "Alberobello · luminarie e mercatini tra i trulli · dicembre 2026",
+     "d": "Presepi viventi e Light Festival. Date esatte 2026 non trovate. Castel del Monte (Andria) è visitabile tutto l'anno.",
+     "l": "https://www.thethinkingtraveller.com/blog/events-in-puglia"
+    },
+    {
+     "r": "SIC",
+     "t": "Erice · «EriceNatale, il borgo dei presepi» · di solito 8/12 – 7/01",
+     "d": "Con Castello di Venere. Date 2026 da confermare.",
+     "l": "https://travel.thewom.it/italia/borghi-sud-italia-natale.html"
+    },
+    {
+     "r": "SIC",
+     "t": "Custonaci (TP) · presepe vivente alla Grotta Mangiapane · di solito 25/12 – 6/01",
+     "d": "Date 2026 da confermare.",
+     "l": "https://travel.thewom.it/italia/borghi-sud-italia-natale.html"
+    },
+    {
+     "r": "BAS",
+     "t": "Castelmezzano e Pietrapertosa · Natale nei borghi",
+     "d": "Tra i Borghi più belli d'Italia. Date 2026 non indicate.",
+     "l": "https://travel.thewom.it/italia/cosa-fare-a-natale.italia.html"
+    },
+    {
+     "r": "MOL",
+     "t": "Larino · luminarie e spettacoli nel centro storico fino all'Epifania",
+     "d": "Date 2026 da confermare.",
+     "l": "https://travel.thewom.it/italia/luminarie-italia.html"
+    },
+    {
+     "r": "UMB",
+     "t": "Monte Castello di Vibio e Corciano · Natale nei borghi",
+     "d": "Nel 2025 Monte Castello di Vibio era «Paese del Natale» dal 30/11 al 6/01. Date 2026 da confermare.",
+     "l": "https://siviaggia.it/borghi/mercatini-natale-borghi-castelli-pura-magia/419742/"
+    },
+    {
+     "r": "LAZ",
+     "t": "Castello di Santa Severa · «La Magia del Natale»",
+     "d": "Nel 2025 fino al 6/01, ingresso gratuito. Date 2026 da confermare.",
+     "l": "https://www.greenme.it/viaggi/non-solo-trentino-6-mercatini-di-natale-vicino-roma-per-lasciarsi-incantare-dalle-atmosfere-delle-feste/"
+    },
+    {
+     "r": "LOM",
+     "t": "Natale nei Beni FAI (castelli, ville, abbazie)",
+     "d": "Nel 2025: 22/11 – 6/01 in 20 Beni. Programma 2026 non ancora trovato.",
+     "l": "https://fondoambiente.it/news/viviamo-insieme-il-natale-nei-beni-del-fai-in-tutta-italia"
+    }
+   ],
+   "links": []
   },
   {
    "id": "altri",
