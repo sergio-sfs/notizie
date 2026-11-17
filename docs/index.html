@@ -55,6 +55,13 @@ div.n:active{opacity:.85}
 .wr span:nth-child(2){width:24px}
 .wr .r{margin-left:auto;color:var(--mu);font-size:13px}
 .note{font-size:12px;color:var(--mu);margin:2px 2px 10px}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20;display:flex;align-items:center;justify-content:center;padding:16px}
+.ov[hidden]{display:none}
+.dlg{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:14px;padding:16px;width:100%;max-width:420px}
+.dlg h3{margin:0 0 6px;font-size:17px}.dlg p{margin:0 0 10px;font-size:13px;color:var(--mu)}
+.dlg input{width:100%;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font-size:16px;margin-bottom:10px}
+.dlg .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.dlg a.chip{text-decoration:none;display:block;width:100%;text-align:center}
 .caret{margin-left:auto;color:var(--ac)}
 .empty{text-align:center;color:var(--mu);padding:40px 10px}
 </style>
@@ -64,8 +71,17 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v9</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v10</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
+<div class="ov" id="kd" hidden><div class="dlg">
+  <h3>🔑 Chiave GitHub</h3>
+  <p>Serve solo per il pulsante ⟳ Aggiorna (avvia subito una nuova raccolta). Resta salvata solo su questo telefono.</p>
+  <input id="kin" type="text" placeholder="github_pat_…" autocomplete="off" autocapitalize="off" spellcheck="false">
+  <div class="row"><button class="chip" id="ksave">💾 Salva</button><button class="chip" id="kdel">🗑️ Rimuovi</button><button class="chip" id="kno">Chiudi</button></div>
+  <div class="row"><a class="chip" target="_blank" rel="noopener noreferrer" href="https://github.com/settings/personal-access-tokens/new?name=notizie&description=App+notizie&actions=write&expires_in=365">🔗 Crea una nuova chiave su GitHub</a>
+  <a class="chip" target="_blank" rel="noopener noreferrer" href="https://github.com/settings/personal-access-tokens">🔗 Ho già una chiave: gestisci / rigenera</a></div>
+  <p style="margin-top:10px">Nella pagina GitHub scegli <b>Only select repositories → notizie</b>, controlla <b>Actions: Read and write</b>, poi <b>Generate token</b>: copia la chiave e incollala qui.</p>
+</div></div>
 <main id="list"><div class="empty">Caricamento…</div></main>
 <script>
 const $=s=>document.querySelector(s);
@@ -220,7 +236,11 @@ async function toggle(a){
 const load=()=>fetch("news.json?"+Date.now()).then(r=>r.json()).then(j=>{const ch=j.updated!==data.updated;data=j;render();return ch});
 load().catch(()=>{$("#list").innerHTML='<div class="empty">Errore di caricamento.</div>'});
 const getTok=()=>{try{return localStorage.getItem("gh")}catch(e){return null}};
-$("#key").onclick=()=>{const t=prompt("Incolla la chiave GitHub (vuoto = rimuovi):",getTok()||"");if(t===null)return;try{t.trim()?localStorage.setItem("gh",t.trim()):localStorage.removeItem("gh")}catch(e){}};
+$("#key").onclick=()=>{$("#kin").value=getTok()||"";$("#kd").hidden=false};
+$("#kno").onclick=()=>{$("#kd").hidden=true};
+$("#kd").onclick=e=>{if(e.target.id==="kd")$("#kd").hidden=true};
+$("#ksave").onclick=()=>{const t=$("#kin").value.trim();try{t?localStorage.setItem("gh",t):localStorage.removeItem("gh")}catch(e){}$("#kd").hidden=true};
+$("#kdel").onclick=()=>{try{localStorage.removeItem("gh")}catch(e){}$("#kin").value="";$("#kd").hidden=true};
 $("#ref").onclick=async()=>{
   const b=$("#ref"),tok=getTok();b.disabled=true;
   try{
