@@ -41,7 +41,7 @@ div.n:active{opacity:.85}
 .tp{background:var(--bd);border-radius:6px;padding:0 6px}
 .b{margin-top:10px;border-top:1px solid var(--bd);padding-top:10px;font-size:16px;line-height:1.55;cursor:auto;user-select:text}
 .b p{margin:0 0 12px}.b h3{font-size:16px;margin:14px 0 6px}
-.b .go{display:inline-block;margin:4px 0 2px;color:var(--ac);font-weight:600;text-decoration:none}
+.b .go{display:inline-block;margin:4px 14px 2px 0;color:var(--ac);font-weight:600;text-decoration:none}
 .ext{color:var(--ac);font-weight:600;text-decoration:none;border:1px solid var(--bd);border-radius:6px;padding:0 6px}
 .caret{margin-left:auto;color:var(--ac)}
 .empty{text-align:center;color:var(--mu);padding:40px 10px}
@@ -51,7 +51,7 @@ div.n:active{opacity:.85}
 <header>
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
-  <div class="bar"><span id="upd"></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Auto</option><option value="light">☀️ Chiaro</option><option value="dark">🌙 Scuro</option><option value="black">⚫ Nero</option><option value="sepia">📜 Seppia</option><option value="green">🌿 Verde</option><option value="rose">🌸 Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span id="upd"></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <main id="list"><div class="empty">Caricamento…</div></main>
 <script>
@@ -86,9 +86,9 @@ function render(){
   L.forEach(i=>{
     const d=new Date(i.d),dl=dayLabel(d);
     if(dl!==last){h+=`<div class="day">${dl}</div>`;last=dl}
-    h+=`<div class="n ${read[i.u]?"read":""}" data-u="${esc(i.u)}">
+    h+=`<div class="n ${read[i.u]?"read":""}" data-u="${esc(i.u)}" data-l="${i.l?1:0}">
       <div class="t">${esc(i.t)}</div>${i.x&&i.x!==i.t?`<div class="x">${esc(i.x)}</div>`:""}
-      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span><span>${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<a class="ext" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer">↗ Sito</a><span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
+      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span>${i.l?'<span class="tp">🌐 Lingua straniera</span>':""}<span>${d.toLocaleDateString("it-IT",{day:"numeric",month:"short",year:"numeric"})} · ${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<a class="ext" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer">↗ Sito</a><span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
   });
   $("#list").innerHTML=h||'<div class="empty">Nessuna notizia.</div>';
 }
@@ -116,7 +116,10 @@ async function toggle(a){
   const b=a.querySelector(".b"),u=a.dataset.u,c=a.querySelector(".caret");
   if(!b.hidden){b.hidden=true;c.textContent="▾ Leggi";return}
   b.hidden=false;c.textContent="▴ Chiudi";read[u]=Date.now();saveRead();a.classList.add("read");
+  const tr=`<a class="go" href="https://translate.google.com/translate?sl=auto&tl=it&u=${encodeURIComponent(u)}" target="_blank" rel="noopener noreferrer">🌐 Traduci in italiano</a>`;
+  const en='<p style="color:var(--mu)">Testo in lingua straniera: apri la versione tradotta o il sito.</p>';
   const link=`<a class="go" href="${esc(u)}" target="_blank" rel="noopener noreferrer">↗ Apri sul sito originale</a>`;
+  if(a.dataset.l==="1"){b.innerHTML=en+tr+link;return}
   if(cache[u]){b.innerHTML=cache[u]+link;return}
   b.innerHTML='<p style="color:var(--mu)">Carico l\'articolo…</p>'+link;
   try{
@@ -127,7 +130,7 @@ async function toggle(a){
     if(ne>ni)throw "en";if(ps.length<2)throw 0;
     cache[u]=ps.map(x=>/^#{1,4} /.test(x)?`<h3>${esc(x.replace(/^#+ /,""))}</h3>`:`<p>${esc(x)}</p>`).join("");
     b.innerHTML=cache[u]+link;
-  }catch(e){b.innerHTML='<p style="color:var(--mu)">'+(e==="en"?"Questo sito pubblica il testo in inglese.":"Impossibile leggere qui (sito a pagamento o protetto).")+'</p>'+link}
+  }catch(e){b.innerHTML=e==="en"?en+tr+link:'<p style="color:var(--mu)">Impossibile leggere qui (sito a pagamento o protetto).</p>'+link}
 }
 const load=()=>fetch("news.json?"+Date.now()).then(r=>r.json()).then(j=>{const ch=j.updated!==data.updated;data=j;render();return ch});
 load().catch(()=>{$("#list").innerHTML='<div class="empty">Errore di caricamento.</div>'});

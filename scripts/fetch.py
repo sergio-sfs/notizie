@@ -6,7 +6,7 @@ from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 
 KEEP_DAYS, MAX_PER_TOPIC = 14, 60
-BLOCK = ["backdoorpodcast.com"]   # siti con testo in inglese
+BLOCK = []   # siti da escludere (vuoto: nessuno)
 def blocked(u): return any(d in u for d in BLOCK)
 BING = "https://www.bing.com/news/search?format=rss&setlang=it&cc=IT&count=50&q="
 
@@ -68,9 +68,9 @@ def fetch(query, official_domains):
         except Exception: continue
         off = any(host == d or host.endswith("." + d) for d in official_domains)
         if blocked(link): continue
-        if not off and foreign(title + " " + clean(it.findtext("description"), 400)): continue
+        lang_en = (not off) and foreign(title + " " + clean(it.findtext("description"), 400))
         out.append({"t": title, "s": source, "u": link, "d": dt.isoformat(timespec="seconds"),
-                    "o": off, "x": clean(it.findtext("description"))})
+                    "o": off, "x": clean(it.findtext("description")), "l": lang_en})
     return out
 
 def main():
@@ -81,7 +81,7 @@ def main():
     cutoff = datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)
     result = []
     for tid, name, emoji, domains, queries in TOPICS:
-        items = [i for i in oldmap.get(tid, []) if not blocked(i["u"]) and "news.google.com" not in i["u"] and (i["o"] or not foreign(i["t"] + " " + i.get("x", "")))]
+        items = [i for i in oldmap.get(tid, []) if not blocked(i["u"]) and "news.google.com" not in i["u"] ]
         for q in queries:
             try: items += fetch(q, domains)
             except Exception as e: print(f"! {tid} [{q}]: {e}", file=sys.stderr)
