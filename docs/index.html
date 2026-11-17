@@ -63,6 +63,10 @@ div.n:active{opacity:.85}
 .dlg input{width:100%;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font-size:16px;margin-bottom:10px}
 .dlg .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .dlg a.chip{text-decoration:none;display:block;width:100%;text-align:center}
+.tv{padding:7px 0;border-top:1px solid var(--bd)}
+.tv b{font-size:14.5px;display:block}
+.tv div{font-size:13px;color:var(--mu);margin:2px 0}
+.tv a{font-size:13px;font-weight:600;color:var(--ac);text-decoration:none}
 .caret{margin-left:auto;color:var(--ac)}
 .empty{text-align:center;color:var(--mu);padding:40px 10px}
 </style>
@@ -72,7 +76,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v17</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v18</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -111,7 +115,7 @@ function items(skipDay){
 }
 function render(){
   $("#tabs").innerHTML=[{id:"all",name:"Tutte",emoji:"📰",n:data.topics.reduce((a,t)=>a+t.items.length,0)},
-    ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length})),{id:"meteo",name:"Meteo e neve",emoji:"🌤️",n:""}]
+    ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length})),{id:"meteo",name:"Meteo e neve",emoji:"🌤️",n:""},{id:"viaggi",name:"Viaggi",emoji:"✈️",n:""}]
     .map(t=>`<button class="tab ${t.id===cur?"on":""}" data-id="${t.id}">${t.emoji} ${esc(t.name)}<small>${t.n}</small></button>`).join("");
   $("#off").classList.toggle("on",onlyOff);
   $("#upd").textContent=data.updated?"Aggiornato "+new Date(data.updated).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"";
@@ -119,8 +123,8 @@ function render(){
   if(dayF&&!days.includes(dayF))dayF="";
   $("#day").innerHTML='<option value="">📅 Tutti i giorni</option>'+days.map(k=>{const d=new Date(k+"T12:00:00");return`<option value="${k}">📅 ${dayLabel(d)}${dayLabel(d)==="Oggi"||dayLabel(d)==="Ieri"?" · "+d.toLocaleDateString("it-IT",{day:"numeric",month:"short"}):""}</option>`}).join("");
   $("#day").value=dayF;$("#sort").value=sortM;
-  const isW=cur==="meteo";$(".bar2").style.display=isW?"none":"";$("#off").style.display=isW?"none":"";$("#q").style.display=isW?"none":"";
-  if(isW){renderWeather();return}
+  const isW=cur==="meteo"||cur==="viaggi";$(".bar2").style.display=isW?"none":"";$("#off").style.display=isW?"none":"";$("#q").style.display=isW?"none":"";
+  if(isW){cur==="viaggi"?renderTravel():renderWeather();return}
   const L=items();let last="",h="";
   if(sortM==="cat"&&cur==="all"){const ord=Object.fromEntries(data.topics.map((t,k)=>[t.id,k]));L.sort((a,b)=>ord[a.tp.id]-ord[b.tp.id]||b.d.localeCompare(a.d))}
   L.forEach(i=>{
@@ -184,6 +188,21 @@ async function renderWeather(){
   if(a1.length)h+='<div class="day">📍 Meteo</div>'+a1.map(x=>card(...x)).join("");
   if(a2.length)h+='<div class="day">⛷️ Neve in montagna</div><div class="note">Valori stimati da modello meteo (non sono i bollettini degli impianti): per piste e impianti aperti controlla i siti delle località.</div>'+a2.map(x=>card(...x)).join("");
   L.innerHTML=h+ui+'<div style="text-align:center"><button class="chip" id="prst">↺ Ripristina località predefinite</button></div>';
+}
+let tv=null;
+async function renderTravel(){
+  const L=$("#list");
+  if(!tv){L.innerHTML='<div class="empty">Carico i viaggi…</div>';
+    try{const r=await fetch("viaggi.json?"+Date.now());if(!r.ok)throw 0;tv=await r.json()}catch(e){L.innerHTML='<div class="empty">Viaggi non disponibili.</div>';return}}
+  if(cur!=="viaggi")return;
+  let h=`<div class="day">✈️ Viaggi · da Guanzate · controllo del ${esc(tv.updated)}</div>`+tv.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("")+`<div class="note">Periodo cercato: ${esc(tv.window)}</div>`;
+  tv.dests.forEach(d=>{
+    h+=`<div class="day">${d.emoji} ${esc(d.name)}</div><div class="wc"><h4>💶 ${esc(d.est)}</h4></div>`;
+    d.modes.forEach(m=>{
+      h+=`<div class="wc"><h4>${esc(m.title)}</h4>`+m.items.map(i=>`<div class="tv"><b>${esc(i.t)}</b><div>${esc(i.d)}</div>${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri / prenota</a>`:""}</div>`).join("")+"</div>";
+    });
+  });
+  L.innerHTML=h;
 }
 async function geo(){
   const v=($("#pq")||{}).value;if(!v||!v.trim())return;const R=$("#pres");R.innerHTML='<div class="note">Cerco…</div>';

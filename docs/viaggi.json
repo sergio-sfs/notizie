@@ -1,0 +1,111 @@
+{
+ "updated": "2026-11-17",
+ "window": "18/11/2026 – 17/02/2027",
+ "notes": [
+  "Fotografia del 17 nov 2026, 1 persona, andata e ritorno. Voli A/R cercati con 2–7 notti di permanenza; prezzi con bagaglio a mano/personale (bagaglio da stiva escluso).",
+  "Guanzate → aeroporto/stazione di Milano non è incluso nei costi.",
+  "Prezzi e orari non si aggiornano da soli: scrivimi «aggiorna viaggi» per rifare la ricerca. Treni e bus: valori di esempio da Omio/Kombo, non per le tue date."
+ ],
+ "dests": [
+  {
+   "id": "noci",
+   "name": "Noci (BA)",
+   "emoji": "📍",
+   "est": "Stima A/R da Milano: circa 120–130 € (volo 113–117 € + bus/treno Bari–Noci circa 8–12 € A/R). Via Brindisi: volo da 120 € + trasferimento da verificare.",
+   "modes": [
+    {
+     "title": "✈️ Voli A/R verso Bari (BRI)",
+     "items": [
+      {
+       "t": "easyJet · Malpensa → Bari · A/R da 113 €",
+       "d": "Andata dom 22 nov 06:50→08:35 · ritorno gio 26 nov 21:55→23:30. Orari easyJet visti: andata 05:10, 06:30, 19:30–19:35; ritorno 21:55.",
+       "l": "https://kiwi.com/u/v64vq9"
+      },
+      {
+       "t": "ITA Airways · Linate → Bari · A/R da 115 €",
+       "d": "Andata ven 11 dic 06:10→07:40 · ritorno mar 15 dic 21:25→22:55. Orari ITA visti: andata 06:10, 08:45–08:55, 11:35, 14:10; ritorno 08:25, 14:05, 16:25, 19:30, 21:25.",
+       "l": "https://kiwi.com/u/pbwqv4z"
+      },
+      {
+       "t": "Solo andata da 31 € (easyJet, Malpensa)",
+       "d": "Gio 10 dic 06:30→08:15 e sab 12 dic 05:10→06:55. Voli trovati in giorni diversi, anche gio e sab: il calendario completo è sul link.",
+       "l": "https://kiwi.com/u/79tu8jw"
+      }
+     ]
+    },
+    {
+     "title": "✈️ Voli A/R verso Brindisi (BDS)",
+     "items": [
+      {
+       "t": "easyJet · Malpensa → Brindisi · A/R da 120 €",
+       "d": "Andata lun 23 nov 07:10→09:00 · ritorno gio 26 nov 21:10→22:55. Orari visti: andata 06:10–06:35, 07:00–07:10, 18:40–19:35; ritorno 08:35–09:25, 21:10–21:40.",
+       "l": "https://kiwi.com/u/4xmv6h"
+      },
+      {
+       "t": "Solo andata da 36 € (easyJet, Malpensa)",
+       "d": "Dom 13 dic, dom 3 gen, dom 14 feb 07:00→08:50.",
+       "l": "https://kiwi.com/u/mzbx6b"
+      }
+     ]
+    },
+    {
+     "title": "🚌 Da Bari a Noci",
+     "items": [
+      {
+       "t": "Bus Ferrovie del Sud Est · Bari Largo Ciaia → Noci",
+       "d": "Diretto, circa 1h10 (es. 13:00→14:10, 18:00→19:10), da circa 4 €.",
+       "l": "https://www.omio.it/autobus/bari/noci-bujek"
+      },
+      {
+       "t": "Treno Ferrovie del Sud Est · Bari Centrale → Noci",
+       "d": "Circa 1h40–1h55 con 1 cambio (es. 08:21→10:04, 16:06→18:01), circa 5 €. Noci → Bari: 14:01→15:40 diretto.",
+       "l": "https://www.omio.it/treni/bari/noci-9orhk"
+      },
+      {
+       "t": "Da Brindisi a Noci e Milano → Bari in treno",
+       "d": "Non ancora verificati."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chieti",
+   "name": "Chieti Scalo",
+   "emoji": "📍",
+   "est": "Stima A/R da Milano in treno: circa 90–145 € (45–72 € a tratta, punte fino a 99 € sul Frecciarossa). Volo: solo andata da 33 € con scalo, ritorno da verificare.",
+   "modes": [
+    {
+     "title": "🚆 Treno (consigliato)",
+     "items": [
+      {
+       "t": "Milano Centrale → Pescara Centrale · Frecciarossa diretto",
+       "d": "Circa 4h50 (es. 11:55→16:47). Fino a 16 treni diretti al giorno, primo 05:05, ultimo 21:50, il più rapido 3h59. Prezzo da 45 €, medio 72 € a tratta. Poi Pescara → Chieti Scalo in regionale (breve).",
+       "l": "https://www.omio.it/treni/milano/pescara"
+      },
+      {
+       "t": "Milano Centrale → Chieti · sempre almeno 1 cambio",
+       "d": "Es. Frecciarossa + regionale 07:50→13:17 (5h27) o 12:35→17:30 (4h55); Intercity 05:25→12:32 (7h07); Intercity Notte 19:45→05:02 (9h17). Biglietti circa 45–65 €.",
+       "l": "https://www.omio.it/treni/milano-centrale/chieti-kuh1n"
+      },
+      {
+       "t": "Ritorno Chieti → Milano",
+       "d": "Es. 14:15→21:40 (7h25), da circa 44 €.",
+       "l": "https://www.omio.it/treni/chieti-madonna-delle-piane/milano-centrale-wym92"
+      }
+     ]
+    },
+    {
+     "title": "✈️ Voli verso Pescara (PSR)",
+     "items": [
+      {
+       "t": "Nessun volo diretto Milano → Pescara trovato nel periodo",
+       "d": "Unica opzione: Wizz Air Bergamo → Tirana → Pescara, solo andata da 33 €, 13:00→17:15 (4h15). Giorni visti: gen 14, 15, 16, 17, 21, 22, 24, 25, 28, 29; feb 1, 4, 6, 11, 14. Ritorno non verificato.",
+       "l": "https://kiwi.com/u/6z8y29"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
