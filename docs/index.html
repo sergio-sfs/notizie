@@ -38,7 +38,7 @@ a.n.read .t{color:var(--mu);font-weight:400}
 <header>
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
-  <div class="bar"><span id="upd"></span><button class="chip" id="off">✔ Solo ufficiali</button></div>
+  <div class="bar"><span id="upd"></span><span><button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <main id="list"><div class="empty">Caricamento…</div></main>
 <script>
@@ -82,7 +82,23 @@ document.addEventListener("click",e=>{
   const a=e.target.closest("a.n");if(a){read[a.dataset.u]=Date.now();saveRead();a.classList.add("read")}
 });
 $("#q").addEventListener("input",e=>{q=e.target.value.trim();render()});
-fetch("news.json?"+Date.now()).then(r=>r.json()).then(j=>{data=j;render()}).catch(()=>{$("#list").innerHTML='<div class="empty">Errore di caricamento.</div>'});
+const load=()=>fetch("news.json?"+Date.now()).then(r=>r.json()).then(j=>{const ch=j.updated!==data.updated;data=j;render();return ch});
+load().catch(()=>{$("#list").innerHTML='<div class="empty">Errore di caricamento.</div>'});
+const getTok=()=>{try{return localStorage.getItem("gh")}catch(e){return null}};
+$("#key").onclick=()=>{const t=prompt("Incolla la chiave GitHub (vuoto = rimuovi):",getTok()||"");if(t===null)return;try{t.trim()?localStorage.setItem("gh",t.trim()):localStorage.removeItem("gh")}catch(e){}};
+$("#ref").onclick=async()=>{
+  const b=$("#ref"),tok=getTok();b.disabled=true;
+  try{
+    if(tok){
+      b.textContent="⏳ Avvio…";
+      const r=await fetch("https://api.github.com/repos/sergio-sfs/notizie/actions/workflows/update.yml/dispatches",{method:"POST",headers:{Authorization:"Bearer "+tok,Accept:"application/vnd.github+json"},body:JSON.stringify({ref:"main"})});
+      if(!r.ok){b.textContent=r.status===401||r.status===403||r.status===404?"❌ Chiave errata":"❌ Errore";return}
+      for(let i=0;i<12;i++){b.textContent="⏳ "+(i+1)*10+"s";await new Promise(s=>setTimeout(s,10000));if(await load())break}
+    }else await load();
+    b.textContent="✅ Fatto";
+  }catch(e){b.textContent="❌ Errore"}
+  finally{setTimeout(()=>{b.textContent="⟳ Aggiorna";b.disabled=false},3000)}
+};
 </script>
 </body>
 </html>
