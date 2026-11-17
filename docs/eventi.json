@@ -1,0 +1,190 @@
+{
+ "updated": "2026-11-17",
+ "area": "Como, Varese, Lecco, Brianza e Milano",
+ "window": "17/11/2026 – febbraio 2027",
+ "notes": [
+  "Fotografia del 17 nov 2026 per Como, Varese, Lecco, Brianza e Milano. Per aggiornarla scrivimi «aggiorna eventi».",
+  "Date prese da TicketOne, Regione Lombardia, SagraMap, GiraItalia: conferma sempre sul sito dell'organizzatore."
+ ],
+ "cats": [
+  {
+   "id": "musica",
+   "name": "Eventi musicali e percussioni",
+   "emoji": "🎵",
+   "items": [
+    {
+     "t": "Vinicio Capossela · Como · mer 18/11/2026 20:30",
+     "d": "«E morte non avrà dominio».",
+     "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/altri-eventi-musicali-1073/"
+    },
+    {
+     "t": "Nomadi · Varese · ven 22/01/2027 20:00",
+     "d": "Live Tour 2025/2026.",
+     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/"
+    },
+    {
+     "t": "La Sera dei Miracoli, omaggio a Lucio Dalla · Varese · ven 05/03/2027 20:00",
+     "d": "",
+     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/"
+    },
+    {
+     "t": "Angelo Branduardi, Il Cantico · Varese · ven 14/05/2027 20:00",
+     "d": "Fuori dal periodo principale, utile per prenotare.",
+     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/"
+    },
+    {
+     "t": "Milano · Cesare Cremonini mar 15/12/2026 · Irama mer 16/12 · Max Pezzali 29 e 30/12 · Sfera Ebbasta dom 07/02/2027",
+     "d": "Tutti alle 21:00. Coez a Milano anche oggi 17/11 alle 21:00.",
+     "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/"
+    },
+    {
+     "t": "🥁 Percussioni: nessun evento con data trovato nel periodo",
+     "d": "Ci sono corsi e masterclass di batteria e percussioni a Milano su Eventbrite, e l'ensemble di percussioni del Conservatorio di Como si esibisce in concerti sul territorio, ma senza date confermate.",
+     "l": "https://www.eventbrite.co.uk/cc/clinic-e-masterclass-di-batteria-e-percussioni-1840559"
+    },
+    {
+     "t": "Percussionisti Anonimi · Ritmodipendenti (Lecco)",
+     "d": "Spettacolo di percussioni: data non indicata nella pagina trovata.",
+     "l": "https://www.in-lombardia.it/en/event/percussionisti-anonimi-ritmodipendenti"
+    }
+   ],
+   "links": [
+    [
+     "TicketOne Como",
+     "https://www.ticketone.it/cityd/como-1280/concerti-55/"
+    ],
+    [
+     "TicketOne Varese",
+     "https://www.ticketone.it/city/varese-1595/concerti-55/"
+    ],
+    [
+     "Fever Como",
+     "https://feverup.com/it/como/concerti-festival"
+    ],
+    [
+     "Bandsintown Varese",
+     "https://www.bandsintown.com/c/varese-italy"
+    ],
+    [
+     "Il Tacco di Bacco",
+     "https://iltaccodibacco.it/cernobbio/pdf/"
+    ]
+   ]
+  },
+  {
+   "id": "fiere",
+   "name": "Fiere",
+   "emoji": "🏛️",
+   "items": [
+    {
+     "t": "Fiera di Sant'Ambrogio «Oh Bej Oh Bej» · Milano · 7–10 dic 2026",
+     "d": "Fiera storica di Milano.",
+     "l": "https://sagramap.com/sagre/mese/dicembre/lombardia"
+    },
+    {
+     "t": "Fiera di Sant'Ambrogio · Merate (LC) · 7–8 dic 2026",
+     "d": "Piazza degli Eroi, dalle 7:00.",
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+    },
+    {
+     "t": "Artigiano in Fiera · Rho Fiera Milano · dicembre 2026 (9 giorni)",
+     "d": "Date esatte da confermare sul sito della fiera.",
+     "l": "https://blog.italotreno.com/in-viaggio-per-lavoro/fiere-rho-fiera-milano-nellautunno-2026-eventi-non-perdere/"
+    },
+    {
+     "t": "Bergamo Arte Fiera · 15–17 gen 2027",
+     "d": "",
+     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20B%20-%20Calendario%20manifestazioni%20fieristiche%20Nazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf"
+    },
+    {
+     "t": "Milano Home e Quick & More · Rho · 21–24 gen 2027",
+     "d": "Calendario aggiornato; una versione precedente indicava 14–17 gennaio. Da confermare.",
+     "l": "https://www.fibre2fashion.com/trade-fairs/milano-home-2027-66751"
+    },
+    {
+     "t": "BIT Borsa Internazionale del Turismo · Rho · 9–11 feb 2027",
+     "d": "",
+     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20A%20-%20Calendario%20manifestazioni%20fieristiche%20Internazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf"
+    },
+    {
+     "t": "MyPlant & Garden · Rho · 17–19 feb 2027",
+     "d": "",
+     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20A%20-%20Calendario%20manifestazioni%20fieristiche%20Internazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf"
+    }
+   ],
+   "links": [
+    [
+     "Fiera Milano",
+     "https://www.fieramilano.it"
+    ],
+    [
+     "Calendario fiere Regione Lombardia",
+     "https://www.regione.lombardia.it"
+    ]
+   ]
+  },
+  {
+   "id": "sagre",
+   "name": "Sagre e mercatini",
+   "emoji": "🍲",
+   "items": [
+    {
+     "t": "Sagra della Polenta · Tradate (VA) · dom 6 dic 2026 12:00",
+     "d": "Anche 8 dicembre secondo un'altra fonte.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+    },
+    {
+     "t": "Mercatino di Natale · Varano Borghi (VA) · 6 dic 2026",
+     "d": "",
+     "l": "https://sagramap.com/lombardia/varese"
+    },
+    {
+     "t": "Natale in Villa · Albavilla (CO) · 8 dic 2026 10:00",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+    },
+    {
+     "t": "Mercatini di Natale · Bellagio e Carlazzo (CO) · inizio/metà dicembre",
+     "d": "Carlazzo con prodotti tipici e vino.",
+     "l": "https://sagramap.com/sagre/mese/dicembre/lombardia"
+    },
+    {
+     "t": "Natale a Merate (LC) · 22 nov – 24 dic 2026",
+     "d": "Tutti i giorni 8:00–20:00.",
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+    },
+    {
+     "t": "Winter Fire Party · Merate · 12 dic · Festa in Birrificio · Galbiate · 20 dic 2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+    },
+    {
+     "t": "Nota",
+     "d": "Da novembre a febbraio le sagre classiche sono poche: prevalgono mercatini di Natale e feste di Santa Lucia/Sant'Ambrogio. La stagione vera riparte in primavera."
+    }
+   ],
+   "links": [
+    [
+     "SagraMap Lombardia",
+     "https://sagramap.com/lombardia"
+    ],
+    [
+     "SagraMap dicembre",
+     "https://sagramap.com/sagre/mese/dicembre/lombardia"
+    ],
+    [
+     "GiraItalia Lecco",
+     "https://www.giraitalia.com/eventi/provincia/lecco"
+    ],
+    [
+     "Eventi e Sagre Como",
+     "https://www.eventiesagre.it/cerca/cat/sez/Dicembre/Lombardia/CO/cit/rilib"
+    ],
+    [
+     "in-lombardia",
+     "https://www.in-lombardia.it"
+    ]
+   ]
+  }
+ ]
+}
