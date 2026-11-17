@@ -6,7 +6,9 @@
   "Controllo del 17 nov 2026, tutte le regioni. Per aggiornare scrivimi «aggiorna eventi».",
   "Per fiere e sagre ho inserito anche i grandi eventi con oltre 5.000 presenze. Nei concerti trovi l'etichetta 🥁 percussioni oppure 🎵 altro genere.",
   "Date da TicketOne, calendari regionali, siti turistici e portali di sagre: conferma sempre sul sito dell'organizzatore. Dove scrivo «da confermare» è l'edizione precedente.",
-  "Seconda passata sui siti istituzionali: calendario fiere Regione Piemonte e Visit Tuscany. Per le altre regioni i portali ufficiali non mostravano elenchi leggibili, quindi restano aggregatori e siti turistici."
+  "Seconda passata sui siti istituzionali: calendario fiere Regione Piemonte e Visit Tuscany. Per le altre regioni i portali ufficiali non mostravano elenchi leggibili, quindi restano aggregatori e siti turistici.",
+  "Frecce Tricolori: il calendario 2026 è concluso (ultimo air show a Salerno, 25–27/9) e quello 2027 non risulta ancora pubblicato.",
+  "EICMA (5–8/11) e Auto e Moto d'Epoca (22–25/10) si sono già svolti."
  ],
  "cats": [
   {
@@ -173,6 +175,13 @@
      "t": "Umbria Jazz Winter · Orvieto · fine dicembre",
      "d": "Tradizionale tra Natale e Capodanno. Date 2026/27 da confermare.",
      "l": "https://travel.thewom.it/destinazioni/news-lowcost/capodanno-concerti-in-piazza-italia.html",
+     "p": 0
+    },
+    {
+     "r": "VEN",
+     "t": "Concerto di Capodanno · Teatro La Fenice, Venezia · 1/01/2027",
+     "d": "Anteprime 29, 30 e 31/12/2026. Diretta Rai1 la mattina del 1° gennaio.",
+     "l": "https://italianismo.com.br/agenda-evento/concerto-di-capodanno-2027-em-veneza-o-ano-novo-na-fenice/",
      "p": 0
     }
    ],
@@ -433,6 +442,18 @@
      "t": "Fiera del Porro · Cervere (CN) · 7–22/11/2026",
      "d": "47ª edizione. Calendario ufficiale Regione Piemonte (visitatori non indicati).",
      "l": "https://www.regione.piemonte.it/web/media/55082/download"
+    },
+    {
+     "r": "LOM",
+     "t": "Artigiano in Fiera · Fiera Milano Rho · 5–13/12/2026 👥 5000+",
+     "d": "Stima circa 1 milione di visitatori (PredictHQ). Ingresso gratuito con pass digitale.",
+     "l": "https://www.predicthq.com/major-events/top-events/artigiano-in-fiera"
+    },
+    {
+     "r": "UMB",
+     "t": "Eurochocolate · Perugia · 13–22/11/2026",
+     "d": "In corso. Ingresso libero.",
+     "l": "https://www.italia.it/it/umbria/perugia/cosa-fare/evento-eurochocolate-perugia"
     }
    ],
    "links": [
@@ -781,6 +802,36 @@
      "t": "Calenzano Christmas e Cortona Città del Natale · da confermare",
      "d": "Date 2026 non ancora pubblicate (2025: 29–30 nov e 5 dic–6 gen).",
      "l": "https://travel.thewom.it/italia/mercatini-natale-toscana.html"
+    },
+    {
+     "r": "LOM",
+     "t": "Fiera degli Oh Bej! Oh Bej! · Milano, Castello Sforzesco · 5–8/12/2026",
+     "d": "Fiera di Sant'Ambrogio, ingresso libero. Alcuni calendari indicano 7–10 dicembre: date ufficiali da confermare.",
+     "l": "https://tg24.sky.it/lifestyle/2026/11/06/mercatini-natale-milano-2026"
+    },
+    {
+     "r": "ER",
+     "t": "Fiera di Santa Lucia · Bologna, Strada Maggiore · 6/11–26/12/2026",
+     "d": "Date attese in base agli anni precedenti, non confermate.",
+     "l": "https://ultimatechristmasmarkets.com/?p=655"
+    },
+    {
+     "r": "LIG",
+     "t": "Creativamente in Libertà · Lavagna (GE) · 21/11–19/12/2026",
+     "d": "Mercatino di artigianato.",
+     "l": "https://www.eventiesagre.it/Mercatini_Artigianato/21189269_Creativamente+In+Liberta.html"
+    },
+    {
+     "r": "LIG",
+     "t": "Natale a Santo Stefano d'Aveto (GE) · 5/12/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://www.eventiesagre.it/cerca/cat/sez/mesi/Liguria/prov/cit/natale"
+    },
+    {
+     "r": "ABR",
+     "t": "Fiera dell'Epifania · L'Aquila · 5/01/2027",
+     "d": "Nel 2026 (76ª ed.) circa 295 bancarelle. Data 2027 da confermare. L'Aquila è Capitale Italiana della Cultura 2026.",
+     "l": "https://lifeinabruzzo.com/whatsonabruzzo-5-11-jan-26/"
     }
    ],
    "links": [
@@ -828,6 +879,97 @@
      "Mercatini Natale per regione",
      "https://www.eventiesagre.it/Promo+e+Sconti_Tempo+Libero/21149446_Calendario+Regionale+Mercatini+di+Natale+in+Italia.html",
      ""
+    ]
+   ]
+  },
+  {
+   "id": "altri",
+   "name": "Altri eventi (sport, motori, Capodanno)",
+   "emoji": "🏁",
+   "items": [
+    {
+     "r": "SIC",
+     "t": "Capodanno Rai 2027 · Palermo · 31/12/2026",
+     "d": "Annunciato dal sindaco Lagalla; ufficiale per la trasmissione di fine anno.",
+     "l": "https://qds.it/ufficiale-capodanno-rai-2027-palermo-annuncio-lagalla/"
+    },
+    {
+     "r": "LOM",
+     "t": "Prima della Scala · Milano · 7/12/2026",
+     "d": "La stagione 2026-27 apre il giorno di Sant'Ambrogio.",
+     "l": "https://pixidia.com/?p=90901"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo sci alpino maschile · Val Gardena · 18–19/12/2026",
+     "d": "Super-G il 18, discesa il 19 (calendario FIS provvisorio).",
+     "l": "https://www.dolomiti.it/it/dolomiti/news/dolomitis-superski-coppa-mondo-sci-alpino"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo sci alpino maschile · Alta Badia · 20–21/12/2026",
+     "d": "Gigante il 20, slalom il 21.",
+     "l": "https://www.dolomiti.it/it/dolomiti/news/dolomitis-superski-coppa-mondo-sci-alpino"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo sci alpino maschile · Madonna di Campiglio · 23/12/2026",
+     "d": "Slalom notturno.",
+     "l": "https://www.dolomiti.it/it/dolomiti/news/dolomitis-superski-coppa-mondo-sci-alpino"
+    },
+    {
+     "r": "LOM",
+     "t": "Coppa del Mondo sci alpino maschile · Bormio · 28–29/12/2026",
+     "d": "Discesa libera e super-G.",
+     "l": "https://www.centrometeoitaliano.it/sport-vari/coppa-del-mondo-di-sci-alpino-femminile-e-maschile-calendario-gare-e-dove-vederle-in-tv-184410/amp/"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo sci alpino femminile · Val di Fassa · 9–10/01/2027",
+     "d": "Discesa libera e super-G.",
+     "l": "https://sport.sky.it/altri-sport/sci/calendario-sci-2026-2027-coppa-mondo-mondiali-gare-date"
+    },
+    {
+     "r": "VEN",
+     "t": "Coppa del Mondo sci alpino femminile · Cortina d'Ampezzo · 15–17/01/2027",
+     "d": "Due discese e un super-G.",
+     "l": "https://www.dolomiti.it/it/cortina/eventi/coppa-del-mondo-di-sci-alpino-femminile"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo sci alpino femminile · Plan de Corones · 19/01/2027",
+     "d": "Slalom gigante.",
+     "l": "https://www.alto-adige.com/evento/570/coppa-del-mondo-sci-plan-de-corones"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo di biathlon · Anterselva · 14–17/01/2027",
+     "d": "",
+     "l": "https://www.suedtirol.info/it/it/lp/archivio/inverno-2025-2026/sci-dolomitinordicski/dolomiti-nordicski/eventi-sci-di-fondo"
+    },
+    {
+     "r": "LOM",
+     "t": "Coppa del Mondo sci alpinismo · Bormio · 9–10/01/2027",
+     "d": "Sprint il 9, staffetta mista il 10.",
+     "l": "https://www.tickettailor.com/events/societmultiservizialtavallespa/2452383"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo telemark · Carezza · 14–15/01/2027",
+     "d": "",
+     "l": "https://www.suedtirol.info/it/it/esperienze-eventi/plp-eventi/o/gare-coppa-del-mondo-alto-adige.page1"
+    }
+   ],
+   "links": [
+    [
+     "Coppe del Mondo Alto Adige",
+     "https://www.suedtirol.info/it/it/esperienze-eventi/plp-eventi/o/gare-coppa-del-mondo-alto-adige.page1",
+     "TAA"
+    ],
+    [
+     "Sardegna Turismo eventi",
+     "https://www.sardegnaturismo.it/eventi",
+     "SAR"
     ]
    ]
   }
