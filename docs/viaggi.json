@@ -119,7 +119,7 @@
    "id": "chieti",
    "name": "Chieti Scalo",
    "emoji": "📍",
-   "est": "Stima A/R da Milano in treno: circa 90–145 € (45–72 € a tratta, punte fino a 99 € sul Frecciarossa). Volo: solo andata da 33 € con scalo, ritorno da verificare.",
+   "est": "Stima A/R da Milano: volo diretto Ryanair circa 35–100 € (più trasferimento aeroporto→Chieti da verificare); treno circa 90–145 €.",
    "modes": [
     {
      "title": "🚆 Treno (consigliato)",
@@ -145,8 +145,18 @@
      "title": "✈️ Voli verso Pescara (PSR)",
      "items": [
       {
-       "t": "Nessun volo diretto Milano → Pescara trovato nel periodo",
-       "d": "Unica opzione: Wizz Air Bergamo → Tirana → Pescara, solo andata da 33 €, 13:00→17:15 (4h15). Giorni visti: gen 14, 15, 16, 17, 21, 22, 24, 25, 28, 29; feb 1, 4, 6, 11, 14. Ritorno non verificato.",
+       "t": "Ryanair diretto Milano ⇄ Pescara (Malpensa e Bergamo)",
+       "d": "Correzione: i voli diretti esistono (Kiwi non mostrava Ryanair). Orari visti (estate, da riverificare per l'inverno): Pescara→Malpensa 07:40, 07:55 e 20:00; Malpensa→Pescara 08:25 e 21:55; Bergamo→Pescara 21:10 e 22:25; durata circa 1h15–1h20. A/R da circa 34 € (Kayak, 30 € da Bergamo). Lufthansa non vola diretto: solo con scali, molto più cara.",
+       "l": "https://www.kayak.it/voli/Milano-MIL/Pescara-Liberi-PSR"
+      },
+      {
+       "t": "Orari e prezzi su Omio",
+       "d": "Voli Milano → Pescara, solo andata da circa 28–58 € secondo il giorno.",
+       "l": "https://www.omio.it/voli/milano/aeroporto-di-pescara-abruzzo-4e2pr"
+      },
+      {
+       "t": "Wizz Air Bergamo → Tirana → Pescara",
+       "d": "Solo andata da 33 €, con scalo (4h15). Meno comodo del Ryanair diretto.",
        "l": "https://kiwi.com/u/6z8y29"
       }
      ]
