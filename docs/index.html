@@ -45,7 +45,9 @@ div.n:active{opacity:.85}
 .ext.sh{background:none;font:inherit;font-size:12px;cursor:pointer}
 .ext{color:var(--ac);font-weight:600;text-decoration:none;border:1px solid var(--bd);border-radius:6px;padding:0 6px}
 .n.open{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 14%,var(--card));box-shadow:0 0 0 2px var(--ac)}
-.bar2{display:flex;gap:6px;flex-wrap:wrap;padding:2px 0 4px}
+.bar2{display:flex;gap:6px;flex-wrap:nowrap;padding:2px 0 4px}
+.bar2 select{flex:1;min-width:0;text-overflow:ellipsis;font-size:13px;padding:6px 8px}
+.sm{font-size:12px;padding:2px 8px;margin-left:4px}
 .wc{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px}
 .wc h4{margin:0 0 6px;font-size:15px}
 .wr{display:flex;gap:10px;align-items:center;font-size:14px;padding:3px 0;border-top:1px solid var(--bd)}
@@ -61,8 +63,8 @@ div.n:active{opacity:.85}
 <header>
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
-  <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Ordina: per giorno</option><option value="cat">↕ Ordina: per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v8</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v9</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <main id="list"><div class="empty">Caricamento…</div></main>
 <script>
@@ -113,6 +115,11 @@ function render(){
   $("#list").innerHTML=h||'<div class="empty">Nessuna notizia.</div>';
 }
 document.addEventListener("click",e=>{
+  const ad=e.target.closest(".padd");if(ad){const P=getPl().slice();P.push({n:ad.dataset.n,a:+ad.dataset.a,o:+ad.dataset.o,m:+ad.dataset.m});setPl(P);renderWeather();return}
+  const rm=e.target.closest(".prem");if(rm){const P=getPl().slice();P.splice(+rm.dataset.i,1);setPl(P.length?P:DEF);renderWeather();return}
+  const tg=e.target.closest(".ptog");if(tg){const P=getPl().map(x=>({...x}));P[+tg.dataset.i].m^=1;setPl(P);renderWeather();return}
+  if(e.target.closest("#pgo")){geo();return}
+  if(e.target.closest("#prst")){try{localStorage.removeItem("places")}catch(x){}wx=null;renderWeather();return}
   const tb=e.target.closest(".tab");if(tb){cur=tb.dataset.id;render();scrollTo(0,0);return}
   if(e.target.closest("#off")){onlyOff=!onlyOff;render();return}
   const sh=e.target.closest(".sh");if(sh){const n=sh.closest(".n"),u=n.dataset.u,ti=n.querySelector(".t").textContent;
@@ -125,34 +132,45 @@ $("#day").onchange=e=>{dayF=e.target.value;render()};
 $("#sort").onchange=e=>{sortM=e.target.value;render()};
 $("#q").addEventListener("input",e=>{q=e.target.value.trim();render()});
 const cache={};
-const PL=[["Guanzate",45.70,8.94,0],["Livigno",46.54,10.14,1],["Bormio",46.47,10.37,1],["Madesimo",46.43,9.35,1],["Pian delle Betulle",45.93,9.42,1]];
-const WI=c=>c===0?"☀️":c<=1?"🌤️":c===2?"⛅":c===3?"☁️":c<=48?"🌫️":c<=57?"🌦️":c<=67?"🌧️":c<=77?"🌨️":c<=82?"🌦️":c<=86?"🌨️":"⛈️";
+const DEF=[{n:"Guanzate",a:45.70,o:8.94,m:0},{n:"Livigno",a:46.54,o:10.14,m:1},{n:"Bormio",a:46.47,o:10.37,m:1},{n:"Madesimo",a:46.43,o:9.35,m:1},{n:"Pian delle Betulle",a:45.93,o:9.42,m:1}];
 let wx=null,wxT=0;
+const getPl=()=>{try{const p=JSON.parse(localStorage.getItem("places"));if(Array.isArray(p)&&p.length)return p}catch(e){}return DEF};
+const setPl=p=>{try{localStorage.setItem("places",JSON.stringify(p))}catch(e){}wx=null};
+const WI=c=>c===0?"☀️":c<=1?"🌤️":c===2?"⛅":c===3?"☁️":c<=48?"🌫️":c<=57?"🌦️":c<=67?"🌧️":c<=77?"🌨️":c<=82?"🌦️":c<=86?"🌨️":"⛈️";
 const dn=k=>new Date(k+"T12:00:00").toLocaleDateString("it-IT",{weekday:"short",day:"numeric"});
 async function renderWeather(){
-  const L=$("#list");
+  const L=$("#list"),P=getPl();
+  const ui='<div class="wc"><h4>➕ Aggiungi località</h4><div style="display:flex;gap:6px"><input id="pq" type="search" placeholder="Es. Cortina, Como, Bari…" style="flex:1;min-width:0;padding:8px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font-size:16px"><button class="chip" id="pgo">Cerca</button></div><div id="pres"></div></div>';
   if(!wx||Date.now()-wxT>18e5){
     L.innerHTML='<div class="empty">Carico il meteo…</div>';
     try{
-      const u="https://api.open-meteo.com/v1/forecast?latitude="+PL.map(p=>p[1]).join(",")+"&longitude="+PL.map(p=>p[2]).join(",")+"&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,snowfall_sum&hourly=snow_depth&forecast_days=5&timezone=Europe%2FRome";
+      const u="https://api.open-meteo.com/v1/forecast?latitude="+P.map(p=>p.a).join(",")+"&longitude="+P.map(p=>p.o).join(",")+"&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,snowfall_sum&hourly=snow_depth&forecast_days=5&timezone=Europe%2FRome";
       const r=await fetch(u);if(!r.ok)throw 0;wx=await r.json();if(!Array.isArray(wx))wx=[wx];wxT=Date.now();
-    }catch(e){L.innerHTML='<div class="empty">Meteo non disponibile in questo momento.</div>';return}
+    }catch(e){L.innerHTML='<div class="empty">Meteo non disponibile in questo momento.</div>'+ui;return}
   }
   if(cur!=="meteo")return;
-  const hr=new Date().getHours();let h="";
-  PL.forEach((p,k)=>{
-    const w=wx[k];if(!w)return;
+  const hr=new Date().getHours();
+  const card=(p,k)=>{
+    const w=wx[k];if(!w)return"";
     const sd=w.hourly&&w.hourly.snow_depth?w.hourly.snow_depth[hr]:null;
-    if(k===0)h+='<div class="day">📍 Meteo · '+p[0]+'</div>';
-    if(k===1)h+='<div class="day">⛷️ Neve in montagna</div><div class="note">Valori stimati da modello meteo (non sono i bollettini degli impianti): per piste e impianti aperti controlla i siti delle località.</div>';
-    let c=`<div class="wc"><h4>${WI(w.current.weather_code)} ${p[0]} · ${Math.round(w.current.temperature_2m)}°${p[3]?` · neve al suolo ${sd==null?"n.d.":Math.round(sd*100)+" cm"}`:""}</h4>`;
+    let c=`<div class="wc"><h4>${WI(w.current.weather_code)} ${esc(p.n)} · ${Math.round(w.current.temperature_2m)}°${p.m?` · neve al suolo ${sd==null?"n.d.":Math.round(sd*100)+" cm"}`:""}<span style="float:right"><button class="chip sm ptog" data-i="${k}" title="Mostra come montagna/neve">${p.m?"⛷️":"🏙️"}</button><button class="chip sm prem" data-i="${k}" title="Rimuovi">✕</button></span></h4>`;
     w.daily.time.forEach((d,i)=>{
       const sn=w.daily.snowfall_sum[i],pr=w.daily.precipitation_sum[i];
-      c+=`<div class="wr"><span>${dn(d)}</span><span>${WI(w.daily.weather_code[i])}</span><span>${Math.round(w.daily.temperature_2m_min[i])}° / ${Math.round(w.daily.temperature_2m_max[i])}°</span><span class="r">${p[3]?`❄️ ${sn>0?sn.toFixed(1)+" cm":"—"}`:`💧 ${pr>0?pr.toFixed(1)+" mm":"—"}`}</span></div>`;
+      c+=`<div class="wr"><span>${dn(d)}</span><span>${WI(w.daily.weather_code[i])}</span><span>${Math.round(w.daily.temperature_2m_min[i])}° / ${Math.round(w.daily.temperature_2m_max[i])}°</span><span class="r">${p.m?`❄️ ${sn>0?sn.toFixed(1)+" cm":"—"}`:`💧 ${pr>0?pr.toFixed(1)+" mm":"—"}`}</span></div>`;
     });
-    h+=c+"</div>";
-  });
-  L.innerHTML=h;
+    return c+"</div>";
+  };
+  let h='',a1=P.map((p,k)=>[p,k]).filter(x=>!x[0].m),a2=P.map((p,k)=>[p,k]).filter(x=>x[0].m);
+  if(a1.length)h+='<div class="day">📍 Meteo</div>'+a1.map(x=>card(...x)).join("");
+  if(a2.length)h+='<div class="day">⛷️ Neve in montagna</div><div class="note">Valori stimati da modello meteo (non sono i bollettini degli impianti): per piste e impianti aperti controlla i siti delle località.</div>'+a2.map(x=>card(...x)).join("");
+  L.innerHTML=h+ui+'<div style="text-align:center"><button class="chip" id="prst">↺ Ripristina località predefinite</button></div>';
+}
+async function geo(){
+  const v=($("#pq")||{}).value;if(!v||!v.trim())return;const R=$("#pres");R.innerHTML='<div class="note">Cerco…</div>';
+  try{
+    const r=await fetch("https://geocoding-api.open-meteo.com/v1/search?count=6&language=it&format=json&name="+encodeURIComponent(v.trim()));const j=await r.json();
+    R.innerHTML=(j.results||[]).map(x=>`<div class="wr"><span style="width:auto;flex:1;color:var(--tx);text-transform:none">${esc(x.name)} <small style="color:var(--mu)">${esc([x.admin1,x.country].filter(Boolean).join(", "))}${x.elevation!=null?" · "+Math.round(x.elevation)+" m":""}</small></span><button class="chip sm padd" data-n="${esc(x.name)}" data-a="${x.latitude}" data-o="${x.longitude}" data-m="${(x.elevation||0)>=1000?1:0}">➕</button></div>`).join("")||'<div class="note">Nessun risultato.</div>';
+  }catch(e){R.innerHTML='<div class="note">Ricerca non disponibile.</div>'}
 }
 const STOP=/leggi anche|correlat|altre notizie|ultime notizie|potrebbe interessarti|ti potrebbe|articoli simili|commenti|condividi|più letti|guarda anche|vedi anche|lascia un commento|argomenti|tag:|iscriviti|notizie di|dal network|in evidenza|consigliat/i;
 const JUNK=/cookie|consenso|IABV2|privacy|gdpr|accett|newsletter|iscriviti|©|tutti i diritti|seguici su|condividi|leggi anche|pubblicità|abbonati|javascript/i;
