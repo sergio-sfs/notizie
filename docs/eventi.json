@@ -10,7 +10,8 @@
   "Frecce Tricolori: il calendario 2026 è concluso (ultimo air show a Salerno, 25–27/9) e quello 2027 non risulta ancora pubblicato.",
   "EICMA (5–8/11) e Auto e Moto d'Epoca (22–25/10) si sono già svolti.",
   "🏰 Castelli e luoghi da visitare: dove la pagina lo riporta, ho indicato l'evento in corso nello stesso posto.",
-  "Aggiunta fonte Giraitalia.com (calendari per regione/mese): letti Trentino-Alto Adige dic 2026, Sardegna, Lazio. Restano da leggere le altre regioni."
+  "Aggiunta fonte Giraitalia.com (calendari per regione/mese): letti Trentino-Alto Adige dic 2026, Sardegna, Lazio. Restano da leggere le altre regioni.",
+  "🧭 Esperienze, Beni FAI e gite: programma Natale 2026 dei Beni FAI non ancora pubblicato, indicate le edizioni 2025 come riferimento."
  ],
  "cats": [
   {
@@ -1134,6 +1135,113 @@
     [
      "Giraitalia · eventi per regione e mese",
      "https://www.giraitalia.com/eventi/lombardia"
+    ]
+   ]
+  },
+  {
+   "id": "esperienze",
+   "name": "Esperienze, Beni FAI e gite",
+   "emoji": "🧭",
+   "items": [
+    {
+     "r": "PIE",
+     "t": "FAI · Castello di Masino (Caravino)",
+     "d": "Natale nei Beni FAI: nel 2025 visite dal 26/11 al 14/12, mer–dom. Programma 2026 non ancora trovato.",
+     "l": "https://fondoambiente.it/news/viviamo-insieme-il-natale-nei-beni-del-fai-in-tutta-italia"
+    },
+    {
+     "r": "PIE",
+     "t": "FAI · Castello della Manta (Saluzzo)",
+     "d": "Eventi natalizi nel 2025. Programma 2026 da confermare.",
+     "l": "https://www.mentelocale.it/torino/101678-natale-nei-beni-del-fai-eventi-visite-speciali-e-attivit-per-famiglie-al-castello-di-masino-e-al-castello-della-manta.htm"
+    },
+    {
+     "r": "TAA",
+     "t": "FAI · Castello di Avio (Sabbionara)",
+     "d": "Natale al Castello: 21/11 – 20/12/2026, solo weekend.",
+     "l": "https://www.iltrentinodeibambini.it/de/?p=223622"
+    },
+    {
+     "r": "LOM",
+     "t": "FAI · Villa Necchi Campiglio (Milano)",
+     "d": "Nel 2025 «La Tavola di Natale» fino all'11/01. Allestimento 2026 da confermare.",
+     "l": "https://fondoambiente.it/news/natale-in-mostra-le-esposizioni-darte-e-i-presepi-nei-beni-fai"
+    },
+    {
+     "r": "LOM",
+     "t": "FAI · Villa Fogazzaro Roi (Valsolda) e Villa del Balbianello (Tremezzina)",
+     "d": "Villa Fogazzaro addobbata con visite guidate nel 2025. Balbianello è il Bene FAI più visitato alle Giornate d'Autunno 2026.",
+     "l": "https://www.ilgiorno.it/cosa-fare/il-natale-nei-beni-del-fai-5595e820"
+    },
+    {
+     "r": "LIG",
+     "t": "FAI · Abbazia di San Fruttuoso (Camogli)",
+     "d": "Eventi di Natale nei Beni FAI. Programma 2026 da confermare.",
+     "l": "https://fondoambiente.it/news/viviamo-insieme-il-natale-nei-beni-del-fai-in-tutta-italia"
+    },
+    {
+     "r": "MAR",
+     "t": "FAI · Orto sul Colle dell'Infinito (Recanati)",
+     "d": "Eventi natalizi per famiglie nel 2025. Programma 2026 da confermare.",
+     "l": "https://fondoambiente.it/news/viviamo-insieme-il-natale-nei-beni-del-fai-in-tutta-italia"
+    },
+    {
+     "r": "SIC",
+     "t": "FAI · Giardino della Kolymbethra (Valle dei Templi)",
+     "d": "«Il Natale dei Contadini» 27–30/12 nel 2025. Date 2026 da confermare.",
+     "l": "https://siviaggia.it/notizie/eventi-beni-fai-natale-2025/563396/amp/"
+    },
+    {
+     "r": "TAA",
+     "t": "Gita · Trenino dei Castelli (edizione invernale)",
+     "d": "Giornata in treno da Trento tra Val di Non, Val di Sole e castelli con presepi e mercatino. Date non indicate nel testo letto.",
+     "l": "https://siviaggia.it/notizie/trentino-trenino-castelli-winter-edition/608384/"
+    },
+    {
+     "r": "TAA",
+     "t": "Gita · Trenatale del Renon (BZ) · 4/12/2026",
+     "d": "Trenino d'epoca sull'altopiano del Renon.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Gita · Trenino di Natale e Villaggio di Babbo Natale · Trento · 1–5/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Gita · Bolzano–Renon–Merano: mercatini di Natale in giornata",
+     "d": "Mercatini dal 26/11/2026 al 6/01/2027.",
+     "l": "https://travel.thewom.it/italia/citta-italiane-per-natale.html"
+    },
+    {
+     "r": "LAZ",
+     "t": "Gita · Greccio (RI) · santuario del Presepe e mostra mercato",
+     "d": "Mostra mercato del Presepio dal 28/11/2026 al 6/01/2027.",
+     "l": "https://travel.thewom.it/italia/lazio/mercatini-di-natale-lazio.html"
+    },
+    {
+     "r": "PIE",
+     "t": "Gita · Asti, Govone e San Damiano in un giorno",
+     "d": "Magico Paese di Natale fino al 20/12/2026, Casa di Babbo Natale a pagamento.",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-piu-belli-italia-classifica.html"
+    },
+    {
+     "r": "PIE",
+     "t": "Giornate FAI di Primavera 2027 · date da annunciare",
+     "d": "Edizione 2026: 780 luoghi aperti in 400 città. Il FAI le pubblica a inizio anno.",
+     "l": "https://www.lapresse.it/cultura/2026/03/09/tornano-le-giornate-fai-di-primavera-780-luoghi-aperti-in-400-citta-italiane/"
+    }
+   ],
+   "links": [
+    [
+     "FAI · Eventi nei Beni",
+     "https://fondoambiente.it/news/viviamo-insieme-il-natale-nei-beni-del-fai-in-tutta-italia"
+    ],
+    [
+     "Castelli Aperti FVG",
+     "https://www.turismofvg.it/events/open-castle-spring-2026"
     ]
    ]
   },
