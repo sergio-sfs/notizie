@@ -42,6 +42,7 @@ div.n:active{opacity:.85}
 .b{margin-top:10px;border-top:1px solid var(--bd);padding-top:10px;font-size:16px;line-height:1.55;cursor:auto;user-select:text}
 .b p{margin:0 0 12px}.b h3{font-size:16px;margin:14px 0 6px}
 .b .go{display:inline-block;margin:4px 14px 2px 0;color:var(--ac);font-weight:600;text-decoration:none}
+.ext.sh{background:none;font:inherit;font-size:12px;cursor:pointer}
 .ext{color:var(--ac);font-weight:600;text-decoration:none;border:1px solid var(--bd);border-radius:6px;padding:0 6px}
 .caret{margin-left:auto;color:var(--ac)}
 .empty{text-align:center;color:var(--mu);padding:40px 10px}
@@ -51,7 +52,7 @@ div.n:active{opacity:.85}
 <header>
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v6</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v7</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <main id="list"><div class="empty">Caricamento…</div></main>
 <script>
@@ -88,13 +89,15 @@ function render(){
     if(dl!==last){h+=`<div class="day">${dl}</div>`;last=dl}
     h+=`<div class="n ${read[i.u]?"read":""}" data-u="${esc(i.u)}" data-l="${i.l?1:0}">
       <div class="t">${esc(i.t)}</div>${i.x&&i.x!==i.t?`<div class="x">${esc(i.x)}</div>`:""}
-      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span>${i.l?'<span class="tp">🌐 Lingua straniera</span>':""}<span>${d.toLocaleDateString("it-IT",{day:"numeric",month:"short",year:"numeric"})} · ${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<a class="ext" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer">↗ Sito</a><span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
+      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span>${i.l?'<span class="tp">🌐 Lingua straniera</span>':""}<span>${d.toLocaleDateString("it-IT",{day:"numeric",month:"short",year:"numeric"})} · ${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<button class="ext sh">⤴ Condividi</button><a class="ext" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer">↗ Sito</a><span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
   });
   $("#list").innerHTML=h||'<div class="empty">Nessuna notizia.</div>';
 }
 document.addEventListener("click",e=>{
   const tb=e.target.closest(".tab");if(tb){cur=tb.dataset.id;render();scrollTo(0,0);return}
   if(e.target.closest("#off")){onlyOff=!onlyOff;render();return}
+  const sh=e.target.closest(".sh");if(sh){const n=sh.closest(".n"),u=n.dataset.u,ti=n.querySelector(".t").textContent;
+    (navigator.share?navigator.share({title:ti,url:u}):navigator.clipboard.writeText(ti+"\n"+u).then(()=>{sh.textContent="✅ Copiato";setTimeout(()=>sh.textContent="⤴ Condividi",2000)})).catch(()=>{});return}
   const ex=e.target.closest("a.ext");if(ex){const n=ex.closest(".n");read[n.dataset.u]=Date.now();saveRead();n.classList.add("read");return}
   if(e.target.closest(".b"))return;
   const a=e.target.closest(".n");if(a)toggle(a)

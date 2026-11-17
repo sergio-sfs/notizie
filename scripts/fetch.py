@@ -20,9 +20,21 @@ TOPICS = [
    ['site:comofootball.com', '"Como 1907"', 'Como Fabregas']),
  ("juve", "Juventus", "⚪⚫", ["juventus.com"],
    ['site:juventus.com', 'Juventus Serie A', 'Juventus calcio notizie']),
+ ("ansa", "ANSA", "📰", ["ansa.it"], ['site:ansa.it']),
+ ("corriere", "Corriere", "🗞️", ["corriere.it"], ['site:corriere.it']),
+ ("cadorago", "Cadorago", "📍", [], ['Cadorago']),
+ ("guanzate", "Guanzate", "📍", [], ['Guanzate']),
+ ("noci", "Noci", "📍", [], ['Noci Bari OR "Noci Puglia"']),
  ("fisco", "Fisco · 730", "🧾", ["agenziaentrate.gov.it", "fiscooggi.it", "finanze.gov.it", "mef.gov.it", "inps.it"],
    ['site:agenziaentrate.gov.it', 'site:fiscooggi.it', 'modello 730 novità', 'Irpef detrazioni novità', '730 precompilata']),
 ]
+
+# feed RSS diretti (link diretti agli articoli); se falliscono resta la ricerca Bing
+FEEDS = {
+ "ansa": ["https://www.ansa.it/sito/ansait_rss.xml"],
+ "corriere": ["https://xml2.corriereobjects.it/rss/homepage.xml"],
+}
+MAXN = {"ansa": 150, "corriere": 100}
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; notizie-app)"})
@@ -73,6 +85,19 @@ def fetch(query, official_domains):
                     "o": off, "x": clean(it.findtext("description")), "l": lang_en})
     return out
 
+def fetch_feed(url, domains, label):
+    out = []
+    root = ET.fromstring(get(url))
+    for it in root.iter("item"):
+        title = clean(it.findtext("title"), 300)
+        link = (it.findtext("link") or "").strip()
+        if not title or not link.startswith("http"): continue
+        try: dt = parsedate_to_datetime(it.findtext("pubDate")).astimezone(timezone.utc)
+        except Exception: continue
+        out.append({"t": title, "s": label, "u": link, "d": dt.isoformat(timespec="seconds"),
+                    "o": True, "x": clean(it.findtext("description")), "l": False})
+    return out
+
 def main():
     path = "docs/news.json"
     try: old = json.load(open(path, encoding="utf-8"))
@@ -82,6 +107,9 @@ def main():
     result = []
     for tid, name, emoji, domains, queries in TOPICS:
         items = [i for i in oldmap.get(tid, []) if not blocked(i["u"]) and "news.google.com" not in i["u"] ]
+        for fu in FEEDS.get(tid, []):
+            try: items += fetch_feed(fu, domains, name)
+            except Exception as e: print(f"! {tid} feed: {e}", file=sys.stderr)
         for q in queries:
             try: items += fetch(q, domains)
             except Exception as e: print(f"! {tid} [{q}]: {e}", file=sys.stderr)
@@ -92,7 +120,7 @@ def main():
             seen[k] = i; uniq.append(i)
         uniq = [i for i in uniq if datetime.fromisoformat(i["d"]) >= cutoff]
         uniq.sort(key=lambda x: x["d"], reverse=True)
-        result.append({"id": tid, "name": name, "emoji": emoji, "items": uniq[:MAX_PER_TOPIC]})
+        result.append({"id": tid, "name": name, "emoji": emoji, "items": uniq[:MAXN.get(tid, MAX_PER_TOPIC)]})
     new = {"topics": result}
     changed = [t["items"] for t in result] != [t.get("items") for t in old.get("topics", [])]
     new["updated"] = datetime.now(timezone.utc).isoformat(timespec="seconds") if changed else old.get("updated")
