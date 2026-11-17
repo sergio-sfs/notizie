@@ -49,7 +49,8 @@ div.n:active{opacity:.85}
 .bar2{display:flex;gap:6px;flex-wrap:nowrap;padding:2px 0 4px}
 .bar2 select{flex:1;min-width:0;text-overflow:ellipsis;font-size:13px;padding:6px 8px}
 .sm{font-size:12px;padding:2px 8px;margin-left:4px}
-.wc{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px}
+.wc{--c:var(--ac);cursor:pointer;background:var(--card);border:2px solid color-mix(in srgb,var(--c) 70%,var(--bd));border-left:8px solid var(--c);border-radius:12px;padding:10px 12px;margin-bottom:8px}
+.wc.sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--card));box-shadow:0 0 0 2px var(--c)}
 .wc h4{margin:0 0 6px;font-size:15px}
 .wr{display:flex;gap:10px;align-items:center;font-size:14px;padding:3px 0;border-top:1px solid var(--bd)}
 .wr span:first-child{width:62px;color:var(--mu);text-transform:capitalize}
@@ -76,7 +77,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v23</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v24</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -143,6 +144,7 @@ document.addEventListener("click",e=>{
   const tg=e.target.closest(".ptog");if(tg){const P=getPl().map(x=>({...x}));P[+tg.dataset.i].m^=1;setPl(P);renderWeather();return}
   if(e.target.closest("#pgo")){geo();return}
   if(e.target.closest("#prst")){try{localStorage.removeItem("places")}catch(x){}wx=null;renderWeather();return}
+  const wc=e.target.closest(".wc");if(wc&&!e.target.closest("a,button,input,select")){const on=wc.classList.contains("sel");document.querySelectorAll(".wc.sel").forEach(x=>x.classList.remove("sel"));if(!on)wc.classList.add("sel");return}
   const tb=e.target.closest(".tab");if(tb){cur=tb.dataset.id;render();scrollTo(0,0);return}
   if(e.target.closest("#off")){onlyOff=!onlyOff;render();return}
   const st=e.target.closest(".sht");if(st){const n=st.closest(".n"),b=n.querySelector(".b"),ti=n.querySelector(".t").textContent,tx=[...b.querySelectorAll("p,h3")].map(x=>x.textContent).join("\n\n"),all=ti+"\n\n"+tx+"\n\n"+n.dataset.u;
