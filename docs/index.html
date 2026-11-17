@@ -101,6 +101,7 @@ document.addEventListener("click",e=>{
 });
 $("#q").addEventListener("input",e=>{q=e.target.value.trim();render()});
 const cache={};
+const STOP=/leggi anche|correlat|altre notizie|ultime notizie|potrebbe interessarti|ti potrebbe|articoli simili|commenti|condividi|più letti|guarda anche|vedi anche|lascia un commento|argomenti|tag:|iscriviti|notizie di|dal network|in evidenza|consigliat/i;
 const JUNK=/cookie|consenso|IABV2|privacy|gdpr|accett|newsletter|iscriviti|©|tutti i diritti|seguici su|condividi|leggi anche|pubblicità|abbonati|javascript/i;
 function parse(md,title){
   let t=md.includes("Markdown Content:")?md.split("Markdown Content:").slice(1).join(""):md;
@@ -109,8 +110,16 @@ function parse(md,title){
   const k=(title||"").toLowerCase().replace(/\W+/g," ").trim().slice(0,25);
   let st=k?bl.findIndex(x=>/^#{1,4} /.test(x)&&x.toLowerCase().replace(/\W+/g," ").includes(k)):-1;
   const src=st>=0?bl.slice(st+1):bl;
-  const good=src.filter(x=>x.length>=70&&!JUNK.test(x));
-  return good.slice(0,80);
+  const tw=new Set((title||"").toLowerCase().match(/[a-zàèéìòù]{4,}/g)||[]);
+  const good=[];
+  for(const x of src){
+    const hd=/^#{1,4} /.test(x);
+    if((hd||x.length<60)&&STOP.test(x))break;
+    if(hd&&good.length>=2){const w=x.toLowerCase().match(/[a-zàèéìòù]{4,}/g)||[];if(w.length>=3&&!w.some(y=>tw.has(y)))break}
+    if(x.length>=70&&!JUNK.test(x))good.push(x);
+    if(good.length>=(st>=0?60:15))break;
+  }
+  return good;
 }
 async function toggle(a){
   const b=a.querySelector(".b"),u=a.dataset.u,c=a.querySelector(".caret");
