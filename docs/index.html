@@ -24,14 +24,18 @@ input[type=search]{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--bd
 .bar{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:12px;padding:4px 0}
 main{max-width:720px;margin:0 auto;padding:8px 12px 40px}
 .day{font-size:12px;font-weight:600;color:var(--mu);text-transform:uppercase;letter-spacing:.04em;margin:14px 2px 6px}
-a.n{display:block;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px;color:inherit;text-decoration:none}
-a.n:active{opacity:.7}
-a.n.read .t{color:var(--mu);font-weight:400}
+div.n{display:block;cursor:pointer;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px;color:inherit;text-decoration:none}
+div.n:active{opacity:.85}
+.n.read .t{color:var(--mu);font-weight:400}
 .t{font-weight:600;font-size:15.5px}
 .m{display:flex;gap:8px;flex-wrap:wrap;margin-top:5px;font-size:12px;color:var(--mu);align-items:center}
 .x{color:var(--mu);font-size:13px;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .of{color:var(--of);font-weight:600}
 .tp{background:var(--bd);border-radius:6px;padding:0 6px}
+.b{margin-top:10px;border-top:1px solid var(--bd);padding-top:10px;font-size:16px;line-height:1.55;cursor:auto;user-select:text}
+.b p{margin:0 0 12px}.b h3{font-size:16px;margin:14px 0 6px}
+.b .go{display:inline-block;margin:4px 0 2px;color:var(--ac);font-weight:600;text-decoration:none}
+.caret{margin-left:auto;color:var(--ac)}
 .empty{text-align:center;color:var(--mu);padding:40px 10px}
 </style>
 </head>
@@ -71,18 +75,41 @@ function render(){
   L.forEach(i=>{
     const d=new Date(i.d),dl=dayLabel(d);
     if(dl!==last){h+=`<div class="day">${dl}</div>`;last=dl}
-    h+=`<a class="n ${read[i.u]?"read":""}" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer" data-u="${esc(i.u)}">
+    h+=`<div class="n ${read[i.u]?"read":""}" data-u="${esc(i.u)}">
       <div class="t">${esc(i.t)}</div>${i.x&&i.x!==i.t?`<div class="x">${esc(i.x)}</div>`:""}
-      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span><span>${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}</div></a>`;
+      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span><span>${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
   });
   $("#list").innerHTML=h||'<div class="empty">Nessuna notizia.</div>';
 }
 document.addEventListener("click",e=>{
   const tb=e.target.closest(".tab");if(tb){cur=tb.dataset.id;render();scrollTo(0,0);return}
   if(e.target.closest("#off")){onlyOff=!onlyOff;render();return}
-  const a=e.target.closest("a.n");if(a){read[a.dataset.u]=Date.now();saveRead();a.classList.add("read")}
+  if(e.target.closest(".b"))return;
+  const a=e.target.closest(".n");if(a)toggle(a)
 });
 $("#q").addEventListener("input",e=>{q=e.target.value.trim();render()});
+const cache={};
+function parse(md){
+  let t=md.includes("Markdown Content:")?md.split("Markdown Content:").slice(1).join(""):md;
+  t=t.replace(/!\[[^\]]*\]\([^)]*\)/g,"").replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").replace(/[*_`>]/g,"");
+  const bl=t.split(/\n\s*\n/).map(x=>x.replace(/\s+/g," ").trim()).filter(Boolean);
+  const good=bl.filter(x=>/^#{1,4} /.test(x)||x.length>=70);
+  return (good.length>=3?good:bl).slice(0,80);
+}
+async function toggle(a){
+  const b=a.querySelector(".b"),u=a.dataset.u,c=a.querySelector(".caret");
+  if(!b.hidden){b.hidden=true;c.textContent="▾ Leggi";return}
+  b.hidden=false;c.textContent="▴ Chiudi";read[u]=Date.now();saveRead();a.classList.add("read");
+  const link=`<a class="go" href="${esc(u)}" target="_blank" rel="noopener noreferrer">↗ Apri sul sito originale</a>`;
+  if(cache[u]){b.innerHTML=cache[u]+link;return}
+  b.innerHTML='<p style="color:var(--mu)">Carico l\'articolo…</p>'+link;
+  try{
+    const r=await fetch("https://r.jina.ai/"+u);if(!r.ok)throw 0;
+    const ps=parse(await r.text());if(!ps.length)throw 0;
+    cache[u]=ps.map(x=>/^#{1,4} /.test(x)?`<h3>${esc(x.replace(/^#+ /,""))}</h3>`:`<p>${esc(x)}</p>`).join("");
+    b.innerHTML=cache[u]+link;
+  }catch(e){b.innerHTML='<p style="color:var(--mu)">Impossibile leggere qui (sito a pagamento o protetto).</p>'+link}
+}
 const load=()=>fetch("news.json?"+Date.now()).then(r=>r.json()).then(j=>{const ch=j.updated!==data.updated;data=j;render();return ch});
 load().catch(()=>{$("#list").innerHTML='<div class="empty">Errore di caricamento.</div>'});
 const getTok=()=>{try{return localStorage.getItem("gh")}catch(e){return null}};
