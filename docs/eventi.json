@@ -6,7 +6,7 @@
   "Controllo del 17 nov 2026, tutte le regioni. Per aggiornare scrivimi «aggiorna eventi».",
   "Per fiere e sagre ho inserito anche i grandi eventi con oltre 5.000 presenze. Nei concerti trovi l'etichetta 🥁 percussioni oppure 🎵 altro genere.",
   "Date da TicketOne, calendari regionali, siti turistici e portali di sagre: conferma sempre sul sito dell'organizzatore. Dove scrivo «da confermare» è l'edizione precedente.",
-  "Fuori dalla Lombardia la copertura è più rada; per Sardegna, Calabria, Basilicata e Molise le fonti trovate sono poche."
+  "Seconda passata sui siti istituzionali: calendario fiere Regione Piemonte e Visit Tuscany. Per le altre regioni i portali ufficiali non mostravano elenchi leggibili, quindi restano aggregatori e siti turistici."
  ],
  "cats": [
   {
@@ -391,6 +391,48 @@
      "t": "Mercatini di Natale di Bolzano, Merano, Bressanone, Vipiteno e Brunico · 26–27 nov 2026 – 6 gen 2027",
      "d": "I più grandi d'Italia. Trento dal 20/11/2026 al 6/1/2027.",
      "l": "https://www.cosedicasa.com/news/eventi/mercatini-di-natale/mercatini-di-natale-2026-in-alto-adige-con-lo-sfondo-delle-montagne-torna-la-magia-delle-feste-15008"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Nazionale del Tartufo · Asti · 12–13/12/2026",
+     "d": "Calendario ufficiale Regione Piemonte (visitatori non indicati).",
+     "l": "https://www.regione.piemonte.it/web/media/55082/download"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera del Bue Grasso · Carrù (CN) · 17–20/12/2026",
+     "d": "116ª edizione. Calendario ufficiale Regione Piemonte (visitatori non indicati).",
+     "l": "https://www.regione.piemonte.it/web/media/55082/download"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Nazionale del Bue Grasso · Moncalvo (AT) · 2/12/2026",
+     "d": "389ª edizione. Calendario ufficiale Regione Piemonte (visitatori non indicati).",
+     "l": "https://www.regione.piemonte.it/web/media/55082/download"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Fredda della Lumaca · Borgo San Dalmazzo (CN) · 4–8/12/2026",
+     "d": "457ª edizione. Calendario ufficiale Regione Piemonte (visitatori non indicati).",
+     "l": "https://www.regione.piemonte.it/web/media/55082/download"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Nazionale del Cappone · Morozzo (CN) · 13–14/12/2026",
+     "d": "Calendario ufficiale Regione Piemonte (visitatori non indicati).",
+     "l": "https://www.regione.piemonte.it/web/media/55082/download"
+    },
+    {
+     "r": "PIE",
+     "t": "Acqui & Sapori, Mostra Regionale del Tartufo · Acqui Terme · 21/11/2026",
+     "d": "Calendario ufficiale Regione Piemonte (visitatori non indicati).",
+     "l": "https://www.regione.piemonte.it/web/media/55082/download"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera del Porro · Cervere (CN) · 7–22/11/2026",
+     "d": "47ª edizione. Calendario ufficiale Regione Piemonte (visitatori non indicati).",
+     "l": "https://www.regione.piemonte.it/web/media/55082/download"
     }
    ],
    "links": [
@@ -413,6 +455,26 @@
      "Bologna Welcome fiere",
      "https://www.bolognawelcome.com/it/eventi/fiere",
      "ER"
+    ],
+    [
+     "Calendario fiere Regione Piemonte",
+     "https://www.regione.piemonte.it/web/media/55082/download",
+     "PIE"
+    ],
+    [
+     "Visit Tuscany eventi",
+     "https://visittuscany.com/it/eventi/",
+     "TOS"
+    ],
+    [
+     "Abruzzo Turismo",
+     "https://abruzzoturismo.it/en/",
+     "ABR"
+    ],
+    [
+     "Turismo Torino agenda",
+     "https://turismotorino.org/en/visita/eventi/agenda",
+     "PIE"
     ]
    ]
   },
@@ -683,6 +745,42 @@
      "t": "Eventi natalizi · Genova · dicembre 2026 – gennaio 2027",
      "d": "Con l'albero di Piazza De Ferrari.",
      "l": "https://www.thewomtravel.fr/italie/illuminations-noel-italie-turin.html"
+    },
+    {
+     "r": "TOS",
+     "t": "Weihnachtsmarkt · Firenze, Piazza Santa Croce · 14/11–20/12/2026",
+     "d": "Ingresso gratuito.",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-toscana.html"
+    },
+    {
+     "r": "TOS",
+     "t": "Mercato nel Campo · Siena · 4–8/12/2026",
+     "d": "Mercato medievale in Piazza del Campo.",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-toscana.html"
+    },
+    {
+     "r": "TOS",
+     "t": "Lucca Magico Natale · 22/11/2026 – 6/01/2027",
+     "d": "Mercatino in Piazza Napoleone.",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-toscana.html"
+    },
+    {
+     "r": "TOS",
+     "t": "Natale a Montepulciano · 21/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-toscana.html"
+    },
+    {
+     "r": "TOS",
+     "t": "Città del Natale · Empoli · 14/11/2026 – 10/01/2027",
+     "d": "Mercatini in giornate selezionate fino al 24/12.",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-toscana.html"
+    },
+    {
+     "r": "TOS",
+     "t": "Calenzano Christmas e Cortona Città del Natale · da confermare",
+     "d": "Date 2026 non ancora pubblicate (2025: 29–30 nov e 5 dic–6 gen).",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-toscana.html"
     }
    ],
    "links": [
