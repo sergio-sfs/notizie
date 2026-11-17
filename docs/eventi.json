@@ -12,7 +12,8 @@
   "🏰 Castelli e luoghi da visitare: dove la pagina lo riporta, ho indicato l'evento in corso nello stesso posto.",
   "Aggiunta fonte Giraitalia.com (calendari per regione/mese): letti Trentino-Alto Adige dic 2026, Sardegna, Lazio. Restano da leggere le altre regioni.",
   "🧭 Esperienze, Beni FAI e gite: programma Natale 2026 dei Beni FAI non ancora pubblicato, indicate le edizioni 2025 come riferimento.",
-  "🎺 Bande: i corpi bandistici pubblicano i programmi a ridosso delle date; trovate 5 voci con data 2026. Giraitalia non ha una sezione bande."
+  "🎺 Bande: i corpi bandistici pubblicano i programmi a ridosso delle date; trovate 5 voci con data 2026. Giraitalia non ha una sezione bande.",
+  "Aggiunta fonte Sagramap.com (calendari novembre e dicembre per regione). Le date sono indicative: il sito stesso consiglia di verificarle sulle fonti ufficiali."
  ],
  "cats": [
   {
@@ -969,6 +970,576 @@
      "t": "Brescia, Bergamo, Mantova · piccoli mercatini 5 e 13/12/2026",
      "d": "Colere (villaggio 5/12), Vestone (5/12), Bovezzo, Paitone, Gussago (13/12), Pegognaga MN (13/12).",
      "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+    },
+    {
+     "r": "PIE",
+     "t": "Sapori d'autunno · Grana Monferrato (AT) · 7–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sapori-dautunno-a-grana-monferrato"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera del Porro · Cervere (CN) · 7–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-del-porro-di-cervere"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera del Tartufo e dei Vini del Roero · Vezza d'Alba (CN) · 16–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-del-tartufo-e-dei-vini-del-roero-vezza-dalba"
+    },
+    {
+     "r": "PIE",
+     "t": "Acqui & Sapori · Mostra Regionale del Tartufo · Acqui Terme (AL) · 21–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/acqui-sapori-mostra-regionale-del-tartufo-acqui-terme"
+    },
+    {
+     "r": "PIE",
+     "t": "Bagna Cauda Day · Asti · 20–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/bagna-cauda-day-asti"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Nazionale di Sua Maestà il Bue Grasso · Moncalvo (AT) · 2/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-nazionale-di-sua-maesta-il-bue-grasso-moncalvo"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Fredda della Lumaca · Borgo San Dalmazzo (CN) · 4–8/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-fredda-della-lumaca-borgo-san-dalmazzo"
+    },
+    {
+     "r": "PIE",
+     "t": "Dolci Terre di Novi · Novi Ligure (AL) · 5–8/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/dolci-terre-di-novi-novi-ligure"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Nazionale del Tartufo · San Damiano d'Asti (AT) · 5–7/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-nazionale-del-tartufo-san-damiano-dasti"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera del Bue Grasso e del Manzo · Nizza Monferrato (AT) · 5–6/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-del-bue-grasso-e-del-manzo-nizza-monferrato"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Nazionale del Cappone · Morozzo (CN) · 13–14/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-nazionale-del-cappone-di-morozzo"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Storica del Cappone Nostrano · San Damiano d'Asti (AT) · 13/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-storica-del-cappone-nostrano-di-san-damiano-dasti"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera del Bovino e Mostra del Porro · Carmagnola (TO) · 13/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-del-bovino-da-carne-di-razza-piemontese-e-della-giora-carmagnola"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Nazionale del Bue Grasso · Carrù (CN) · 17–20/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-nazionale-del-bue-grasso-carru"
+    },
+    {
+     "r": "LOM",
+     "t": "Festa del Torrone · Cremona · 7–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-del-torrone-di-cremona"
+    },
+    {
+     "r": "LOM",
+     "t": "Fiera Cristo Re · Brescia · 22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-cristo-re-brescia"
+    },
+    {
+     "r": "LOM",
+     "t": "Fiera di Sant'Andrea · Chiuro (SO) · 29/11 – 6/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-di-santandrea-chiuro"
+    },
+    {
+     "r": "LOM",
+     "t": "Natale Rivoltano · Rivolta d'Adda (CR) · 30/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-rivoltano-rivolta-dadda"
+    },
+    {
+     "r": "LOM",
+     "t": "Sondrio Natale · 5–31/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/sondrio-natale"
+    },
+    {
+     "r": "LOM",
+     "t": "Fiera di Santa Lucia · Crema (CR) · 11–12/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-di-santa-lucia-crema"
+    },
+    {
+     "r": "LOM",
+     "t": "Natale nel Villaggio · Livigno (SO) · 27/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-nel-villaggio-livigno"
+    },
+    {
+     "r": "LOM",
+     "t": "Villaggio di Babbo Natale · Sellero (BS) · 6/12/2026 – 7/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/villaggio-di-babbo-natale-sellero"
+    },
+    {
+     "r": "LOM",
+     "t": "Mercatino di Dicembre · Bellagio (CO) · 6/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatino-di-dicembre-bellagio"
+    },
+    {
+     "r": "LOM",
+     "t": "Altri ~80 eventi natalizi lombardi di dicembre (Brescia, Bergamo, Valtellina, Mantova, Varese)",
+     "d": "Elenco completo su Sagramap, Lombardia dicembre 2026 (127 eventi).",
+     "l": "https://sagramap.com/sagre/mese/dicembre/lombardia"
+    },
+    {
+     "r": "VEN",
+     "t": "Festa del Radicchio di Rio San Martino · Scorzè (VE) · 6–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-del-radicchio-di-rio-san-martino-scorze"
+    },
+    {
+     "r": "VEN",
+     "t": "Taste of Earth (Bollito con la Peara) · Isola della Scala (VR) · 6–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/taste-of-earth-levoluzione-della-fiera-del-bollito-con-la-peara-isola-della-scala"
+    },
+    {
+     "r": "VEN",
+     "t": "Festa della Verza Moretta · Veronella (VR) · 12–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/13a-festa-della-verza-moretta-di-veronella"
+    },
+    {
+     "r": "VEN",
+     "t": "Festa del Bollito e della Pearà · Castagnaro (VR) · 20–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-del-bollito-e-della-peara-di-castagnaro"
+    },
+    {
+     "r": "VEN",
+     "t": "Fiera di Sant'Andrea · Portogruaro (VE) · 22–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-di-santandrea-portogruaro"
+    },
+    {
+     "r": "VEN",
+     "t": "Natale di Fiaba · Thiene (VI) · 28/11 – 6/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-di-fiaba-thiene"
+    },
+    {
+     "r": "VEN",
+     "t": "Antica Fiera di Santa Lucia · Verona · 11–13/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/antica-fiera-di-santa-lucia-verona"
+    },
+    {
+     "r": "VEN",
+     "t": "Mostra del Radicchio Variegato · Castelfranco Veneto (TV) · 12–13/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/mostra-del-radicchio-variegato-di-castelfranco-castelfranco-veneto"
+    },
+    {
+     "r": "VEN",
+     "t": "Natale con NOI · Marostica (VI) · 13–20/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-con-noi-mercatini-di-natale-marostica"
+    },
+    {
+     "r": "VEN",
+     "t": "Villaggio di Natale · Vittorio Veneto (TV) · 7/12/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/villaggio-di-natale-di-vittorio-veneto"
+    },
+    {
+     "r": "VEN",
+     "t": "La Grotta della Cometa · Roncade (TV) · 7/12/2026 – 24/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/la-grotta-della-cometa-roncade"
+    },
+    {
+     "r": "VEN",
+     "t": "Natale a Malcesine (VR) · 6/12/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-a-malcesine"
+    },
+    {
+     "r": "VEN",
+     "t": "Stelle a Natale · Cison di Valmarino (TV) · 5–13/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/stelle-a-natale-cison-di-valmarino"
+    },
+    {
+     "r": "VEN",
+     "t": "Altri ~40 mercatini e feste venete di dicembre",
+     "d": "Elenco completo su Sagramap, Veneto dicembre 2026 (52 eventi).",
+     "l": "https://sagramap.com/sagre/mese/dicembre/veneto"
+    },
+    {
+     "r": "ER",
+     "t": "Antica Fiera di Santa Lucia · Bologna · 6/11 – 27/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/antica-fiera-di-santa-lucia-bologna"
+    },
+    {
+     "r": "ER",
+     "t": "Sagra del Tartufo Autunnale · Terre del Reno (FE) · 6–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-del-tartufo-autunnale-terre-del-reno"
+    },
+    {
+     "r": "ER",
+     "t": "Truffle Week · Sarsina (FC) · 13–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/truffle-week-di-sarsina"
+    },
+    {
+     "r": "ER",
+     "t": "Sagra dell'Anguilla e delle Rane · Molinella (BO) · 14–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-dellanguilla-e-delle-rane-di-molinella"
+    },
+    {
+     "r": "ER",
+     "t": "Sagra della Polenta di Dodici Morelli · Cento (FE) · 14–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-della-polenta-di-dodici-morelli-cento"
+    },
+    {
+     "r": "ER",
+     "t": "L'Ambra di Talamello (RN) · 15–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/lambra-di-talamello"
+    },
+    {
+     "r": "ER",
+     "t": "Natale a Porta Galliera · Bologna · 19/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-a-porta-galliera-bologna"
+    },
+    {
+     "r": "ER",
+     "t": "Fiera di Natale di via Altabella · Bologna · 20/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-di-natale-di-via-altabella-bologna"
+    },
+    {
+     "r": "ER",
+     "t": "Mercatino di Natale Tirolese · Modena · 20/11/2026 – 7/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatino-di-natale-tirolese-modena-christmas-village"
+    },
+    {
+     "r": "ER",
+     "t": "Mercatino di Natale in Piazza Cavalli · Piacenza · 21/11 – 24/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatino-di-natale-in-piazza-cavalli-piacenza"
+    },
+    {
+     "r": "ER",
+     "t": "Rimini, il Capodanno più lungo del mondo · 21/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/rimini-il-capodanno-piu-lungo-del-mondo"
+    },
+    {
+     "r": "ER",
+     "t": "Festa del Formaggio di Fossa · Sogliano al Rubicone (FC) · 22/11 – 6/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-del-formaggio-di-fossa-sogliano-al-rubicone"
+    },
+    {
+     "r": "ER",
+     "t": "Fossa, Tartufo e Venere · Mondaino (RN) · 22–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/fossa-tartufo-e-venere-mondaino"
+    },
+    {
+     "r": "ER",
+     "t": "Gipsy Garden Winter Edition · Cervia (RA) · 28/11 – 6/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/gipsy-garden-winter-edition-di-cervia"
+    },
+    {
+     "r": "ER",
+     "t": "Natale e Capodanno a Reggio Emilia · 28/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-e-capodanno-a-reggio-emilia-mercatino-di-natale-in-piazza-san-prospero"
+    },
+    {
+     "r": "ER",
+     "t": "Mercatini di Natale di Parma · Piazza Ghiaia · 29/11 – 20/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatini-di-natale-di-parma-in-piazza-ghiaia"
+    },
+    {
+     "r": "TOS",
+     "t": "Sagra del Tartufo · San Miniato (PI) · 14–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-del-tartufo-san-miniato"
+    },
+    {
+     "r": "TOS",
+     "t": "Empoli Città del Natale · 14/11/2026 – 10/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/empoli-citta-del-natale"
+    },
+    {
+     "r": "TOS",
+     "t": "Il Desco · Sapori e saperi lucchesi · Lucca · 27–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/il-desco-sapori-e-saperi-lucchesi-lucca"
+    },
+    {
+     "r": "TOS",
+     "t": "Festa dell'Olio · Seggiano (GR) · 27–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-dellolio-seggiano"
+    },
+    {
+     "r": "TOS",
+     "t": "Radicondoli Christmas Market (SI) · 28–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/radicondoli-christmas-market"
+    },
+    {
+     "r": "UMB",
+     "t": "La Terra dei Mercanti · Bastia Umbra (PG) · 21–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/la-terra-dei-mercanti-bastia-umbra"
+    },
+    {
+     "r": "UMB",
+     "t": "A Natale regalati Orvieto · 27/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/a-natale-regalati-orvieto"
+    },
+    {
+     "r": "UMB",
+     "t": "Mercatini di Natale di Castel Rigone · Passignano sul Trasimeno · 14/11 – 20/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatini-di-natale-di-castel-rigone-passignano-sul-trasimeno"
+    },
+    {
+     "r": "MAR",
+     "t": "Festa della Cicerchia · Serra de' Conti (AN) · 27–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-della-cicerchia-serra-de-conti"
+    },
+    {
+     "r": "MAR",
+     "t": "CioccoVisciola · Pergola (PU) · dicembre",
+     "d": "",
+     "l": "https://sagramap.com/evento/cioccovisciola-pergola"
+    },
+    {
+     "r": "LAZ",
+     "t": "Viterbo Christmas Village · 21/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/viterbo-christmas-village"
+    },
+    {
+     "r": "LAZ",
+     "t": "Villaggio di Natale · Latina · 20/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/villaggio-di-natale-di-latina"
+    },
+    {
+     "r": "ABR",
+     "t": "ApruVino · Loreto Aprutino (PE) · 21/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/apruvino-loreto-aprutino"
+    },
+    {
+     "r": "ABR",
+     "t": "Festival Organistico Internazionale · Città Sant'Angelo (PE) · fino al 3/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/festival-organistico-internazionale-citta-santangelo"
+    },
+    {
+     "r": "CAM",
+     "t": "Dolce Avellino · 19–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/dolce-avellino"
+    },
+    {
+     "r": "CAM",
+     "t": "Sagra del Fagiolo di Controne (SA) · 28–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-del-fagiolo-di-controne"
+    },
+    {
+     "r": "PUG",
+     "t": "Sagra del Fungo Cardoncello · Gravina in Puglia (BA) · 21–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-del-fungo-cardoncello-gravina-in-puglia"
+    },
+    {
+     "r": "PUG",
+     "t": "Sagra du Chiacone · Bari · 28–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-du-chiacone-bari"
+    },
+    {
+     "r": "PUG",
+     "t": "Mercatino di San Nicola · Molfetta (BA) · 3–5/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatino-di-san-nicola-di-molfetta"
+    },
+    {
+     "r": "BAS",
+     "t": "Tesori dalla Terra · Tartufo Bianco di Basilicata · Matera · 20–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/tesori-dalla-terra-tartufo-bianco-pregiato-di-basilicata-matera"
+    },
+    {
+     "r": "BAS",
+     "t": "Mercatini di Natale di Matera · 4/12/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatini-di-natale-di-matera"
+    },
+    {
+     "r": "CAL",
+     "t": "Sorsi diGria · Cotronei (KR) · 20–21/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sorsi-digria-cotronei"
+    },
+    {
+     "r": "SIC",
+     "t": "Sagra dello Sfincione · Bagheria (PA) · 19–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-dello-sfincione-di-bagheria"
+    },
+    {
+     "r": "SIC",
+     "t": "Un giorno da pecora · Santa Ninfa (TP) · 21–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/un-giorno-da-pecora-sagra-della-pecora-della-valle-del-belice-santa-ninfa"
+    },
+    {
+     "r": "SIC",
+     "t": "Festa di Santa Barbara · Paternò (CT) · inizio dicembre",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-di-santa-barbara-a-paterno"
+    },
+    {
+     "r": "SAR",
+     "t": "Saboris Antigus · Gesico 22/11, Suelli 29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/saboris-antigus-di-gesico"
+    },
+    {
+     "r": "SAR",
+     "t": "Pane e Olio in Frantoio · Santadi · 28–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/pane-e-olio-in-frantoio-santadi"
+    },
+    {
+     "r": "FVG",
+     "t": "Sagra di San Filis · Flambro, Talmassons (UD) · 12–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/sagra-di-san-filis-a-flambro-talmassons"
+    },
+    {
+     "r": "FVG",
+     "t": "Fiera del Tartufo Bianco · Muzzana del Turgnano (UD) · 21–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-del-tartufo-bianco-pregiato-muzzana-del-turgnano"
+    },
+    {
+     "r": "FVG",
+     "t": "Chocofest · Gradisca d'Isonzo (GO) · 27–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/chocofest-la-festa-del-cioccolato-gradisca-disonzo"
+    },
+    {
+     "r": "FVG",
+     "t": "Fiera di San Nicolò · Trieste · 28/11 – 6/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/fiera-di-san-nicolo-di-trieste"
+    },
+    {
+     "r": "FVG",
+     "t": "Advent Pur 2026 · Malborghetto Valbruna (UD) · 28/11 – 20/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/advent-pur-2026-malborghetto-valbruna"
+    },
+    {
+     "r": "FVG",
+     "t": "Advento · mercatino transfrontaliero di Passo Pramollo · Pontebba (UD) · 5/12/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/advento-il-mercatino-di-natale-transfrontaliero-di-passo-pramollo-pontebba"
+    },
+    {
+     "r": "VDA",
+     "t": "Lo Tsaven · Aosta · 22/11/2026 – 3/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/lo-tsaven-aosta"
+    },
+    {
+     "r": "VDA",
+     "t": "Festa della Micooula · Hône · 4–8/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/festa-della-micooula-hone"
+    },
+    {
+     "r": "LIG",
+     "t": "Tartufando · Genova · 19–29/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/tartufando-genova"
+    },
+    {
+     "r": "TAA",
+     "t": "Mercatini di Natale di Madonna di Campiglio e Pinzolo · 5/12/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatini-di-natale-a-madonna-di-campiglio-pinzolo"
+    },
+    {
+     "r": "TAA",
+     "t": "Natale di Montagna · Brentonico (TN) · 6–30/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/natale-di-montagna-di-brentonico"
+    },
+    {
+     "r": "TAA",
+     "t": "Il Borgo di Natale di Fondo (TN) · 6/12/2026 – 5/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/il-borgo-di-natale-di-fondo-borgo-danaunia"
+    },
+    {
+     "r": "TAA",
+     "t": "Mountain Christmas · Selva di Val Gardena · 29/11/2026 – 3/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/mountain-christmas-il-mercatino-di-natale-di-selva-di-val-gardena"
+    },
+    {
+     "r": "TAA",
+     "t": "Ortisei, il paese di Natale · 28/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/ortisei-il-paese-di-natale-nadel-urtijei"
     }
    ],
    "links": [
@@ -1080,9 +1651,9 @@
     },
     {
      "r": "MAR",
-     "t": "Candele a Candelara e Mombaroccio (PU) · date 2026 da confermare",
-     "d": "Nel 2025 Candelara era 22–23 e 29–30 novembre, 6–8 dicembre. «Il Natale che non ti aspetti» unisce oltre 20 borghi.",
-     "l": "https://travel.thewom.it/italia/marche/pesaro-e-urbino/candelara-mercatino-di-natale.html"
+     "t": "Candele a Candelara · Pesaro · 28/11 – 20/12/2026",
+     "d": "Mercatino delle candele nel borgo di Candelara, con Mombaroccio e «Il Natale che non ti aspetti».",
+     "l": "https://sagramap.com/evento/candele-a-candelara-pesaro"
     },
     {
      "r": "VDA",
@@ -1152,9 +1723,9 @@
     },
     {
      "r": "TAA",
-     "t": "Ossana (TN) · «Borgo dei 1000 Presepi» · dicembre 2026",
-     "d": "Segnalato da Giraitalia da inizio dicembre (1–5/12 nel calendario letto).",
-     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+     "t": "Ossana (TN) · Borgo dei 1000 Presepi · 27/11/2026 – 6/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/ossana-il-borgo-dei-1000-presepi"
     },
     {
      "r": "TAA",
@@ -1164,9 +1735,9 @@
     },
     {
      "r": "TAA",
-     "t": "Forte di Tenna (TN) · Natale al Forte · 5/12/2026",
-     "d": "",
-     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+     "t": "Natale al Forte di Tenna (TN) · 5–13/12/2026",
+     "d": "Mercatino di Natale nel forte.",
+     "l": "https://sagramap.com/evento/natale-al-forte-di-tenna-mercatino-di-natale"
     },
     {
      "r": "TAA",
@@ -1188,9 +1759,9 @@
     },
     {
      "r": "TAA",
-     "t": "Castelbello-Ciardes (BZ) · Fiera d'Avvento al Castello · 18/12/2026 ore 17",
+     "t": "Castelbello-Ciardes (BZ) · Avvento al Castello · 18–20/12/2026",
      "d": "",
-     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+     "l": "https://sagramap.com/evento/avvento-al-castello-di-castelbello-castelbello-ciardes"
     },
     {
      "r": "SAR",
@@ -1227,6 +1798,60 @@
      "t": "Residenze Reali Sabaude · Natale (Stupinigi, Venaria, Rivoli, Govone)",
      "d": "Nel 2025: dal 6/12 Villaggio degli Elfi a Stupinigi, Villaggio di Babbo Natale a Rivoli dal 7/12 al 6/01. Programma 2026 da confermare.",
      "l": "https://www.quotidiano.net/itinerari/piemonte/natale-reale-residenze-sabaude-0f1b3925"
+    },
+    {
+     "r": "CAM",
+     "t": "Come d'Incanto · Natale al Castello di Ceppaloni (BN) · 7/11 – 20/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/come-dincanto-natale-al-castello-di-ceppaloni"
+    },
+    {
+     "r": "ER",
+     "t": "Aspettando il Natale a Vigoleno · Vernasca (PC) · 28/11 – 6/12",
+     "d": "Borgo fortificato con castello.",
+     "l": "https://sagramap.com/evento/aspettando-il-natale-a-vigoleno-vernasca"
+    },
+    {
+     "r": "ER",
+     "t": "Winterland · Castell'Arquato (PC) · 29/11 – 8/12",
+     "d": "Borgo medievale con rocca.",
+     "l": "https://sagramap.com/evento/winterland-di-castellarquato"
+    },
+    {
+     "r": "ER",
+     "t": "Mercatini Medievali nel Borgo · Savignano sul Panaro (MO) · 21–22/11",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatini-medievali-nel-borgo-savignano-sul-panaro"
+    },
+    {
+     "r": "PIE",
+     "t": "Natale è Reale · Palazzina di Stupinigi (Nichelino, TO) · 28/11 – 13/12",
+     "d": "Residenza Sabauda UNESCO.",
+     "l": "https://sagramap.com/evento/natale-e-reale-di-stupinigi-nichelino"
+    },
+    {
+     "r": "LOM",
+     "t": "Mercatini di Natale nel Borgo Medievale di Bagnaria (PV) · 8/12",
+     "d": "",
+     "l": "https://sagramap.com/evento/mercatini-di-natale-nel-borgo-medievale-di-bagnaria"
+    },
+    {
+     "r": "VEN",
+     "t": "Presepi per le vie del Borgo di Mura · Cison di Valmarino (TV) · 12/12/2026 – 10/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/presepi-per-le-vie-del-borgo-di-mura-cison-di-valmarino"
+    },
+    {
+     "r": "TAA",
+     "t": "Faedo (TN) · paese del presepe e Mercatino della Stella · 29/11/2026 – 5/01/2027",
+     "d": "",
+     "l": "https://sagramap.com/evento/faedo-il-paese-del-presepe-e-mercatino-della-stella"
+    },
+    {
+     "r": "TAA",
+     "t": "Tesero e i suoi Presepi (TN) · inizio dicembre",
+     "d": "",
+     "l": "https://sagramap.com/evento/tesero-e-i-suoi-presepi"
     }
    ],
    "links": [
@@ -1297,9 +1922,9 @@
     },
     {
      "r": "TAA",
-     "t": "Gita · Trenatale del Renon (BZ) · 4/12/2026",
-     "d": "Trenino d'epoca sull'altopiano del Renon.",
-     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+     "t": "Gita · Trenatale del Renon (BZ) · 27/11/2026 – 3/01/2027",
+     "d": "Trenino d'epoca sull'altopiano del Renon con mercatino.",
+     "l": "https://sagramap.com/evento/trenatale-del-renon-il-mercatino-di-natale"
     },
     {
      "r": "TAA",
