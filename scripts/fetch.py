@@ -24,7 +24,7 @@ TOPICS = [
  ("corriere", "Corriere", "🗞️", ["corriere.it"], ['site:corriere.it']),
  ("cadorago", "Cadorago", "📍", [], ['Cadorago']),
  ("guanzate", "Guanzate", "📍", [], ['Guanzate']),
- ("noci", "Noci", "📍", [], ['Noci Bari OR "Noci Puglia"']),
+ ("noci", "Noci", "📍", [], ['Noci Bari', 'comune di Noci', 'Noci Puglia notizie']),
  ("fisco", "Fisco · 730", "🧾", ["agenziaentrate.gov.it", "fiscooggi.it", "finanze.gov.it", "mef.gov.it", "inps.it"],
    ['site:agenziaentrate.gov.it', 'site:fiscooggi.it', 'modello 730 novità', 'Irpef detrazioni novità', '730 precompilata']),
 ]
