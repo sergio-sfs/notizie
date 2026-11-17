@@ -27,7 +27,7 @@ TOPICS = [
  ("guanzate", "Guanzate", "📍", [], ['Guanzate']),
  ("noci", "Noci", "📍", [], ['Noci Bari', 'comune di Noci', 'Noci Puglia notizie']),
  ("info", "Informatica", "💻", [],
-   ['informatica notizie', 'site:punto-informatico.it', 'site:hdblog.it', 'cybersecurity Italia', 'intelligenza artificiale novità', 'IBM i AS/400 novità']),
+   ['site:punto-informatico.it', 'site:hdblog.it', 'site:wired.it', 'site:hwupgrade.it', 'site:tomshw.it', 'site:techprincess.it', 'site:zerounoweb.it', 'site:cybersecurity360.it', 'site:agendadigitale.eu', 'site:ictbusiness.it', 'IBM i AS/400 novità']),
  ("fisco", "Fisco · 730", "🧾", ["agenziaentrate.gov.it", "fiscooggi.it", "finanze.gov.it", "mef.gov.it", "inps.it"],
    ['site:agenziaentrate.gov.it', 'site:fiscooggi.it', 'modello 730 novità', 'Irpef detrazioni novità', '730 precompilata']),
 ]
@@ -44,6 +44,7 @@ FEEDS = {
  "info": ["https://www.punto-informatico.it/feed/", "https://www.hdblog.it/feed/", "https://www.wired.it/feed/rss"],
  "corriere": ["https://xml2.corriereobjects.it/rss/homepage.xml", "https://www.corriere.it/rss/homepage.xml", "https://www.corriere.it/rss/cronache.xml", "https://www.corriere.it/rss/politica.xml", "https://www.corriere.it/rss/economia.xml", "https://www.corriere.it/rss/sport.xml"],
 }
+TECH = r"punto-informatico|hdblog|wired\.it|hwupgrade|tomshw|techprincess|zerounoweb|cybersecurity360|agendadigitale|ictbusiness|ibm\.com|as400|midrange|itjungle|ibmi"
 REQUIRE = {"noci": r"\bnoci\b", "cadorago": r"cadorago", "guanzate": r"guanzate"}
 MAXN = {"ansa": 250, "corriere": 200, "info": 100}
 
@@ -129,6 +130,8 @@ def main():
             k = norm(i["t"])
             if k in seen: continue
             seen[k] = i; uniq.append(i)
+        if tid == "info":
+            uniq = [i for i in uniq if re.search(TECH, i["u"], re.I) or re.search(r"ibm i|as/400|as400|rpgle", i["t"] + " " + i.get("x", ""), re.I)]
         if tid in REQUIRE:
             uniq = [i for i in uniq if re.search(REQUIRE[tid], i["t"] + " " + i.get("x", ""), re.I)]
         uniq = [i for i in uniq if datetime.fromisoformat(i["d"]) >= cutoff]
