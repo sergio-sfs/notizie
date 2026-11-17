@@ -26,6 +26,8 @@ TOPICS = [
  ("cadorago", "Cadorago", "📍", [], ['Cadorago']),
  ("guanzate", "Guanzate", "📍", [], ['Guanzate']),
  ("noci", "Noci", "📍", [], ['Noci Bari', 'comune di Noci', 'Noci Puglia notizie']),
+ ("info", "Informatica", "💻", [],
+   ['informatica notizie', 'site:punto-informatico.it', 'site:hdblog.it', 'cybersecurity Italia', 'intelligenza artificiale novità', 'IBM i AS/400 novità']),
  ("fisco", "Fisco · 730", "🧾", ["agenziaentrate.gov.it", "fiscooggi.it", "finanze.gov.it", "mef.gov.it", "inps.it"],
    ['site:agenziaentrate.gov.it', 'site:fiscooggi.it', 'modello 730 novità', 'Irpef detrazioni novità', '730 precompilata']),
 ]
@@ -39,10 +41,11 @@ FEEDS = {
           "https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml",
           "https://www.ansa.it/sito/notizie/sport/sport_rss.xml",
           "https://www.ansa.it/lombardia/notizie/lombardia_rss.xml"],
+ "info": ["https://www.punto-informatico.it/feed/", "https://www.hdblog.it/feed/", "https://www.wired.it/feed/rss"],
  "corriere": ["https://xml2.corriereobjects.it/rss/homepage.xml", "https://www.corriere.it/rss/homepage.xml", "https://www.corriere.it/rss/cronache.xml", "https://www.corriere.it/rss/politica.xml", "https://www.corriere.it/rss/economia.xml", "https://www.corriere.it/rss/sport.xml"],
 }
 REQUIRE = {"noci": r"\bnoci\b", "cadorago": r"cadorago", "guanzate": r"guanzate"}
-MAXN = {"ansa": 250, "corriere": 200}
+MAXN = {"ansa": 250, "corriere": 200, "info": 100}
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; notizie-app)"})
