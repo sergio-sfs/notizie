@@ -22,7 +22,7 @@ header{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 12px 6p
 .top{display:flex;gap:8px;align-items:center}
 h1{font-size:18px;margin:0;flex:0 0 auto}
 input[type=search]{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font-size:16px}
-.tabs{display:flex;flex-wrap:wrap;gap:6px;padding:8px 0 4px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:8px 0 4px;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tab,.chip{flex:0 0 auto;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:999px;padding:6px 12px;font-size:14px;cursor:pointer}
 .tab.on{background:var(--ac);border-color:var(--ac);color:#fff}
@@ -77,7 +77,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v33</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v34</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -201,14 +201,14 @@ async function renderEvents(){
   if(cur!=="eventi")return;
   const RG=ev.regions||[],nm=Object.fromEntries(RG);
   let h=`<div class="day">🎪 Eventi · controllo del ${esc(ev.updated)}</div>`+ev.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("");
-  h+='<div style="display:flex;flex-wrap:wrap;gap:6px;margin:8px 0">'+[["","Tutte"]].concat(RG).map(x=>{const on=x[0]===evR;return `<button data-r="${x[0]}" style="border:1px solid #d32f2f;border-radius:14px;padding:4px 10px;font-size:13px;cursor:pointer;background:${on?"#d32f2f":"transparent"};color:${on?"#fff":"#d32f2f"}">${esc(x[1])}</button>`}).join("")+"</div>";
+  h+='<select id="evsel" style="width:100%;margin:8px 0;padding:8px;font-size:15px;border:1px solid #d32f2f;border-radius:10px;color:#d32f2f;background:transparent">'+[["","Tutte le regioni"]].concat(RG).map(x=>`<option value="${x[0]}"${x[0]===evR?" selected":""}>${esc(x[1])}</option>`).join("")+"</select>";
   ev.cats.forEach(c=>{
     const it=c.items.filter(i=>!evR||i.r===evR),ln=(c.links||[]).filter(x=>!evR||!x[2]||x[2]===evR);
     h+=`<div class="day">${c.emoji} ${esc(c.name)}</div><div class="wc">`+(it.length?it.map(i=>`<div class="tv"><b>${evR?"":esc(nm[i.r]||"")+" · "}${esc(i.t)}</b>${i.p===1?' <span>🥁 percussioni</span>':i.p===0?' <span>🎵 altro genere</span>':""}${i.d?`<div>${esc(i.d)}</div>`:""}${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri</a>`:""}</div>`).join(""):'<div class="tv"><div>Nulla trovato per questa regione.</div></div>')
      +(ln.length?`<div class="tv"><b>🔎 Siti consultati</b><div>`+ln.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener noreferrer">${esc(x[0])}</a>`).join(" · ")+`</div></div>`:"")+"</div>";
   });
   L.innerHTML=h;
-  L.querySelectorAll("button[data-r]").forEach(a=>a.onclick=()=>{evR=a.dataset.r;renderEvents()});
+  $("#evsel").onchange=e=>{evR=e.target.value;renderEvents()};
 }
 let sv=null,svM=new Date().getMonth()+1;
 async function renderSwiss(){
@@ -219,14 +219,14 @@ async function renderSwiss(){
   const MN=["Gen","Feb","Mar","Apr","Mag","Giu","Lug","Ago","Set","Ott","Nov","Dic"],c0=new Date().getMonth();
   const mb=[[0,"Tutti"]].concat(Array.from({length:12},(_,k)=>{const m=(c0+k)%12;return[m+1,MN[m]]}));
   let h=`<div class="day">🇨🇭 Svizzera · controllo del ${esc(sv.updated)}</div>`+sv.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("");
-  h+='<div style="display:flex;flex-wrap:wrap;gap:6px;margin:8px 0">'+mb.map(x=>{const on=x[0]===svM;return `<button data-m="${x[0]}" style="border:1px solid #d32f2f;border-radius:14px;padding:4px 10px;font-size:13px;cursor:pointer;background:${on?"#d32f2f":"transparent"};color:${on?"#fff":"#d32f2f"}">${esc(x[1])}</button>`}).join("")+"</div>";
+  h+='<select id="svsel" style="width:100%;margin:8px 0;padding:8px;font-size:15px;border:1px solid #d32f2f;border-radius:10px;color:#d32f2f;background:transparent">'+mb.map(x=>`<option value="${x[0]}"${x[0]===svM?" selected":""}>${x[0]?"📅 "+esc(x[1]):"📅 Tutti i mesi"}</option>`).join("")+"</select>";
   sv.cats.forEach(c=>{
     const it=c.items.filter(i=>!svM||i.m.includes(svM));
     h+=`<div class="day">${c.emoji} ${esc(c.name)}</div><div class="wc">`+(it.length?it.map(i=>`<div class="tv"><b>${esc(i.t)}</b>${i.d?`<div>${esc(i.d)}</div>`:""}${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri</a>`:""}</div>`).join(""):'<div class="tv"><div>Nulla di verificato per questo mese.</div></div>')
      +((c.links||[]).length?`<div class="tv"><b>🔎 Siti consultati</b><div>`+c.links.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener noreferrer">${esc(x[0])}</a>`).join(" · ")+`</div></div>`:"")+"</div>";
   });
   L.innerHTML=h;
-  L.querySelectorAll("button[data-m]").forEach(a=>a.onclick=()=>{svM=+a.dataset.m;renderSwiss()});
+  $("#svsel").onchange=e=>{svM=+e.target.value;renderSwiss()};
 }
 let tv=null;
 async function renderTravel(){
