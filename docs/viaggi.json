@@ -113,6 +113,26 @@
      ]
     },
     {
+     "title": "🚌 Bus Milano → Noci / Bari (Marino, Itabus, FlixBus)",
+     "items": [
+      {
+       "t": "Marino Autolinee · Milano → Noci diretto, da 29 €",
+       "d": "Notturno, circa 11h35 (es. sab 21:05→08:40, 100 € in quel giorno). Partenza da Milano Lampugnano.",
+       "l": "https://www.omio.it/autobus/milano/noci-ccaly"
+      },
+      {
+       "t": "Marino · Milano Lampugnano → Bari (Terminal Bus Via Capruzzi)",
+       "d": "18:50→06:05 (11h15) circa 67 €; 20:25→07:50 (11h25) circa 76 €. Poi bus/treno FSE per Noci.",
+       "l": "https://www.omio.it/autobus/milano-centrale/aeroporto-di-bari-palese-z3uru"
+      },
+      {
+       "t": "Itabus e altri · Milano → Bari",
+       "d": "Da 15 €, medio 43 €, circa 10h30–16h, fino a 40 corse al giorno.",
+       "l": "https://www.omio.it/autobus/milano/bari"
+      }
+     ]
+    },
+    {
      "title": "🚆 Treno Milano → Bari",
      "items": [
       {
@@ -177,6 +197,26 @@
        "t": "Ritorno Chieti → Milano",
        "d": "Es. 14:15→21:40 (7h25), da circa 44 €.",
        "l": "https://www.omio.it/treni/chieti-madonna-delle-piane/milano-centrale-wym92"
+      }
+     ]
+    },
+    {
+     "title": "🚌 Bus Milano ⇄ Chieti / Pescara (Marino, FlixBus)",
+     "items": [
+      {
+       "t": "Marino Autolinee · Pescara → Milano Lampugnano diretto",
+       "d": "Es. 23:30→07:00 (7h30), solo ven/sab/dom, da circa 61 €. FlixBus 22:10→06:25 (8h15) e 00:15→07:30 (7h15), da circa 28–35 €.",
+       "l": "https://www.omio.it/autobus/stazione-di-pescara-centrale/stazione-di-milano-centrale-ghaot"
+      },
+      {
+       "t": "Milano → Chieti · FlixBus diretto da 34 €",
+       "d": "Es. 23:10→09:19 (10h09). Chieti → Milano da circa 21 € (medio 38–54 €).",
+       "l": "https://www.omio.it/autobus/milano/chieti"
+      },
+      {
+       "t": "Milano → aeroporto di Pescara",
+       "d": "Da circa 39 €, circa 6h45–7h.",
+       "l": "https://www.omio.it/autobus/milano/aeroporto-di-pescara-abruzzo-dehqa"
       }
      ]
     },
@@ -262,6 +302,14 @@
     [
      "FlixBus",
      "https://www.flixbus.it"
+    ],
+    [
+     "Marino Autolinee",
+     "https://www.marinobus.it"
+    ],
+    [
+     "Itabus",
+     "https://www.itabus.it"
     ]
    ]
   },
