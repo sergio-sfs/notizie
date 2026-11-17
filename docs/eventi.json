@@ -1,10 +1,10 @@
 {
  "updated": "2026-11-17",
- "area": "Como, Varese, Lecco, Brianza e Milano",
+ "area": "Lombardia (Como/Varese/Lecco/Brianza/Milano), Piemonte, Veneto, Emilia-Romagna, Toscana, Liguria, Abruzzo, Puglia",
  "window": "17/11/2026 – febbraio 2027",
  "notes": [
   "Fotografia del 17 nov 2026 per Como, Varese, Lecco, Brianza e Milano. Per aggiornarla scrivimi «aggiorna eventi».",
-  "Date prese da TicketOne, Regione Lombardia, SagraMap, GiraItalia: conferma sempre sul sito dell'organizzatore."
+  "Date prese da TicketOne, Regione Lombardia, SagraMap, GiraItalia e simili: conferma sempre sul sito dell'organizzatore. Fuori Lombardia la copertura è più rada."
  ],
  "cats": [
   {
@@ -15,59 +15,172 @@
     {
      "t": "Vinicio Capossela · Como · mer 18/11/2026 20:30",
      "d": "«E morte non avrà dominio».",
-     "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/altri-eventi-musicali-1073/"
+     "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/altri-eventi-musicali-1073/",
+     "r": "LOM"
     },
     {
      "t": "Nomadi · Varese · ven 22/01/2027 20:00",
      "d": "Live Tour 2025/2026.",
-     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/"
+     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/",
+     "r": "LOM"
     },
     {
      "t": "La Sera dei Miracoli, omaggio a Lucio Dalla · Varese · ven 05/03/2027 20:00",
      "d": "",
-     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/"
+     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/",
+     "r": "LOM"
     },
     {
      "t": "Angelo Branduardi, Il Cantico · Varese · ven 14/05/2027 20:00",
      "d": "Fuori dal periodo principale, utile per prenotare.",
-     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/"
+     "l": "https://www.ticketone.it/city/varese-1595/concerti-55/",
+     "r": "LOM"
     },
     {
      "t": "Milano · Cesare Cremonini mar 15/12/2026 · Irama mer 16/12 · Max Pezzali 29 e 30/12 · Sfera Ebbasta dom 07/02/2027",
      "d": "Tutti alle 21:00. Coez a Milano anche oggi 17/11 alle 21:00.",
-     "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/"
+     "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/",
+     "r": "LOM"
     },
     {
      "t": "🥁 Percussioni: nessun evento con data trovato nel periodo",
      "d": "Ci sono corsi e masterclass di batteria e percussioni a Milano su Eventbrite, e l'ensemble di percussioni del Conservatorio di Como si esibisce in concerti sul territorio, ma senza date confermate.",
-     "l": "https://www.eventbrite.co.uk/cc/clinic-e-masterclass-di-batteria-e-percussioni-1840559"
+     "l": "https://www.eventbrite.co.uk/cc/clinic-e-masterclass-di-batteria-e-percussioni-1840559",
+     "r": "LOM"
     },
     {
      "t": "Percussionisti Anonimi · Ritmodipendenti (Lecco)",
      "d": "Spettacolo di percussioni: data non indicata nella pagina trovata.",
-     "l": "https://www.in-lombardia.it/en/event/percussionisti-anonimi-ritmodipendenti"
+     "l": "https://www.in-lombardia.it/en/event/percussionisti-anonimi-ritmodipendenti",
+     "r": "LOM"
+    },
+    {
+     "r": "PIE",
+     "t": "Drum Theatre «La danza dei tamburi» · Settimo Torinese (TO) · dom 13/12/2026 21:00",
+     "d": "Concerto di percussioni, Teatro Garybaldi.",
+     "l": "https://www.mentelocale.it/torino/135918-la-danza-dei-tamburi-drum-theatre.htm"
+    },
+    {
+     "r": "PIE",
+     "t": "Max Pezzali, Max Forever · Torino · 13/03/2027",
+     "d": "Inalpi Arena.",
+     "l": "https://www.inalpiarena.it/en/eventi/max-pezzali-tickets-ae1329"
+    },
+    {
+     "r": "VEN",
+     "t": "Sfera Ebbasta · Jesolo (VE) · mer 27/01/2027 21:00",
+     "d": "Palasport 2027.",
+     "l": "https://www.ticketone.it/events/concerti-55/?page=1"
+    },
+    {
+     "r": "VEN",
+     "t": "Alla scoperta di Morricone · Padova · ven 19/03/2027 21:15",
+     "d": "Ensemble Symphony Orchestra.",
+     "l": "https://www.ticketone.it/city/padova-226/concerti-55/?page=1"
+    },
+    {
+     "r": "TOS",
+     "t": "Irama · Firenze · mar 08/12/2026 21:00",
+     "d": "Palasport 2026.",
+     "l": "https://www.ticketone.it/events/concerti-55/helpcenter/"
+    },
+    {
+     "r": "ABR",
+     "t": "Pescara · Disney Il Concerto 13/12/2026 · Canto Libero (Battisti e Mogol) 09/01/2027 · Omaggio a Morricone 24/01 · Gianmarco Carroccia 30/01 · Fabio Concato 27/02/2027",
+     "d": "Orari: 17:00 il 13/12 e 18:00 il 24/01, gli altri 21:00.",
+     "l": "https://www.ticketone.it/city/pescara-1938/concerti-55/"
+    },
+    {
+     "r": "PUG",
+     "t": "Gigi D'Alessio · Bari · tour Palasport 14/11–23/12/2026",
+     "d": "Tappa di Bari in elenco, data da verificare.",
+     "l": "https://www.ticketone.it/en/city/bari-221/concerti-55/"
+    },
+    {
+     "r": "PUG",
+     "t": "Alla scoperta di Morricone · Bari · mar 30/03/2027 21:00",
+     "d": "",
+     "l": "https://www.ticketone.it/en/city/bari-221/concerti-55/"
+    },
+    {
+     "r": "ER",
+     "t": "Nessun concerto con data certa trovato",
+     "d": "Vedi i link ai siti di biglietti.",
+     "l": "https://www.ticketone.it/events/concerti-55/"
+    },
+    {
+     "r": "LIG",
+     "t": "Nessun concerto con data certa trovato",
+     "d": "Vedi i link ai siti di biglietti.",
+     "l": "https://www.ticketone.it/events/concerti-55/"
+    },
+    {
+     "r": "ITA",
+     "t": "Elenchi nazionali dei concerti",
+     "d": "Dicembre 2026 e gennaio 2027, con prezzi.",
+     "l": "https://www.rockol.it/concerti-dicembre"
     }
    ],
    "links": [
     [
      "TicketOne Como",
-     "https://www.ticketone.it/cityd/como-1280/concerti-55/"
+     "https://www.ticketone.it/cityd/como-1280/concerti-55/",
+     "LOM"
     ],
     [
      "TicketOne Varese",
-     "https://www.ticketone.it/city/varese-1595/concerti-55/"
+     "https://www.ticketone.it/city/varese-1595/concerti-55/",
+     "LOM"
     ],
     [
      "Fever Como",
-     "https://feverup.com/it/como/concerti-festival"
+     "https://feverup.com/it/como/concerti-festival",
+     "LOM"
     ],
     [
      "Bandsintown Varese",
-     "https://www.bandsintown.com/c/varese-italy"
+     "https://www.bandsintown.com/c/varese-italy",
+     "LOM"
     ],
     [
      "Il Tacco di Bacco",
-     "https://iltaccodibacco.it/cernobbio/pdf/"
+     "https://iltaccodibacco.it/cernobbio/pdf/",
+     "LOM"
+    ],
+    [
+     "Rockol dicembre",
+     "https://www.rockol.it/concerti-dicembre",
+     "ITA"
+    ],
+    [
+     "Rockol gennaio",
+     "https://www.rockol.it/concerti-gennaio",
+     "ITA"
+    ],
+    [
+     "TicketOne Italia",
+     "https://www.ticketone.it/events/concerti-55/",
+     "ITA"
+    ],
+    [
+     "TicketOne Pescara",
+     "https://www.ticketone.it/city/pescara-1938/concerti-55/",
+     "ABR"
+    ],
+    [
+     "TicketOne Bari",
+     "https://www.ticketone.it/en/city/bari-221/concerti-55/",
+     "PUG"
+    ],
+    [
+     "TicketOne Padova",
+     "https://www.ticketone.it/city/padova-226/concerti-55/",
+     "VEN"
+    ],
+    [
+     "Il Tacco di Bacco Puglia",
+     "https://iltaccodibacco.it/puglia/events/2026-12-20/",
+     "PUG"
     ]
    ]
   },
@@ -79,47 +192,137 @@
     {
      "t": "Fiera di Sant'Ambrogio «Oh Bej Oh Bej» · Milano · 7–10 dic 2026",
      "d": "Fiera storica di Milano.",
-     "l": "https://sagramap.com/sagre/mese/dicembre/lombardia"
+     "l": "https://sagramap.com/sagre/mese/dicembre/lombardia",
+     "r": "LOM"
     },
     {
      "t": "Fiera di Sant'Ambrogio · Merate (LC) · 7–8 dic 2026",
      "d": "Piazza degli Eroi, dalle 7:00.",
-     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco",
+     "r": "LOM"
     },
     {
      "t": "Artigiano in Fiera · Rho Fiera Milano · dicembre 2026 (9 giorni)",
      "d": "Date esatte da confermare sul sito della fiera.",
-     "l": "https://blog.italotreno.com/in-viaggio-per-lavoro/fiere-rho-fiera-milano-nellautunno-2026-eventi-non-perdere/"
+     "l": "https://blog.italotreno.com/in-viaggio-per-lavoro/fiere-rho-fiera-milano-nellautunno-2026-eventi-non-perdere/",
+     "r": "LOM"
     },
     {
      "t": "Bergamo Arte Fiera · 15–17 gen 2027",
      "d": "",
-     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20B%20-%20Calendario%20manifestazioni%20fieristiche%20Nazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf"
+     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20B%20-%20Calendario%20manifestazioni%20fieristiche%20Nazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf",
+     "r": "LOM"
     },
     {
      "t": "Milano Home e Quick & More · Rho · 21–24 gen 2027",
-     "d": "Calendario aggiornato; una versione precedente indicava 14–17 gennaio. Da confermare.",
-     "l": "https://www.fibre2fashion.com/trade-fairs/milano-home-2027-66751"
+     "d": "Il calendario Regione Lombardia indica 14–17 gennaio 2027, altre fonti 21–24. Da confermare.",
+     "l": "https://www.fibre2fashion.com/trade-fairs/milano-home-2027-66751",
+     "r": "LOM"
     },
     {
      "t": "BIT Borsa Internazionale del Turismo · Rho · 9–11 feb 2027",
      "d": "",
-     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20A%20-%20Calendario%20manifestazioni%20fieristiche%20Internazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf"
+     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20A%20-%20Calendario%20manifestazioni%20fieristiche%20Internazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf",
+     "r": "LOM"
     },
     {
      "t": "MyPlant & Garden · Rho · 17–19 feb 2027",
      "d": "",
-     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20A%20-%20Calendario%20manifestazioni%20fieristiche%20Internazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf"
+     "l": "https://www.regione.lombardia.it/content/dam/rl/Dec%209712%20All.%20A%20-%20Calendario%20manifestazioni%20fieristiche%20Internazionali%20in%20Lombardia%20per%20l%27anno%202027.pdf",
+     "r": "LOM"
+    },
+    {
+     "r": "PIE",
+     "t": "Fiera Internazionale del Tartufo Bianco d'Alba · 10 ott – 6 dic 2026",
+     "d": "Ogni fine settimana, fino al 6 dicembre.",
+     "l": "https://www.visititaly.eu/it/cibo-e-sapori/le-10-sagre-piu-famose-d-italia"
+    },
+    {
+     "r": "VEN",
+     "t": "Motor Bike Expo · Verona · 22–24 gen 2027",
+     "d": "",
+     "l": "https://www.showsbee.com/shows-0-6-Italy-all_city-Professional_Shows.html"
+    },
+    {
+     "r": "ER",
+     "t": "SIGEP World · Rimini · 23–27 gen 2027",
+     "d": "Fiera professionale su gelato, pasticceria e caffè.",
+     "l": "https://www.teleborsa.it/News/2026/09/14/sigep-world-2027-ieg-raddoppia-i-buyer-internazionali-151.html"
+    },
+    {
+     "r": "ER",
+     "t": "Arte Fiera · Bologna · 5–7 feb 2027",
+     "d": "Anteprima il 4 febbraio, 50ª edizione.",
+     "l": "https://www.bolognawelcome.com/it/eventi/fiere"
+    },
+    {
+     "r": "ER",
+     "t": "Liberamente · BolognaFiere · 19–21 feb 2027",
+     "d": "",
+     "l": "https://openvan.camp/en/event/liberamente-2027"
+    },
+    {
+     "r": "ER",
+     "t": "Fiera di Natale, via Altabella · Bologna · 20 nov 2026 – 6 gen 2027",
+     "d": "Più l'Antica Fiera di Santa Lucia in Strada Maggiore.",
+     "l": "https://www.bolognawelcome.com/it/blog/christmas-markets-in-and-around-the-city-centre"
+    },
+    {
+     "r": "TOS",
+     "t": "Pitti Uomo e Pitti Filati · Firenze · gennaio",
+     "d": "Date 2027 non trovate: nel 2026 erano 13–16 e 21–23 gennaio.",
+     "l": "https://www.ice.it/it/sites/default/files/banner_files/fiereinarrivo_gen_ita.pdf"
+    },
+    {
+     "r": "LIG",
+     "t": "Nessuna fiera trovata nel periodo",
+     "d": "Calendario fiere Genova sul link Radiocor.",
+     "l": "https://www.borsaitaliana.it/borsa/notizie/archivi/radiocor.html?page=305"
+    },
+    {
+     "r": "ABR",
+     "t": "Nessuna fiera trovata nel periodo",
+     "d": "",
+     "l": "https://www.regione.abruzzo.it"
+    },
+    {
+     "r": "PUG",
+     "t": "Nessuna fiera trovata nel periodo",
+     "d": "La Fiera del Levante è a settembre.",
+     "l": "https://www.borsaitaliana.it/borsa/notizie/archivi/radiocor.html?page=101"
+    },
+    {
+     "r": "ITA",
+     "t": "Calendari fiere per città",
+     "d": "Radiocor: Torino, Genova, Verona, Padova, Bologna, Rimini, Firenze, Bari.",
+     "l": "https://www.borsaitaliana.it/borsa/notizie/archivi/radiocor.html?lang=en+&page=101"
     }
    ],
    "links": [
     [
      "Fiera Milano",
-     "https://www.fieramilano.it"
+     "https://www.fieramilano.it",
+     "LOM"
     ],
     [
      "Calendario fiere Regione Lombardia",
-     "https://www.regione.lombardia.it"
+     "https://www.regione.lombardia.it",
+     "LOM"
+    ],
+    [
+     "Piemonte in fiera",
+     "https://www.regione.piemonte.it/web/temi/sviluppo/commercio/calendario-fieristico-regionale",
+     "PIE"
+    ],
+    [
+     "Bologna Welcome fiere",
+     "https://www.bolognawelcome.com/it/eventi/fiere",
+     "ER"
+    ],
+    [
+     "Trade fair Italia 2027",
+     "https://www.tradefairdates.com/Fairs-Italy-Z108-S6.html",
+     "ITA"
     ]
    ]
   },
@@ -131,60 +334,207 @@
     {
      "t": "Sagra della Polenta · Tradate (VA) · dom 6 dic 2026 12:00",
      "d": "Anche 8 dicembre secondo un'altra fonte.",
-     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent",
+     "r": "LOM"
     },
     {
      "t": "Mercatino di Natale · Varano Borghi (VA) · 6 dic 2026",
      "d": "",
-     "l": "https://sagramap.com/lombardia/varese"
+     "l": "https://sagramap.com/lombardia/varese",
+     "r": "LOM"
     },
     {
      "t": "Natale in Villa · Albavilla (CO) · 8 dic 2026 10:00",
      "d": "",
-     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent",
+     "r": "LOM"
     },
     {
      "t": "Mercatini di Natale · Bellagio e Carlazzo (CO) · inizio/metà dicembre",
      "d": "Carlazzo con prodotti tipici e vino.",
-     "l": "https://sagramap.com/sagre/mese/dicembre/lombardia"
+     "l": "https://sagramap.com/sagre/mese/dicembre/lombardia",
+     "r": "LOM"
     },
     {
      "t": "Natale a Merate (LC) · 22 nov – 24 dic 2026",
      "d": "Tutti i giorni 8:00–20:00.",
-     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco",
+     "r": "LOM"
     },
     {
      "t": "Winter Fire Party · Merate · 12 dic · Festa in Birrificio · Galbiate · 20 dic 2026",
      "d": "",
-     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco",
+     "r": "LOM"
     },
     {
      "t": "Nota",
-     "d": "Da novembre a febbraio le sagre classiche sono poche: prevalgono mercatini di Natale e feste di Santa Lucia/Sant'Ambrogio. La stagione vera riparte in primavera."
+     "d": "Da novembre a febbraio le sagre classiche sono poche: prevalgono mercatini di Natale e feste di Santa Lucia/Sant'Ambrogio. La stagione vera riparte in primavera.",
+     "r": "LOM"
+    },
+    {
+     "r": "PIE",
+     "t": "Sagre di dicembre: poche in elenco",
+     "d": "Al tartufo di Alba (fino al 6/12) si aggiungono mercatini; calendario regionale sul link.",
+     "l": "https://www.eventiesagre.it/amp/Eventi_Vari/21150955_Calendario+Mensile+Eventi+E+Sagre+Regione+Piemonte.html"
+    },
+    {
+     "r": "VEN",
+     "t": "Mercatini di Natale · Roncade (TV) · 12 dic 2026",
+     "d": "",
+     "l": "https://www.eventiesagre.it/cerca/cat/sez/Dicembre/Veneto/prov/cit/rilib"
+    },
+    {
+     "r": "VEN",
+     "t": "Mercatino dell'antiquariato · Piazzola sul Brenta (PD) · fino al 27 dic 2026",
+     "d": "Anche Godega di Sant'Urbano (TV) fino al 20 dic.",
+     "l": "https://www.eventiesagre.it/cerca/cat/sez/Dicembre/Veneto/prov/cit/rilib"
+    },
+    {
+     "r": "ER",
+     "t": "Mercatino Creativo · Ferrara · fino al 6 dic 2026",
+     "d": "",
+     "l": "https://www.eventiesagre.it/cerca/cat/sez/mesi/Emilia+Romagna/prov/cit/intit/rilib"
+    },
+    {
+     "r": "ER",
+     "t": "Fiera di Santa Lucia (Forlì) e «Zzuén al maiàl» (Tresigallo, FE) · dicembre",
+     "d": "Date non confermate, in base alle edizioni passate.",
+     "l": "https://www.itinerarinelgusto.it/sagre-e-feste/emilia-romagna/dicembre"
+    },
+    {
+     "r": "TOS",
+     "t": "Mercatino di Natale · Firenze, Santa Croce · 20 nov – 20 dic 2026 circa",
+     "d": "Date in attesa di conferma ufficiale. Arezzo Città del Natale dal 14/11/2026 al 6/1/2027.",
+     "l": "https://travel.thewom.it/italia/toscana/firenze/mercatini-natale-firenze.html"
+    },
+    {
+     "r": "LIG",
+     "t": "Mercatini di Natale in Villavecchia · Ronco Scrivia (GE) · 6 dic 2026",
+     "d": "",
+     "l": "https://www.mentelocale.it/genova/118293-eventi-autentici-liguri-2026-ecco-i-102-appuntamenti-tra-sagre-fiere-e-mercatini.htm"
+    },
+    {
+     "r": "LIG",
+     "t": "Presepi in Fontanabuona · dall'8 dic · Presepe vivente Deiva Marina dal 22 dic · Roccavignale 22–24 dic",
+     "d": "",
+     "l": "https://www.mentelocale.it/genova/118293-eventi-autentici-liguri-2026-ecco-i-102-appuntamenti-tra-sagre-fiere-e-mercatini.htm"
+    },
+    {
+     "r": "LIG",
+     "t": "Creativamente in Libertà · Lavagna (GE) · 21 nov – 19 dic 2026",
+     "d": "Mercatino natalizio.",
+     "l": "https://www.eventiesagre.it/cerca/cat/sez/mesi/Liguria/prov/cit/natale"
+    },
+    {
+     "r": "ABR",
+     "t": "Tartufo bianco a Campovalano (TE) · dicembre",
+     "d": "Data non confermata.",
+     "l": "https://www.itinerarinelgusto.it/sagre-e-feste/abruzzo/dicembre"
+    },
+    {
+     "r": "PUG",
+     "t": "Villaggio Natalizio a Martano (LE) · Santa Lucia a Taviano (LE) · dicembre",
+     "d": "Date non confermate, in base alle edizioni passate.",
+     "l": "https://www.itinerarinelgusto.it/sagre-e-feste/lecce/gennaio"
+    },
+    {
+     "r": "ITA",
+     "t": "Tutta Italia: sagre e mercatini del mese",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/socialevent"
     }
    ],
    "links": [
     [
      "SagraMap Lombardia",
-     "https://sagramap.com/lombardia"
+     "https://sagramap.com/lombardia",
+     "LOM"
     ],
     [
      "SagraMap dicembre",
-     "https://sagramap.com/sagre/mese/dicembre/lombardia"
+     "https://sagramap.com/sagre/mese/dicembre/lombardia",
+     "LOM"
     ],
     [
      "GiraItalia Lecco",
-     "https://www.giraitalia.com/eventi/provincia/lecco"
+     "https://www.giraitalia.com/eventi/provincia/lecco",
+     "LOM"
     ],
     [
      "Eventi e Sagre Como",
-     "https://www.eventiesagre.it/cerca/cat/sez/Dicembre/Lombardia/CO/cit/rilib"
+     "https://www.eventiesagre.it/cerca/cat/sez/Dicembre/Lombardia/CO/cit/rilib",
+     "LOM"
     ],
     [
      "in-lombardia",
-     "https://www.in-lombardia.it"
+     "https://www.in-lombardia.it",
+     "LOM"
+    ],
+    [
+     "GiraItalia Italia",
+     "https://www.giraitalia.com/eventi/socialevent",
+     "ITA"
+    ],
+    [
+     "SagraMap",
+     "https://sagramap.com",
+     "ITA"
+    ],
+    [
+     "Eventi e Sagre",
+     "https://www.eventiesagre.it",
+     "ITA"
+    ],
+    [
+     "Itinerari nel Gusto",
+     "https://www.itinerarinelgusto.it",
+     "ITA"
+    ],
+    [
+     "Sagr.it",
+     "https://sagr.it",
+     "ITA"
     ]
    ]
   }
+ ],
+ "regions": [
+  [
+   "LOM",
+   "Lombardia"
+  ],
+  [
+   "PIE",
+   "Piemonte"
+  ],
+  [
+   "VEN",
+   "Veneto"
+  ],
+  [
+   "ER",
+   "Emilia-Romagna"
+  ],
+  [
+   "TOS",
+   "Toscana"
+  ],
+  [
+   "LIG",
+   "Liguria"
+  ],
+  [
+   "ABR",
+   "Abruzzo"
+  ],
+  [
+   "PUG",
+   "Puglia"
+  ],
+  [
+   "ITA",
+   "Tutta Italia"
+  ]
  ]
 }

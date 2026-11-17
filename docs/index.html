@@ -76,7 +76,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v20</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v21</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -190,17 +190,22 @@ async function renderWeather(){
   L.innerHTML=h+ui+'<div style="text-align:center"><button class="chip" id="prst">↺ Ripristina località predefinite</button></div>';
 }
 let ev=null;
+let evR="";
 async function renderEvents(){
   const L=$("#list");
   if(!ev){L.innerHTML='<div class="empty">Carico gli eventi…</div>';
     try{const r=await fetch("eventi.json?"+Date.now());if(!r.ok)throw 0;ev=await r.json()}catch(e){L.innerHTML='<div class="empty">Eventi non disponibili.</div>';return}}
   if(cur!=="eventi")return;
-  let h=`<div class="day">🎪 Eventi · ${esc(ev.area)} · controllo del ${esc(ev.updated)}</div>`+ev.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("");
+  const RG=ev.regions||[],nm=Object.fromEntries(RG);
+  let h=`<div class="day">🎪 Eventi · controllo del ${esc(ev.updated)}</div>`+ev.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("");
+  h+='<div class="note">'+[["","Tutte"]].concat(RG).map(x=>`<a href="#" data-r="${x[0]}" style="margin-right:10px;${x[0]===evR?"font-weight:700;text-decoration:underline":""}">${esc(x[1])}</a>`).join("")+"</div>";
   ev.cats.forEach(c=>{
-    h+=`<div class="day">${c.emoji} ${esc(c.name)}</div><div class="wc">`+c.items.map(i=>`<div class="tv"><b>${esc(i.t)}</b>${i.d?`<div>${esc(i.d)}</div>`:""}${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri</a>`:""}</div>`).join("")
-     +(c.links?`<div class="tv"><b>🔎 Siti consultati</b><div>`+c.links.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener noreferrer">${esc(x[0])}</a>`).join(" · ")+`</div></div>`:"")+"</div>";
+    const it=c.items.filter(i=>!evR||i.r===evR),ln=(c.links||[]).filter(x=>!evR||!x[2]||x[2]===evR);
+    h+=`<div class="day">${c.emoji} ${esc(c.name)}</div><div class="wc">`+(it.length?it.map(i=>`<div class="tv"><b>${evR?"":esc(nm[i.r]||"")+" · "}${esc(i.t)}</b>${i.d?`<div>${esc(i.d)}</div>`:""}${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri</a>`:""}</div>`).join(""):'<div class="tv"><div>Nulla trovato per questa regione.</div></div>')
+     +(ln.length?`<div class="tv"><b>🔎 Siti consultati</b><div>`+ln.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener noreferrer">${esc(x[0])}</a>`).join(" · ")+`</div></div>`:"")+"</div>";
   });
   L.innerHTML=h;
+  L.querySelectorAll("a[data-r]").forEach(a=>a.onclick=e=>{e.preventDefault();evR=a.dataset.r;renderEvents()});
 }
 let tv=null;
 async function renderTravel(){
