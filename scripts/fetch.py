@@ -37,6 +37,14 @@ def real_url(link):
         if u: return u[0]
     return link
 
+IT = set("il lo la i gli le un una di del della dei delle da in con su per tra fra e è che non si al alla ai nel nella sul sulla come ma più dopo sono ha hanno questo questa".split())
+EN = set("the of and to in for on with at by from is are was were be has have will this that after over about as it its an his her their new says".split())
+OTHER = set("yang dan di untuk dengan pada dari ini itu adalah el los las del por para con una que su sus der die das und ist nicht mit le les des une pour dans est sur".split())
+def foreign(text):
+    w = re.findall(r"[a-zàèéìòù']+", text.lower())
+    it = sum(x in IT for x in w); xx = sum(x in EN or x in OTHER for x in w)
+    return xx >= 2 and xx > it
+
 def clean(s, n=220):
     s = re.sub(r"<[^>]+>", " ", html.unescape(s or ""))
     s = re.sub(r"\s+", " ", s).strip()
@@ -57,6 +65,7 @@ def fetch(query, official_domains):
         try: dt = parsedate_to_datetime(it.findtext("pubDate")).astimezone(timezone.utc)
         except Exception: continue
         off = any(host == d or host.endswith("." + d) for d in official_domains)
+        if not off and foreign(title + " " + clean(it.findtext("description"), 400)): continue
         out.append({"t": title, "s": source, "u": link, "d": dt.isoformat(timespec="seconds"),
                     "o": off, "x": clean(it.findtext("description"))})
     return out

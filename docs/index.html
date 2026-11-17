@@ -35,6 +35,7 @@ div.n:active{opacity:.85}
 .b{margin-top:10px;border-top:1px solid var(--bd);padding-top:10px;font-size:16px;line-height:1.55;cursor:auto;user-select:text}
 .b p{margin:0 0 12px}.b h3{font-size:16px;margin:14px 0 6px}
 .b .go{display:inline-block;margin:4px 0 2px;color:var(--ac);font-weight:600;text-decoration:none}
+.ext{color:var(--ac);font-weight:600;text-decoration:none;border:1px solid var(--bd);border-radius:6px;padding:0 6px}
 .caret{margin-left:auto;color:var(--ac)}
 .empty{text-align:center;color:var(--mu);padding:40px 10px}
 </style>
@@ -77,24 +78,29 @@ function render(){
     if(dl!==last){h+=`<div class="day">${dl}</div>`;last=dl}
     h+=`<div class="n ${read[i.u]?"read":""}" data-u="${esc(i.u)}">
       <div class="t">${esc(i.t)}</div>${i.x&&i.x!==i.t?`<div class="x">${esc(i.x)}</div>`:""}
-      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span><span>${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
+      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span><span>${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<a class="ext" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer">↗ Sito</a><span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
   });
   $("#list").innerHTML=h||'<div class="empty">Nessuna notizia.</div>';
 }
 document.addEventListener("click",e=>{
   const tb=e.target.closest(".tab");if(tb){cur=tb.dataset.id;render();scrollTo(0,0);return}
   if(e.target.closest("#off")){onlyOff=!onlyOff;render();return}
+  const ex=e.target.closest("a.ext");if(ex){const n=ex.closest(".n");read[n.dataset.u]=Date.now();saveRead();n.classList.add("read");return}
   if(e.target.closest(".b"))return;
   const a=e.target.closest(".n");if(a)toggle(a)
 });
 $("#q").addEventListener("input",e=>{q=e.target.value.trim();render()});
 const cache={};
-function parse(md){
+const JUNK=/cookie|consenso|IABV2|privacy|gdpr|accett|newsletter|iscriviti|©|tutti i diritti|seguici su|condividi|leggi anche|pubblicità|abbonati|javascript/i;
+function parse(md,title){
   let t=md.includes("Markdown Content:")?md.split("Markdown Content:").slice(1).join(""):md;
-  t=t.replace(/!\[[^\]]*\]\([^)]*\)/g,"").replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").replace(/[*_`>]/g,"");
+  t=t.replace(/!\[[^\]]*\]\([^)]*\)/g,"").replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").replace(/\[\[[^\]]*\]\]/g,"").replace(/\(?https?:\/\/[^\s)]*\)?/g,"").replace(/[*_`>]/g,"");
   const bl=t.split(/\n\s*\n/).map(x=>x.replace(/\s+/g," ").trim()).filter(Boolean);
-  const good=bl.filter(x=>/^#{1,4} /.test(x)||x.length>=70);
-  return (good.length>=3?good:bl).slice(0,80);
+  const k=(title||"").toLowerCase().replace(/\W+/g," ").trim().slice(0,25);
+  let st=k?bl.findIndex(x=>/^#{1,4} /.test(x)&&x.toLowerCase().replace(/\W+/g," ").includes(k)):-1;
+  const src=st>=0?bl.slice(st+1):bl;
+  const good=src.filter(x=>x.length>=70&&!JUNK.test(x));
+  return good.slice(0,80);
 }
 async function toggle(a){
   const b=a.querySelector(".b"),u=a.dataset.u,c=a.querySelector(".caret");
@@ -105,7 +111,7 @@ async function toggle(a){
   b.innerHTML='<p style="color:var(--mu)">Carico l\'articolo…</p>'+link;
   try{
     const r=await fetch("https://r.jina.ai/"+u);if(!r.ok)throw 0;
-    const ps=parse(await r.text());if(!ps.length)throw 0;
+    const ps=parse(await r.text(),a.querySelector(".t").textContent);if(ps.length<2)throw 0;
     cache[u]=ps.map(x=>/^#{1,4} /.test(x)?`<h3>${esc(x.replace(/^#+ /,""))}</h3>`:`<p>${esc(x)}</p>`).join("");
     b.innerHTML=cache[u]+link;
   }catch(e){b.innerHTML='<p style="color:var(--mu)">Impossibile leggere qui (sito a pagamento o protetto).</p>'+link}
