@@ -76,7 +76,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v18</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v19</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -195,7 +195,8 @@ async function renderTravel(){
   if(!tv){L.innerHTML='<div class="empty">Carico i viaggi…</div>';
     try{const r=await fetch("viaggi.json?"+Date.now());if(!r.ok)throw 0;tv=await r.json()}catch(e){L.innerHTML='<div class="empty">Viaggi non disponibili.</div>';return}}
   if(cur!=="viaggi")return;
-  let h=`<div class="day">✈️ Viaggi · da Guanzate · controllo del ${esc(tv.updated)}</div>`+tv.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("")+`<div class="note">Periodo cercato: ${esc(tv.window)}</div>`;
+  let h=`<div class="day">✈️ Viaggi · da Guanzate · controllo del ${esc(tv.updated)}</div>`+tv.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("")+`<div class="note">Periodo cercato: ${esc(tv.window)}</div>`
+  +(tv.engines?`<div class="wc"><h4>🔎 Siti consultati</h4>`+tv.engines.map(g=>`<div class="tv"><b>${esc(g.g)}</b><div>`+g.l.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener noreferrer">${esc(x[0])}</a>`).join(" · ")+`</div></div>`).join("")+`</div>`:"");
   tv.dests.forEach(d=>{
     h+=`<div class="day">${d.emoji} ${esc(d.name)}</div><div class="wc"><h4>💶 ${esc(d.est)}</h4></div>`;
     d.modes.forEach(m=>{

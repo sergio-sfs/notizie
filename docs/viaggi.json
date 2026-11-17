@@ -217,5 +217,86 @@
     }
    ]
   }
+ ],
+ "engines": [
+  {
+   "g": "Operatori voli",
+   "l": [
+    [
+     "Ryanair",
+     "https://www.ryanair.com/it/it"
+    ],
+    [
+     "easyJet",
+     "https://www.easyjet.com/it"
+    ],
+    [
+     "ITA Airways",
+     "https://www.ita-airways.com/it_it"
+    ],
+    [
+     "Wizz Air",
+     "https://wizzair.com/it-it"
+    ]
+   ]
+  },
+  {
+   "g": "Operatori treni e bus",
+   "l": [
+    [
+     "Trenitalia",
+     "https://www.trenitalia.com/it.html"
+    ],
+    [
+     "Italo",
+     "https://www.italotreno.com/it"
+    ],
+    [
+     "Trenord",
+     "https://www.trenord.it"
+    ],
+    [
+     "Ferrovie del Sud Est",
+     "https://www.fseonline.it"
+    ],
+    [
+     "FlixBus",
+     "https://www.flixbus.it"
+    ]
+   ]
+  },
+  {
+   "g": "Motori di ricerca",
+   "l": [
+    [
+     "Omio",
+     "https://www.omio.it"
+    ],
+    [
+     "Volagratis",
+     "https://www.volagratis.com"
+    ],
+    [
+     "Skyscanner",
+     "https://www.skyscanner.it"
+    ],
+    [
+     "Kiwi.com",
+     "https://www.kiwi.com/it/"
+    ],
+    [
+     "Kayak",
+     "https://www.kayak.it"
+    ],
+    [
+     "Virail",
+     "https://virail.it"
+    ],
+    [
+     "Kombo",
+     "https://www.kombo.co/it"
+    ]
+   ]
+  }
  ]
 }
