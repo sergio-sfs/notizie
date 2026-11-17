@@ -1,10 +1,12 @@
 {
  "updated": "2026-11-17",
- "area": "Lombardia (Como/Varese/Lecco/Brianza/Milano), Piemonte, Veneto, Emilia-Romagna, Toscana, Liguria, Abruzzo, Puglia",
+ "area": "Tutta Italia, per regione",
  "window": "17/11/2026 – febbraio 2027",
  "notes": [
-  "Fotografia del 17 nov 2026 per Como, Varese, Lecco, Brianza e Milano. Per aggiornarla scrivimi «aggiorna eventi».",
-  "Date prese da TicketOne, Regione Lombardia, SagraMap, GiraItalia e simili: conferma sempre sul sito dell'organizzatore. Fuori Lombardia la copertura è più rada."
+  "Controllo del 17 nov 2026, tutte le regioni. Per aggiornare scrivimi «aggiorna eventi».",
+  "Per fiere e sagre ho inserito anche i grandi eventi con oltre 5.000 presenze. Nei concerti trovi l'etichetta 🥁 percussioni oppure 🎵 altro genere.",
+  "Date da TicketOne, calendari regionali, siti turistici e portali di sagre: conferma sempre sul sito dell'organizzatore. Dove scrivo «da confermare» è l'edizione precedente.",
+  "Fuori dalla Lombardia la copertura è più rada; per Sardegna, Calabria, Basilicata e Molise le fonti trovate sono poche."
  ],
  "cats": [
   {
@@ -16,109 +18,162 @@
      "t": "Vinicio Capossela · Como · mer 18/11/2026 20:30",
      "d": "«E morte non avrà dominio».",
      "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/altri-eventi-musicali-1073/",
-     "r": "LOM"
+     "r": "LOM",
+     "p": 0
     },
     {
      "t": "Nomadi · Varese · ven 22/01/2027 20:00",
      "d": "Live Tour 2025/2026.",
      "l": "https://www.ticketone.it/city/varese-1595/concerti-55/",
-     "r": "LOM"
+     "r": "LOM",
+     "p": 0
     },
     {
      "t": "La Sera dei Miracoli, omaggio a Lucio Dalla · Varese · ven 05/03/2027 20:00",
      "d": "",
      "l": "https://www.ticketone.it/city/varese-1595/concerti-55/",
-     "r": "LOM"
+     "r": "LOM",
+     "p": 0
     },
     {
      "t": "Angelo Branduardi, Il Cantico · Varese · ven 14/05/2027 20:00",
      "d": "Fuori dal periodo principale, utile per prenotare.",
      "l": "https://www.ticketone.it/city/varese-1595/concerti-55/",
-     "r": "LOM"
+     "r": "LOM",
+     "p": 0
     },
     {
      "t": "Milano · Cesare Cremonini mar 15/12/2026 · Irama mer 16/12 · Max Pezzali 29 e 30/12 · Sfera Ebbasta dom 07/02/2027",
      "d": "Tutti alle 21:00. Coez a Milano anche oggi 17/11 alle 21:00.",
      "l": "https://www.ticketone.it/cityd/como-1280/concerti-55/",
-     "r": "LOM"
+     "r": "LOM",
+     "p": 0
     },
     {
-     "t": "🥁 Percussioni: nessun evento con data trovato nel periodo",
+     "t": "Percussioni: nessun evento con data trovato nel periodo",
      "d": "Ci sono corsi e masterclass di batteria e percussioni a Milano su Eventbrite, e l'ensemble di percussioni del Conservatorio di Como si esibisce in concerti sul territorio, ma senza date confermate.",
      "l": "https://www.eventbrite.co.uk/cc/clinic-e-masterclass-di-batteria-e-percussioni-1840559",
-     "r": "LOM"
+     "r": "LOM",
+     "p": 1
     },
     {
      "t": "Percussionisti Anonimi · Ritmodipendenti (Lecco)",
      "d": "Spettacolo di percussioni: data non indicata nella pagina trovata.",
      "l": "https://www.in-lombardia.it/en/event/percussionisti-anonimi-ritmodipendenti",
-     "r": "LOM"
+     "r": "LOM",
+     "p": 1
     },
     {
      "r": "PIE",
      "t": "Drum Theatre «La danza dei tamburi» · Settimo Torinese (TO) · dom 13/12/2026 21:00",
      "d": "Concerto di percussioni, Teatro Garybaldi.",
-     "l": "https://www.mentelocale.it/torino/135918-la-danza-dei-tamburi-drum-theatre.htm"
+     "l": "https://www.mentelocale.it/torino/135918-la-danza-dei-tamburi-drum-theatre.htm",
+     "p": 1
     },
     {
      "r": "PIE",
      "t": "Max Pezzali, Max Forever · Torino · 13/03/2027",
      "d": "Inalpi Arena.",
-     "l": "https://www.inalpiarena.it/en/eventi/max-pezzali-tickets-ae1329"
+     "l": "https://www.inalpiarena.it/en/eventi/max-pezzali-tickets-ae1329",
+     "p": 0
     },
     {
      "r": "VEN",
      "t": "Sfera Ebbasta · Jesolo (VE) · mer 27/01/2027 21:00",
      "d": "Palasport 2027.",
-     "l": "https://www.ticketone.it/events/concerti-55/?page=1"
+     "l": "https://www.ticketone.it/events/concerti-55/?page=1",
+     "p": 0
     },
     {
      "r": "VEN",
      "t": "Alla scoperta di Morricone · Padova · ven 19/03/2027 21:15",
      "d": "Ensemble Symphony Orchestra.",
-     "l": "https://www.ticketone.it/city/padova-226/concerti-55/?page=1"
+     "l": "https://www.ticketone.it/city/padova-226/concerti-55/?page=1",
+     "p": 0
     },
     {
      "r": "TOS",
      "t": "Irama · Firenze · mar 08/12/2026 21:00",
      "d": "Palasport 2026.",
-     "l": "https://www.ticketone.it/events/concerti-55/helpcenter/"
+     "l": "https://www.ticketone.it/events/concerti-55/helpcenter/",
+     "p": 0
     },
     {
      "r": "ABR",
      "t": "Pescara · Disney Il Concerto 13/12/2026 · Canto Libero (Battisti e Mogol) 09/01/2027 · Omaggio a Morricone 24/01 · Gianmarco Carroccia 30/01 · Fabio Concato 27/02/2027",
      "d": "Orari: 17:00 il 13/12 e 18:00 il 24/01, gli altri 21:00.",
-     "l": "https://www.ticketone.it/city/pescara-1938/concerti-55/"
+     "l": "https://www.ticketone.it/city/pescara-1938/concerti-55/",
+     "p": 0
     },
     {
      "r": "PUG",
      "t": "Gigi D'Alessio · Bari · tour Palasport 14/11–23/12/2026",
      "d": "Tappa di Bari in elenco, data da verificare.",
-     "l": "https://www.ticketone.it/en/city/bari-221/concerti-55/"
+     "l": "https://www.ticketone.it/en/city/bari-221/concerti-55/",
+     "p": 0
     },
     {
      "r": "PUG",
      "t": "Alla scoperta di Morricone · Bari · mar 30/03/2027 21:00",
      "d": "",
-     "l": "https://www.ticketone.it/en/city/bari-221/concerti-55/"
+     "l": "https://www.ticketone.it/en/city/bari-221/concerti-55/",
+     "p": 0
     },
     {
-     "r": "ER",
-     "t": "Nessun concerto con data certa trovato",
-     "d": "Vedi i link ai siti di biglietti.",
-     "l": "https://www.ticketone.it/events/concerti-55/"
+     "r": "LOM",
+     "t": "Geolier · Forum di Assago (MI) · 11/12/2026",
+     "d": "Primo tour nei palasport.",
+     "l": "https://www.rollingstone.it/musica/classifiche-liste-musica/50-tour-che-vedremo-in-italia-nel-2026/1016522/",
+     "p": 0
     },
     {
-     "r": "LIG",
-     "t": "Nessun concerto con data certa trovato",
-     "d": "Vedi i link ai siti di biglietti.",
-     "l": "https://www.ticketone.it/events/concerti-55/"
+     "r": "TOS",
+     "t": "Geolier · Firenze · 27/11/2026",
+     "d": "Tour palasport.",
+     "l": "https://www.rollingstone.it/musica/classifiche-liste-musica/50-tour-che-vedremo-in-italia-nel-2026/1016522/",
+     "p": 0
     },
     {
-     "r": "ITA",
-     "t": "Elenchi nazionali dei concerti",
-     "d": "Dicembre 2026 e gennaio 2027, con prezzi.",
-     "l": "https://www.rockol.it/concerti-dicembre"
+     "r": "LAZ",
+     "t": "Geolier · Roma · 05/12/2026",
+     "d": "Tour palasport.",
+     "l": "https://www.rollingstone.it/musica/classifiche-liste-musica/50-tour-che-vedremo-in-italia-nel-2026/1016522/",
+     "p": 0
+    },
+    {
+     "r": "MAR",
+     "t": "Max Pezzali · Pesaro · 15 e 16/12/2026 21:00",
+     "d": "",
+     "l": "https://www.ticketone.it/events/concerti-55/helpcenter/",
+     "p": 0
+    },
+    {
+     "r": "CAM",
+     "t": "Irama · Napoli · mer 23/12/2026 21:00",
+     "d": "",
+     "l": "https://www.ticketone.it/city/napoli-219/concerti-55/",
+     "p": 0
+    },
+    {
+     "r": "CAM",
+     "t": "Alla scoperta di Morricone · Napoli · mar 05/01/2027 21:00",
+     "d": "Ensemble Symphony Orchestra.",
+     "l": "https://www.ticketone.it/city/napoli-219/concerti-55/",
+     "p": 0
+    },
+    {
+     "r": "MOL",
+     "t": "Festival Percussioni · Conservatorio «Perosi» di Campobasso",
+     "d": "Festival annuale (XII edizione nel documento trovato). Data non indicata: da verificare.",
+     "l": "https://www.conservatorioperosi.it/cms/en/albo-online-2/finish/868/3712.html",
+     "p": 1
+    },
+    {
+     "r": "UMB",
+     "t": "Umbria Jazz Winter · Orvieto · fine dicembre",
+     "d": "Tradizionale tra Natale e Capodanno. Date 2026/27 da confermare.",
+     "l": "https://travel.thewom.it/destinazioni/news-lowcost/capodanno-concerti-in-piazza-italia.html",
+     "p": 0
     }
    ],
    "links": [
@@ -148,21 +203,6 @@
      "LOM"
     ],
     [
-     "Rockol dicembre",
-     "https://www.rockol.it/concerti-dicembre",
-     "ITA"
-    ],
-    [
-     "Rockol gennaio",
-     "https://www.rockol.it/concerti-gennaio",
-     "ITA"
-    ],
-    [
-     "TicketOne Italia",
-     "https://www.ticketone.it/events/concerti-55/",
-     "ITA"
-    ],
-    [
      "TicketOne Pescara",
      "https://www.ticketone.it/city/pescara-1938/concerti-55/",
      "ABR"
@@ -181,6 +221,67 @@
      "Il Tacco di Bacco Puglia",
      "https://iltaccodibacco.it/puglia/events/2026-12-20/",
      "PUG"
+    ]
+   ]
+  },
+  {
+   "id": "bande",
+   "name": "Eventi bandistici",
+   "emoji": "🎺",
+   "items": [
+    {
+     "r": "LOM",
+     "t": "Concerti di Natale delle bande del Legnanese · dicembre",
+     "d": "Castellanza (Santa Cecilia), Legnano (Corpo Bandistico 1831), Busto Garolfo: nel 2025 erano tra il 13 e il 21 dicembre. Date 2026 da confermare.",
+     "l": "https://www.legnanonews.com/eventi/2025/12/16/concerto-di-natale-del-corpo-bandistico-legnanese-alla-chiesa-di-san-giovanni/1391077/"
+    },
+    {
+     "r": "LOM",
+     "t": "Fanfara dei Carabinieri · concerti itineranti di Natale · Lombardia",
+     "d": "Nel 2025 dal 5 all'11 dicembre. Date 2026 da confermare.",
+     "l": "https://www.mentelocale.it/milano/102433-concerti-itineranti-di-natale-2025-della-fanfara-del-3-reggimento-carabinieri-lombardia.htm"
+    },
+    {
+     "r": "TAA",
+     "t": "Concerto di Natale dei Corpi Bandistici · Trento · 26 dicembre",
+     "d": "Tradizionale di Santo Stefano all'Auditorium Santa Chiara. Data 2026 da confermare.",
+     "l": "https://www.iltrentinodeibambini.it/de/?p=200511"
+    },
+    {
+     "r": "TAA",
+     "t": "Flicorno d'Oro · Riva del Garda · marzo",
+     "d": "Concorso internazionale, quasi 4.000 musicisti. Nel 2026 era il 27–29 marzo, date 2027 da confermare.",
+     "l": "https://www.ladige.it/cultura-e-spettacoli/torna-il-flicorno-doro-4mila-bandisti-attesi-a-riva-del-garda-fpfaw9bm"
+    },
+    {
+     "r": "ABR",
+     "t": "Festival Internazionale di Bande Musicali e Majorettes · Giulianova (TE) · fine maggio",
+     "d": "Nel 2026 dal 26 al 31 maggio. Date 2027 da confermare.",
+     "l": "https://www.bandeinternazionali.it/programma-generale-dettagliato-del-festival-2026/?lang=en"
+    },
+    {
+     "r": "PUG",
+     "t": "Festival Internazionale di Bande Musicali «Valle d'Itria» · Cisternino (BR) · 15–18/07/2027",
+     "d": "29ª edizione.",
+     "l": "https://www.festivalfinder.eu/festivals/29th-international-music-band-festival-valle-ditria"
+    },
+    {
+     "r": "ER",
+     "t": "Concerto di Natale del Corpo Bandistico «Sant'Ambrogio» · area imolese",
+     "d": "Data non indicata nella pagina trovata.",
+     "l": "https://turismoimolese.cittametropolitana.bo.it/it/eventi/celebrazioni-ricorrenze/christmas-concert"
+    }
+   ],
+   "links": [
+    [
+     "LegnanoNews",
+     "https://www.legnanonews.com/eventi/",
+     "LOM"
+    ],
+    [
+     "ANBIMA Piemonte",
+     "https://www.anbima.it/piemonte",
+     "PIE"
     ]
    ]
   },
@@ -234,7 +335,7 @@
     {
      "r": "PIE",
      "t": "Fiera Internazionale del Tartufo Bianco d'Alba · 10 ott – 6 dic 2026",
-     "d": "Ogni fine settimana, fino al 6 dicembre.",
+     "d": "Ogni fine settimana fino al 6 dicembre. Evento di grande afflusso.",
      "l": "https://www.visititaly.eu/it/cibo-e-sapori/le-10-sagre-piu-famose-d-italia"
     },
     {
@@ -274,28 +375,22 @@
      "l": "https://www.ice.it/it/sites/default/files/banner_files/fiereinarrivo_gen_ita.pdf"
     },
     {
-     "r": "LIG",
-     "t": "Nessuna fiera trovata nel periodo",
-     "d": "Calendario fiere Genova sul link Radiocor.",
-     "l": "https://www.borsaitaliana.it/borsa/notizie/archivi/radiocor.html?page=305"
+     "r": "VDA",
+     "t": "Fiera di Sant'Orso · Aosta · sab 30 e dom 31/01/2027",
+     "d": "Oltre 150.000 visitatori e più di mille artigiani.",
+     "l": "https://www.quotidiano.net/itinerari/valle-daosta/millenaria-fiera-santorso-fd21fe34"
     },
     {
-     "r": "ABR",
-     "t": "Nessuna fiera trovata nel periodo",
+     "r": "PIE",
+     "t": "CioccolaTò · Torino · 10–14/02/2027",
      "d": "",
-     "l": "https://www.regione.abruzzo.it"
+     "l": "https://www.turismotorino.org/en/travel-trade/inspirations/12-months-of-great-events"
     },
     {
-     "r": "PUG",
-     "t": "Nessuna fiera trovata nel periodo",
-     "d": "La Fiera del Levante è a settembre.",
-     "l": "https://www.borsaitaliana.it/borsa/notizie/archivi/radiocor.html?page=101"
-    },
-    {
-     "r": "ITA",
-     "t": "Calendari fiere per città",
-     "d": "Radiocor: Torino, Genova, Verona, Padova, Bologna, Rimini, Firenze, Bari.",
-     "l": "https://www.borsaitaliana.it/borsa/notizie/archivi/radiocor.html?lang=en+&page=101"
+     "r": "TAA",
+     "t": "Mercatini di Natale di Bolzano, Merano, Bressanone, Vipiteno e Brunico · 26–27 nov 2026 – 6 gen 2027",
+     "d": "I più grandi d'Italia. Trento dal 20/11/2026 al 6/1/2027.",
+     "l": "https://www.cosedicasa.com/news/eventi/mercatini-di-natale/mercatini-di-natale-2026-in-alto-adige-con-lo-sfondo-delle-montagne-torna-la-magia-delle-feste-15008"
     }
    ],
    "links": [
@@ -318,11 +413,6 @@
      "Bologna Welcome fiere",
      "https://www.bolognawelcome.com/it/eventi/fiere",
      "ER"
-    ],
-    [
-     "Trade fair Italia 2027",
-     "https://www.tradefairdates.com/Fairs-Italy-Z108-S6.html",
-     "ITA"
     ]
    ]
   },
@@ -439,10 +529,160 @@
      "l": "https://www.itinerarinelgusto.it/sagre-e-feste/lecce/gennaio"
     },
     {
-     "r": "ITA",
-     "t": "Tutta Italia: sagre e mercatini del mese",
+     "r": "PIE",
+     "t": "Il Magico Paese di Natale · Asti, Govone e San Damiano d'Asti · 14 nov – 20 dic 2026",
+     "d": "20ª edizione, oltre 150 casette. Asti: mercatino in centro (nel 2025 weekend a novembre, giovedì–domenica a dicembre). Govone: Casa di Babbo Natale e Castello Reale.",
+     "l": "https://magicopaesedinatale.com/"
+    },
+    {
+     "r": "PIE",
+     "t": "Luci d'Artista · Torino · 23/10/2026 – 10/01/2027",
+     "d": "31 opere luminose, ingresso gratuito.",
+     "l": "https://www.idealista.it/en/news/lifestyle-in-italy/2026/11/10/291789-christmas-lights-in-turin-2026-the-centre-of-luci-d-artista"
+    },
+    {
+     "r": "PIE",
+     "t": "Mercatini dell'antiquariato · Torino, Collegno, Pinerolo · 6 dic 2026",
      "d": "",
-     "l": "https://www.giraitalia.com/eventi/socialevent"
+     "l": "https://www.cosedicasa.com/mercatini/regione/piemonte/mese/dicembre-2026"
+    },
+    {
+     "r": "PIE",
+     "t": "Carnevale di Ivrea · apertura 6/01/2027 · Battaglia delle Arance 7–9/02/2027",
+     "d": "",
+     "l": "https://turismotorino.org/en/visita/territorio/ivrea-e-canavese/ivrea/storico-carnevale-di-ivrea"
+    },
+    {
+     "r": "VDA",
+     "t": "Marché Vert Noël · Aosta · 21/11/2026 – 6/01/2027",
+     "d": "18ª edizione, tutti i giorni.",
+     "l": "https://www.voloscontato.it/guide-per-viaggiatori/mercatini-di-natale-di-aosta-2026-la-magia-delle-feste-qui-dura-fino-allepifania.php"
+    },
+    {
+     "r": "TAA",
+     "t": "Mercatino di Natale · Trento · 20/11/2026 – 6/01/2027",
+     "d": "Piazza Fiera e Piazza Mostra, 10–20.",
+     "l": "https://www.iltrentinodeibambini.it/de/?p=223622"
+    },
+    {
+     "r": "TAA",
+     "t": "Mercatini di Natale · Bolzano (35ª ed.), Merano, Bressanone · dal 26/11/2026 al 6/01/2027",
+     "d": "Apertura ufficiale il 26 novembre alle 17.",
+     "l": "https://siviaggia.it/notizie/mercatini-natale-bolzano-2026/605380/"
+    },
+    {
+     "r": "VEN",
+     "t": "Carnevale di Venezia · 23/01 – 9/02/2027",
+     "d": "Date ufficiali dal sito del Carnevale.",
+     "l": "https://pixidia.com/?p=92671"
+    },
+    {
+     "r": "VEN",
+     "t": "Mercatino di Natale · Verona, Piazza Bra · 21/11 – 28/12/2026",
+     "d": "",
+     "l": "https://www.weroad.it/blog/quando-iniziano-i-mercatini-natale"
+    },
+    {
+     "r": "FVG",
+     "t": "Fiera di Santa Caterina · Udine · 23/11/2026",
+     "d": "Fiera tradizionale.",
+     "l": "https://siviaggia.it/notizie/sagre-feste-friuli-venezia-giulia-novembre-2026/606010/amp/"
+    },
+    {
+     "r": "FVG",
+     "t": "Treno dei Presepi e dei Mercatini di Natale · Gemona–Sacile · 8/12/2026",
+     "d": "Treno storico, circa 250 posti: prenotare.",
+     "l": "https://siviaggia.it/notizie/treno-presepi-mercatini-natale-friuli-venezia-giulia-2026/607138/"
+    },
+    {
+     "r": "ER",
+     "t": "Carnevale di Cento · 31/01 e 7, 14, 21, 28/02/2027",
+     "d": "",
+     "l": "https://www.nostrofiglio.it/feste/carnevale/le-date-del-carnevale-2027-eventi-consigli"
+    },
+    {
+     "r": "TOS",
+     "t": "Carnevale di Viareggio · 30/01 – 20/02/2027",
+     "d": "Nel 2026 la sfilata inaugurale ha richiamato circa 100.000 persone.",
+     "l": "https://www.nostrofiglio.it/feste/carnevale/le-date-del-carnevale-2027-eventi-consigli"
+    },
+    {
+     "r": "TOS",
+     "t": "Arezzo Città del Natale · 14/11/2026 – 6/01/2027",
+     "d": "Villaggio tirolese fino al 27 dicembre.",
+     "l": "https://travel.thewom.it/italia/mercatini-natale-piu-belli-italia-classifica.html"
+    },
+    {
+     "r": "UMB",
+     "t": "Albero di Natale di Gubbio · accensione 7/12/2026",
+     "d": "Albero più grande del mondo, sul monte Ingino.",
+     "l": "https://www.lifestyleblog.it/blog/2026/11/luci-di-natale-2026-italia-accensioni/"
+    },
+    {
+     "r": "LAZ",
+     "t": "Mercatino di Natale · Roma, Piazza Navona · 1/12/2026 – 6/01/2027",
+     "d": "Con il Mercatino della Befana.",
+     "l": "https://esim.holafly.com/it/consigli-di-viaggio/mercatino-natale-roma/"
+    },
+    {
+     "r": "LAZ",
+     "t": "Mostra mercato del Presepio · Greccio (RI) · 28/11/2026 – 6/01/2027",
+     "d": "28ª edizione, giornate selezionate.",
+     "l": "https://travel.thewom.it/italia/lazio/mercatini-natale-greccio.html"
+    },
+    {
+     "r": "CAM",
+     "t": "Fiera di Natale di San Gregorio Armeno · Napoli · 1/11/2026 – 10/01/2027",
+     "d": "Via dei Presepi.",
+     "l": "https://www.napolike.it/migliori-mercatini-natale-campania-2026"
+    },
+    {
+     "r": "CAM",
+     "t": "Luci d'Artista · Salerno",
+     "d": "Edizione 2025-26 dal 14/11 al 1/02, con milioni di visitatori l'anno. Date 2026/27 da confermare.",
+     "l": "https://www.eventiesagre.it/Natale_Natale/4152_Luci+d+Artista+a+Salerno.html"
+    },
+    {
+     "r": "MOL",
+     "t": "'Ndocciata · Agnone (IS) · dicembre",
+     "d": "Sfilata di fuochi, vigilia di Natale. Date 2026 da confermare (nel 2025: 23–24 dicembre).",
+     "l": "https://www.italia.it/en/molise/things-to-do/event-ndocciata-agnone"
+    },
+    {
+     "r": "PUG",
+     "t": "Carnevale di Putignano (BA) · da gennaio a febbraio",
+     "d": "Nel 2026 dal 22 gennaio al 17 febbraio. Date 2027 da confermare.",
+     "l": "https://www.waitaly.net/?p=14841"
+    },
+    {
+     "r": "BAS",
+     "t": "Presepe Vivente nei Sassi di Matera · weekend tra dicembre e gennaio",
+     "d": "Nel 2025/26 era la 15ª edizione. Date 2026/27 da confermare.",
+     "l": "https://travel.thewom.it/italia/basilicata/matera/matera-in-inverno.html"
+    },
+    {
+     "r": "CAL",
+     "t": "Mercatini di Natale · Cosenza e Reggio Calabria · fine novembre – inizio gennaio",
+     "d": "Periodo abituale, date 2026 da confermare.",
+     "l": "https://www.viaggiando-italia.it/?p=106465"
+    },
+    {
+     "r": "SIC",
+     "t": "Natale a Palermo 2026 · 27/11/2026 – 10/01/2027",
+     "d": "Mercatini in 7 zone, dal centro a Mondello.",
+     "l": "https://www.balarm.it/news/mercatini-in-7-zone-per-il-natale-a-palermo-2026-dal-centro-a-mondello-il-bando-171422"
+    },
+    {
+     "r": "SAR",
+     "t": "Mercatini di Natale · Cagliari e Sassari · dicembre",
+     "d": "Date 2026 non trovate.",
+     "l": "https://travel.thewom.it/italia/sardegna/natale-in-sardegna.html"
+    },
+    {
+     "r": "LIG",
+     "t": "Eventi natalizi · Genova · dicembre 2026 – gennaio 2027",
+     "d": "Con l'albero di Piazza De Ferrari.",
+     "l": "https://www.thewomtravel.fr/italie/illuminations-noel-italie-turin.html"
     }
    ],
    "links": [
@@ -472,45 +712,56 @@
      "LOM"
     ],
     [
-     "GiraItalia Italia",
-     "https://www.giraitalia.com/eventi/socialevent",
-     "ITA"
+     "Magico Paese di Natale",
+     "https://magicopaesedinatale.com/",
+     "PIE"
     ],
     [
-     "SagraMap",
-     "https://sagramap.com",
-     "ITA"
+     "Mercatini Alto Adige",
+     "https://www.mercatini-di-natale.bz.it/",
+     "TAA"
     ],
     [
-     "Eventi e Sagre",
-     "https://www.eventiesagre.it",
-     "ITA"
+     "LoveVdA",
+     "https://www.lovevda.it",
+     "VDA"
     ],
     [
-     "Itinerari nel Gusto",
-     "https://www.itinerarinelgusto.it",
-     "ITA"
-    ],
-    [
-     "Sagr.it",
-     "https://sagr.it",
-     "ITA"
+     "Mercatini Natale per regione",
+     "https://www.eventiesagre.it/Promo+e+Sconti_Tempo+Libero/21149446_Calendario+Regionale+Mercatini+di+Natale+in+Italia.html",
+     ""
     ]
    ]
   }
  ],
  "regions": [
   [
-   "LOM",
-   "Lombardia"
+   "VDA",
+   "Valle d'Aosta"
   ],
   [
    "PIE",
    "Piemonte"
   ],
   [
+   "LOM",
+   "Lombardia"
+  ],
+  [
+   "TAA",
+   "Trentino-Alto Adige"
+  ],
+  [
    "VEN",
    "Veneto"
+  ],
+  [
+   "FVG",
+   "Friuli-Venezia Giulia"
+  ],
+  [
+   "LIG",
+   "Liguria"
   ],
   [
    "ER",
@@ -521,20 +772,48 @@
    "Toscana"
   ],
   [
-   "LIG",
-   "Liguria"
+   "UMB",
+   "Umbria"
+  ],
+  [
+   "MAR",
+   "Marche"
+  ],
+  [
+   "LAZ",
+   "Lazio"
   ],
   [
    "ABR",
    "Abruzzo"
   ],
   [
+   "MOL",
+   "Molise"
+  ],
+  [
+   "CAM",
+   "Campania"
+  ],
+  [
    "PUG",
    "Puglia"
   ],
   [
-   "ITA",
-   "Tutta Italia"
+   "BAS",
+   "Basilicata"
+  ],
+  [
+   "CAL",
+   "Calabria"
+  ],
+  [
+   "SIC",
+   "Sicilia"
+  ],
+  [
+   "SAR",
+   "Sardegna"
   ]
  ]
 }

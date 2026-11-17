@@ -76,7 +76,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v21</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v22</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -198,14 +198,14 @@ async function renderEvents(){
   if(cur!=="eventi")return;
   const RG=ev.regions||[],nm=Object.fromEntries(RG);
   let h=`<div class="day">🎪 Eventi · controllo del ${esc(ev.updated)}</div>`+ev.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("");
-  h+='<div class="note">'+[["","Tutte"]].concat(RG).map(x=>`<a href="#" data-r="${x[0]}" style="margin-right:10px;${x[0]===evR?"font-weight:700;text-decoration:underline":""}">${esc(x[1])}</a>`).join("")+"</div>";
+  h+='<div style="display:flex;flex-wrap:wrap;gap:6px;margin:8px 0">'+[["","Tutte"]].concat(RG).map(x=>{const on=x[0]===evR;return `<button data-r="${x[0]}" style="border:1px solid #d32f2f;border-radius:14px;padding:4px 10px;font-size:13px;cursor:pointer;background:${on?"#d32f2f":"transparent"};color:${on?"#fff":"#d32f2f"}">${esc(x[1])}</button>`}).join("")+"</div>";
   ev.cats.forEach(c=>{
     const it=c.items.filter(i=>!evR||i.r===evR),ln=(c.links||[]).filter(x=>!evR||!x[2]||x[2]===evR);
-    h+=`<div class="day">${c.emoji} ${esc(c.name)}</div><div class="wc">`+(it.length?it.map(i=>`<div class="tv"><b>${evR?"":esc(nm[i.r]||"")+" · "}${esc(i.t)}</b>${i.d?`<div>${esc(i.d)}</div>`:""}${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri</a>`:""}</div>`).join(""):'<div class="tv"><div>Nulla trovato per questa regione.</div></div>')
+    h+=`<div class="day">${c.emoji} ${esc(c.name)}</div><div class="wc">`+(it.length?it.map(i=>`<div class="tv"><b>${evR?"":esc(nm[i.r]||"")+" · "}${esc(i.t)}</b>${i.p===1?' <span>🥁 percussioni</span>':i.p===0?' <span>🎵 altro genere</span>':""}${i.d?`<div>${esc(i.d)}</div>`:""}${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri</a>`:""}</div>`).join(""):'<div class="tv"><div>Nulla trovato per questa regione.</div></div>')
      +(ln.length?`<div class="tv"><b>🔎 Siti consultati</b><div>`+ln.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener noreferrer">${esc(x[0])}</a>`).join(" · ")+`</div></div>`:"")+"</div>";
   });
   L.innerHTML=h;
-  L.querySelectorAll("a[data-r]").forEach(a=>a.onclick=e=>{e.preventDefault();evR=a.dataset.r;renderEvents()});
+  L.querySelectorAll("button[data-r]").forEach(a=>a.onclick=()=>{evR=a.dataset.r;renderEvents()});
 }
 let tv=null;
 async function renderTravel(){
