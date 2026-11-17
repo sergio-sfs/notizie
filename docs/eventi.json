@@ -11,7 +11,8 @@
   "EICMA (5–8/11) e Auto e Moto d'Epoca (22–25/10) si sono già svolti.",
   "🏰 Castelli e luoghi da visitare: dove la pagina lo riporta, ho indicato l'evento in corso nello stesso posto.",
   "Aggiunta fonte Giraitalia.com (calendari per regione/mese): letti Trentino-Alto Adige dic 2026, Sardegna, Lazio. Restano da leggere le altre regioni.",
-  "🧭 Esperienze, Beni FAI e gite: programma Natale 2026 dei Beni FAI non ancora pubblicato, indicate le edizioni 2025 come riferimento."
+  "🧭 Esperienze, Beni FAI e gite: programma Natale 2026 dei Beni FAI non ancora pubblicato, indicate le edizioni 2025 come riferimento.",
+  "🎺 Bande: i corpi bandistici pubblicano i programmi a ridosso delle date; trovate 5 voci con data 2026. Giraitalia non ha una sezione bande."
  ],
  "cats": [
   {
@@ -186,6 +187,13 @@
      "d": "Anteprime 29, 30 e 31/12/2026. Diretta Rai1 la mattina del 1° gennaio.",
      "l": "https://italianismo.com.br/agenda-evento/concerto-di-capodanno-2027-em-veneza-o-ano-novo-na-fenice/",
      "p": 0
+    },
+    {
+     "r": "LOM",
+     "t": "Candlelight: le colonne sonore del Natale · Como, Teatro Sociale · 27/12/2026 ore 17:30 e 21:30",
+     "d": "Quartetto d'archi in Sala Bianca.",
+     "l": "https://www.mentelocale.it/como/145072-candlelight-colonne-sonore-natale-concerto-quartetto-archi.htm",
+     "p": 0
     }
    ],
    "links": [
@@ -282,6 +290,36 @@
      "t": "Concerto di Natale del Corpo Bandistico «Sant'Ambrogio» · area imolese",
      "d": "Data non indicata nella pagina trovata.",
      "l": "https://turismoimolese.cittametropolitana.bo.it/it/eventi/celebrazioni-ricorrenze/christmas-concert"
+    },
+    {
+     "r": "VEN",
+     "t": "Concerto di Natale · Corpo Bandistico Arrigo Boito · Verona · 20/12/2026 ore 17:30",
+     "d": "Cinema Teatro Nuovo di San Michele.",
+     "l": "https://veneto.piazzainfesta.it/verona/concerto-di-natale-2026-98872"
+    },
+    {
+     "r": "PUG",
+     "t": "Armonie di Natale · Banda Città di Martina Franca · 22/11/2026 – Epifania 2027",
+     "d": "22/11 Santa Cecilia (ore 18–21), 13/12 Santa Lucia (ore 18–20:30), altri giri musicali in città fino all'Epifania.",
+     "l": "https://www.comune.martinafranca.ta.it/Vivere-il-comune/Eventi/ARMONIE-DI-NATALE-2026"
+    },
+    {
+     "r": "LOM",
+     "t": "Concerto di Natale · Banda Civica di Magenta (140 anni) · 23/12/2026",
+     "d": "Teatro Lirico di Magenta.",
+     "l": "https://www.magentanostra.it/oggi-pomeriggio-raduno-bandistico/"
+    },
+    {
+     "r": "LOM",
+     "t": "Corpo Musicale G. Puccini · Gorgonzola · sfilate e concerto di Natale",
+     "d": "29/11 sfilata per la Fiera di S. Caterina; 6 e 13/12 sfilate con pive; concerto di Natale 17 o 18/12 (da confermare).",
+     "l": "https://sites.google.com/view/bandagorgonzola/programmazione-2026"
+    },
+    {
+     "r": "TAA",
+     "t": "Bürgerkapelle Lana · mercatino «Polvere di Stelle» · 5/12 e 13/12/2026 ore 16",
+     "d": "5/12 «Maschlmusig», 13/12 Big Band.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
     }
    ],
    "links": [
@@ -889,6 +927,48 @@
      "t": "Mercatini di Natale minori · Arco, Riva, Pergine, Levico, Ala, Lavarone, Merano, Vipiteno, Lana, San Candido",
      "d": "Elenco ampio su Giraitalia, dicembre 2026.",
      "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "LOM",
+     "t": "Merate (LC) · Natale a Merate, Fiera di Sant'Ambrogio, Winter Fire Party",
+     "d": "Natale a Merate 22/11 e 1–17/12; Fiera di Sant'Ambrogio 7/12; Winter Fire Party 19/12.",
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+    },
+    {
+     "r": "LOM",
+     "t": "Lecco e Galbiate · mercatini di Natale e Babbo Natale in Piazza",
+     "d": "Mercatini Lecco 22/11, Galbiate 29/11; Babbo Natale in Piazza a Galbiate 6 e 13/12; letterine ad Abbadia Lariana 6/12.",
+     "l": "https://www.giraitalia.com/eventi/provincia/lecco"
+    },
+    {
+     "r": "LOM",
+     "t": "Albavilla (CO) · Natale in Villa · 8/12/2026 ore 10",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+    },
+    {
+     "r": "LOM",
+     "t": "Monza e Brianza · Villaggio di Natale Monza 1–17/12; mercatini Besana 13/12 (23ª ed.); Sagra di Natale Vimercate 13/12",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+    },
+    {
+     "r": "LOM",
+     "t": "Varese · Mercatino Varano Borghi 6/12, Sagra della Polenta Tradate 6/12, Auguri in Piazza Busto Arsizio 12/12",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
+    },
+    {
+     "r": "LOM",
+     "t": "Milano e hinterland · Fiera di S. Caterina Gorgonzola 28–29/11 (242ª); Villaggio Babbo Natale Assago 13–20/12; Cornaredo e Senago a dicembre",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/provincia/milano"
+    },
+    {
+     "r": "LOM",
+     "t": "Brescia, Bergamo, Mantova · piccoli mercatini 5 e 13/12/2026",
+     "d": "Colere (villaggio 5/12), Vestone (5/12), Bovezzo, Paitone, Gussago (13/12), Pegognaga MN (13/12).",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__lombardia/mese__2026-12/cat__SocialEvent"
     }
    ],
    "links": [
@@ -982,14 +1062,14 @@
     },
     {
      "r": "TAA",
-     "t": "Castel Valer (Tassullo) · Babbo Natale ogni domenica di dicembre",
-     "d": "Caccia al tesoro e visite guidate. Anno non indicato nella pagina: da verificare.",
-     "l": "https://www.visittrentino.info/it/articoli/inverno/val-di-non"
+     "t": "Castel Valer (Tassullo) · Babbo Natale · domeniche 6, 13, 20 e 27/12/2026",
+     "d": "Orari ore 10 e 15:30. Caccia al tesoro e visite guidate nel castello.",
+     "l": "https://www.nostrofiglio.it/famiglia/viaggi/il-castello-tra-i-meleti-dove-i-bambini-vivono-una-caccia-agli-indizi-di-natale"
     },
     {
      "r": "TAA",
-     "t": "Trenino dei Castelli · edizione invernale · Val di Non, Val di Sole, Trento",
-     "d": "Giornata in treno tra castelli e presepi, con mercatino finale. Date non indicate nel testo letto.",
+     "t": "Trenino dei Castelli · edizione invernale · ogni sabato 28/11 – 19/12/2026",
+     "d": "Giornata in treno da Trento tra Val di Non, Val di Sole e castelli (Castel Valer, Castello di San Michele a Ossana), con presepi e mercatino finale.",
      "l": "https://siviaggia.it/notizie/trentino-trenino-castelli-winter-edition/608384/"
     },
     {
@@ -1129,6 +1209,24 @@
      "t": "Gaeta · «Favole di Luce» · 20–22/11/2026",
      "d": "Borgo medievale sul mare.",
      "l": "https://www.giraitalia.com/eventi/lazio"
+    },
+    {
+     "r": "ER",
+     "t": "Castello di Gropparello (PC) · Natale al castello · dal 15/11/2026",
+     "d": "Allestimenti dal 15/11; 8/12 visite animate con personaggi in costume. Parco fiabesco con esperienze animate.",
+     "l": "https://travel.thewom.it/italia/emilia-romagna/castello-di-gropparello-natale.html"
+    },
+    {
+     "r": "ER",
+     "t": "Brisighella (RA) · Natale tra le tre torri · 6, 8, 13 e 20/12/2026",
+     "d": "6/12 Incanto di Natale; 8/12 concerto «Lo Schiaccianoci» ore 21; 13 e 20/12 mercatini nel centro (20/12 dalle 8 alle 20).",
+     "l": "https://travel.thewom.it/italia/emilia-romagna/brisighella-natale-via-degli-asini.html"
+    },
+    {
+     "r": "PIE",
+     "t": "Residenze Reali Sabaude · Natale (Stupinigi, Venaria, Rivoli, Govone)",
+     "d": "Nel 2025: dal 6/12 Villaggio degli Elfi a Stupinigi, Villaggio di Babbo Natale a Rivoli dal 7/12 al 6/01. Programma 2026 da confermare.",
+     "l": "https://www.quotidiano.net/itinerari/piemonte/natale-reale-residenze-sabaude-0f1b3925"
     }
    ],
    "links": [
@@ -1193,8 +1291,8 @@
     },
     {
      "r": "TAA",
-     "t": "Gita · Trenino dei Castelli (edizione invernale)",
-     "d": "Giornata in treno da Trento tra Val di Non, Val di Sole e castelli con presepi e mercatino. Date non indicate nel testo letto.",
+     "t": "Gita · Trenino dei Castelli (edizione invernale) · sabati 28/11 – 19/12/2026",
+     "d": "Partenza da Trento: Val di Non, Val di Sole, castelli e presepi di Ossana, mercatino finale con vin brulé.",
      "l": "https://siviaggia.it/notizie/trentino-trenino-castelli-winter-edition/608384/"
     },
     {
@@ -1232,6 +1330,18 @@
      "t": "Giornate FAI di Primavera 2027 · date da annunciare",
      "d": "Edizione 2026: 780 luoghi aperti in 400 città. Il FAI le pubblica a inizio anno.",
      "l": "https://www.lapresse.it/cultura/2026/03/09/tornano-le-giornate-fai-di-primavera-780-luoghi-aperti-in-400-citta-italiane/"
+    },
+    {
+     "r": "CAM",
+     "t": "Il Magico Parco di Natale · «Natale in fiaba» (IV ed.) · San Salvatore Telesino (BN) · dal 5/12/2026",
+     "d": "Tra le date indicate: 5, 6 e 13/12. Giraitalia segnala 39 appuntamenti a dicembre.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__campania/mese__2026-12/cat__Festival"
+    },
+    {
+     "r": "LOM",
+     "t": "FAI · Villa Della Porta Bozzolo (Casalzuigno, VA)",
+     "d": "Nel 2025: presepe scultoreo e «La Tavola delle Feste» sul Natale del Settecento. Programma 2026 da confermare.",
+     "l": "https://moveo.telepass.com/natale-2025-beni-fai/"
     }
    ],
    "links": [
