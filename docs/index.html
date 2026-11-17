@@ -44,6 +44,15 @@ div.n:active{opacity:.85}
 .b .go{display:inline-block;margin:4px 14px 2px 0;color:var(--ac);font-weight:600;text-decoration:none}
 .ext.sh{background:none;font:inherit;font-size:12px;cursor:pointer}
 .ext{color:var(--ac);font-weight:600;text-decoration:none;border:1px solid var(--bd);border-radius:6px;padding:0 6px}
+.n.open{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 14%,var(--card));box-shadow:0 0 0 2px var(--ac)}
+.bar2{display:flex;gap:6px;flex-wrap:wrap;padding:2px 0 4px}
+.wc{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px}
+.wc h4{margin:0 0 6px;font-size:15px}
+.wr{display:flex;gap:10px;align-items:center;font-size:14px;padding:3px 0;border-top:1px solid var(--bd)}
+.wr span:first-child{width:62px;color:var(--mu);text-transform:capitalize}
+.wr span:nth-child(2){width:24px}
+.wr .r{margin-left:auto;color:var(--mu);font-size:13px}
+.note{font-size:12px;color:var(--mu);margin:2px 2px 10px}
 .caret{margin-left:auto;color:var(--ac)}
 .empty{text-align:center;color:var(--mu);padding:40px 10px}
 </style>
@@ -52,7 +61,8 @@ div.n:active{opacity:.85}
 <header>
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v7</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Ordina: per giorno</option><option value="cat">↕ Ordina: per categoria</option></select></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v8</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <main id="list"><div class="empty">Caricamento…</div></main>
 <script>
@@ -60,7 +70,7 @@ const $=s=>document.querySelector(s);
 (function(){let t="auto";try{t=localStorage.getItem("theme")||"auto"}catch(e){}
   const el=$("#th");el.value=t;const ap=v=>v==="auto"?document.documentElement.removeAttribute("data-theme"):document.documentElement.setAttribute("data-theme",v);ap(t);
   el.onchange=()=>{ap(el.value);try{localStorage.setItem("theme",el.value)}catch(e){}}})();
-let data={topics:[]},cur="all",onlyOff=false,q="";
+let data={topics:[]},cur="all",onlyOff=false,q="",dayF="",sortM="day";
 let read={};try{read=JSON.parse(localStorage.getItem("read")||"{}")}catch(e){}
 const saveRead=()=>{try{localStorage.setItem("read",JSON.stringify(read))}catch(e){}};
 const esc=s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -70,22 +80,31 @@ function dayLabel(d){
   if(same(d,t))return"Oggi";if(same(d,y))return"Ieri";
   return d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"});
 }
-function items(){
+const dkey=d=>d.toLocaleDateString("sv-SE");
+function items(skipDay){
   let out=[];
   data.topics.forEach(t=>{if(cur==="all"||cur===t.id)t.items.forEach(i=>out.push({...i,tp:t}))});
   if(onlyOff)out=out.filter(i=>i.o);
+  if(dayF&&!skipDay)out=out.filter(i=>dkey(new Date(i.d))===dayF);
   if(q){const k=q.toLowerCase();out=out.filter(i=>(i.t+" "+i.s).toLowerCase().includes(k))}
   return out.sort((a,b)=>b.d.localeCompare(a.d));
 }
 function render(){
   $("#tabs").innerHTML=[{id:"all",name:"Tutte",emoji:"📰",n:data.topics.reduce((a,t)=>a+t.items.length,0)},
-    ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length}))]
+    ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length})),{id:"meteo",name:"Meteo e neve",emoji:"🌤️",n:""}]
     .map(t=>`<button class="tab ${t.id===cur?"on":""}" data-id="${t.id}">${t.emoji} ${esc(t.name)}<small>${t.n}</small></button>`).join("");
   $("#off").classList.toggle("on",onlyOff);
   $("#upd").textContent=data.updated?"Aggiornato "+new Date(data.updated).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"";
+  const days=[...new Set(items(true).map(i=>dkey(new Date(i.d))))].sort().reverse();
+  if(dayF&&!days.includes(dayF))dayF="";
+  $("#day").innerHTML='<option value="">📅 Tutti i giorni</option>'+days.map(k=>{const d=new Date(k+"T12:00:00");return`<option value="${k}">📅 ${dayLabel(d)}${dayLabel(d)==="Oggi"||dayLabel(d)==="Ieri"?" · "+d.toLocaleDateString("it-IT",{day:"numeric",month:"short"}):""}</option>`}).join("");
+  $("#day").value=dayF;$("#sort").value=sortM;
+  const isW=cur==="meteo";$(".bar2").style.display=isW?"none":"";$("#off").style.display=isW?"none":"";$("#q").style.display=isW?"none":"";
+  if(isW){renderWeather();return}
   const L=items();let last="",h="";
+  if(sortM==="cat"&&cur==="all"){const ord=Object.fromEntries(data.topics.map((t,k)=>[t.id,k]));L.sort((a,b)=>ord[a.tp.id]-ord[b.tp.id]||b.d.localeCompare(a.d))}
   L.forEach(i=>{
-    const d=new Date(i.d),dl=dayLabel(d);
+    const d=new Date(i.d),dl=(sortM==="cat"&&cur==="all")?i.tp.emoji+" "+i.tp.name:dayLabel(d);
     if(dl!==last){h+=`<div class="day">${dl}</div>`;last=dl}
     h+=`<div class="n ${read[i.u]?"read":""}" data-u="${esc(i.u)}" data-l="${i.l?1:0}">
       <div class="t">${esc(i.t)}</div>${i.x&&i.x!==i.t?`<div class="x">${esc(i.x)}</div>`:""}
@@ -102,8 +121,39 @@ document.addEventListener("click",e=>{
   if(e.target.closest(".b"))return;
   const a=e.target.closest(".n");if(a)toggle(a)
 });
+$("#day").onchange=e=>{dayF=e.target.value;render()};
+$("#sort").onchange=e=>{sortM=e.target.value;render()};
 $("#q").addEventListener("input",e=>{q=e.target.value.trim();render()});
 const cache={};
+const PL=[["Guanzate",45.70,8.94,0],["Livigno",46.54,10.14,1],["Bormio",46.47,10.37,1],["Madesimo",46.43,9.35,1],["Pian delle Betulle",45.93,9.42,1]];
+const WI=c=>c===0?"☀️":c<=1?"🌤️":c===2?"⛅":c===3?"☁️":c<=48?"🌫️":c<=57?"🌦️":c<=67?"🌧️":c<=77?"🌨️":c<=82?"🌦️":c<=86?"🌨️":"⛈️";
+let wx=null,wxT=0;
+const dn=k=>new Date(k+"T12:00:00").toLocaleDateString("it-IT",{weekday:"short",day:"numeric"});
+async function renderWeather(){
+  const L=$("#list");
+  if(!wx||Date.now()-wxT>18e5){
+    L.innerHTML='<div class="empty">Carico il meteo…</div>';
+    try{
+      const u="https://api.open-meteo.com/v1/forecast?latitude="+PL.map(p=>p[1]).join(",")+"&longitude="+PL.map(p=>p[2]).join(",")+"&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,snowfall_sum&hourly=snow_depth&forecast_days=5&timezone=Europe%2FRome";
+      const r=await fetch(u);if(!r.ok)throw 0;wx=await r.json();if(!Array.isArray(wx))wx=[wx];wxT=Date.now();
+    }catch(e){L.innerHTML='<div class="empty">Meteo non disponibile in questo momento.</div>';return}
+  }
+  if(cur!=="meteo")return;
+  const hr=new Date().getHours();let h="";
+  PL.forEach((p,k)=>{
+    const w=wx[k];if(!w)return;
+    const sd=w.hourly&&w.hourly.snow_depth?w.hourly.snow_depth[hr]:null;
+    if(k===0)h+='<div class="day">📍 Meteo · '+p[0]+'</div>';
+    if(k===1)h+='<div class="day">⛷️ Neve in montagna</div><div class="note">Valori stimati da modello meteo (non sono i bollettini degli impianti): per piste e impianti aperti controlla i siti delle località.</div>';
+    let c=`<div class="wc"><h4>${WI(w.current.weather_code)} ${p[0]} · ${Math.round(w.current.temperature_2m)}°${p[3]?` · neve al suolo ${sd==null?"n.d.":Math.round(sd*100)+" cm"}`:""}</h4>`;
+    w.daily.time.forEach((d,i)=>{
+      const sn=w.daily.snowfall_sum[i],pr=w.daily.precipitation_sum[i];
+      c+=`<div class="wr"><span>${dn(d)}</span><span>${WI(w.daily.weather_code[i])}</span><span>${Math.round(w.daily.temperature_2m_min[i])}° / ${Math.round(w.daily.temperature_2m_max[i])}°</span><span class="r">${p[3]?`❄️ ${sn>0?sn.toFixed(1)+" cm":"—"}`:`💧 ${pr>0?pr.toFixed(1)+" mm":"—"}`}</span></div>`;
+    });
+    h+=c+"</div>";
+  });
+  L.innerHTML=h;
+}
 const STOP=/leggi anche|correlat|altre notizie|ultime notizie|potrebbe interessarti|ti potrebbe|articoli simili|commenti|condividi|più letti|guarda anche|vedi anche|lascia un commento|argomenti|tag:|iscriviti|notizie di|dal network|in evidenza|consigliat/i;
 const JUNK=/cookie|consenso|IABV2|privacy|gdpr|accett|newsletter|iscriviti|©|tutti i diritti|seguici su|condividi|leggi anche|pubblicità|abbonati|javascript/i;
 function parse(md,title){
@@ -131,8 +181,8 @@ function parse(md,title){
 }
 async function toggle(a){
   const b=a.querySelector(".b"),u=a.dataset.u,c=a.querySelector(".caret");
-  if(!b.hidden){b.hidden=true;c.textContent="▾ Leggi";return}
-  b.hidden=false;c.textContent="▴ Chiudi";read[u]=Date.now();saveRead();a.classList.add("read");
+  if(!b.hidden){b.hidden=true;c.textContent="▾ Leggi";a.classList.remove("open");return}
+  b.hidden=false;a.classList.add("open");c.textContent="▴ Chiudi";read[u]=Date.now();saveRead();a.classList.add("read");
   const tr=`<a class="go" href="https://translate.google.com/translate?sl=auto&tl=it&u=${encodeURIComponent(u)}" target="_blank" rel="noopener noreferrer">🌐 Traduci in italiano</a>`;
   const en='<p style="color:var(--mu)">Testo in lingua straniera: apri la versione tradotta o il sito.</p>';
   const link=`<a class="go" href="${esc(u)}" target="_blank" rel="noopener noreferrer">↗ Apri sul sito originale</a>`;

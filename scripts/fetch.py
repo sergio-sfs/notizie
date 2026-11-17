@@ -21,7 +21,8 @@ TOPICS = [
  ("juve", "Juventus", "⚪⚫", ["juventus.com"],
    ['site:juventus.com', 'Juventus Serie A', 'Juventus calcio notizie']),
  ("ansa", "ANSA", "📰", ["ansa.it"], ['site:ansa.it']),
- ("corriere", "Corriere", "🗞️", ["corriere.it"], ['site:corriere.it']),
+ ("corriere", "Corriere", "🗞️", ["corriere.it"],
+   ['site:corriere.it ' + k for k in ["", "cronaca", "politica", "economia", "esteri", "sport", "milano", "cultura", "salute", "tecnologia", "spettacoli", "scuola", "ultime notizie"]]),
  ("cadorago", "Cadorago", "📍", [], ['Cadorago']),
  ("guanzate", "Guanzate", "📍", [], ['Guanzate']),
  ("noci", "Noci", "📍", [], ['Noci Bari', 'comune di Noci', 'Noci Puglia notizie']),
@@ -31,11 +32,17 @@ TOPICS = [
 
 # feed RSS diretti (link diretti agli articoli); se falliscono resta la ricerca Bing
 FEEDS = {
- "ansa": ["https://www.ansa.it/sito/ansait_rss.xml"],
+ "ansa": ["https://www.ansa.it/sito/ansait_rss.xml",
+          "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
+          "https://www.ansa.it/sito/notizie/politica/politica_rss.xml",
+          "https://www.ansa.it/sito/notizie/economia/economia_rss.xml",
+          "https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml",
+          "https://www.ansa.it/sito/notizie/sport/sport_rss.xml",
+          "https://www.ansa.it/lombardia/notizie/lombardia_rss.xml"],
  "corriere": ["https://xml2.corriereobjects.it/rss/homepage.xml", "https://www.corriere.it/rss/homepage.xml", "https://www.corriere.it/rss/cronache.xml", "https://www.corriere.it/rss/politica.xml", "https://www.corriere.it/rss/economia.xml", "https://www.corriere.it/rss/sport.xml"],
 }
 REQUIRE = {"noci": r"\bnoci\b", "cadorago": r"cadorago", "guanzate": r"guanzate"}
-MAXN = {"ansa": 150, "corriere": 100}
+MAXN = {"ansa": 250, "corriere": 200}
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; notizie-app)"})
