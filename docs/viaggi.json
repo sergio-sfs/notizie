@@ -4,9 +4,43 @@
  "notes": [
   "Fotografia del 17 nov 2026, 1 persona, andata e ritorno. Voli A/R cercati con 2–7 notti di permanenza; prezzi con bagaglio a mano/personale (bagaglio da stiva escluso).",
   "Guanzate → aeroporto/stazione di Milano non è incluso nei costi.",
-  "Prezzi e orari non si aggiornano da soli: scrivimi «aggiorna viaggi». Ordine di ricerca: 1) siti degli operatori (Ryanair, easyJet, ITA, Wizz Air; Trenitalia, Italo, FSE, FlixBus), 2) Omio (voli, treni, bus), 3) Volagratis, 4) Skyscanner, 5) Kiwi e altri motori."
+  "Prezzi e orari non si aggiornano da soli: scrivimi «aggiorna viaggi». Ordine di ricerca: 1) siti degli operatori (Ryanair, easyJet, ITA, Wizz Air; Trenitalia, Italo, FSE, FlixBus), 2) Omio (voli, treni, bus), 3) Volagratis, 4) Skyscanner, 5) Kiwi e altri motori.",
+  "Costo e tempi del primo tratto Guanzate→Milano non sono inclusi nelle stime."
  ],
  "dests": [
+  {
+   "id": "primo",
+   "name": "Primo tratto: Guanzate → Milano / Malpensa (Trenord)",
+   "emoji": "🚉",
+   "est": "Costi indicativi: Saronno → Malpensa Express 9 €; tratta R17 fino a Saronno/Milano Cadorna con biglietto Trenord a zone/km (prezzo da verificare nel motore orario).",
+   "modes": [
+    {
+     "title": "🚆 Trenord linea R17 Como – Saronno – Milano Cadorna",
+     "items": [
+      {
+       "t": "Stazioni vicine a Guanzate: Cadorago, Lomazzo (anche Caslino al Piano)",
+       "d": "Guanzate non ha stazione. Sulla R17 Como Lago–Milano Cadorna (circa 1 ora): Como Lago primo treno 5:16, ultimo 22:16; da Milano Cadorna primo 5:43, ultimo 22:43. Quale stazione sia più comoda da casa: da verificare.",
+       "l": "https://www.trenord.it/linee-e-orari/circolazione/le-nostre-linee/como-saronno-milano/?code=R17"
+      },
+      {
+       "t": "Verso Malpensa: cambio a Saronno sul Malpensa Express",
+       "d": "Saronno → Malpensa T1 circa 18–20 min, primo treno 5:16, ultimo 22:46, 9 €. Ritorno da Malpensa T1: ultimo 00:26. Per voli serali di rientro controlla la coincidenza per Lomazzo/Cadorago.",
+       "l": "https://www.malpensaexpress.it/en/lines-and-timetable/most-searched-lines/saronno-malpensa-airport-t1-route"
+      },
+      {
+       "t": "Verso Milano Centrale (treni per Bari/Pescara)",
+       "d": "R17 fino a Milano Cadorna, poi metro o altro mezzo fino a Centrale (tempi da verificare). Saronno ⇄ Milano Cadorna circa 20 min con S3, ultimo da Cadorna 00:02.",
+       "l": "https://www.trenord.it/linee-e-orari/tratte/milano-cadorna-saronno/"
+      },
+      {
+       "t": "Cerca l'orario esatto sul motore Trenord",
+       "d": "Inserisci stazione di partenza e data.",
+       "l": "https://www.trenord.it"
+      }
+     ]
+    }
+   ]
+  },
   {
    "id": "noci",
    "name": "Noci (BA)",
