@@ -9,7 +9,8 @@
   "Seconda passata sui siti istituzionali: calendario fiere Regione Piemonte e Visit Tuscany. Per le altre regioni i portali ufficiali non mostravano elenchi leggibili, quindi restano aggregatori e siti turistici.",
   "Frecce Tricolori: il calendario 2026 è concluso (ultimo air show a Salerno, 25–27/9) e quello 2027 non risulta ancora pubblicato.",
   "EICMA (5–8/11) e Auto e Moto d'Epoca (22–25/10) si sono già svolti.",
-  "🏰 Castelli e luoghi da visitare: dove la pagina lo riporta, ho indicato l'evento in corso nello stesso posto."
+  "🏰 Castelli e luoghi da visitare: dove la pagina lo riporta, ho indicato l'evento in corso nello stesso posto.",
+  "Aggiunta fonte Giraitalia.com (calendari per regione/mese): letti Trentino-Alto Adige dic 2026, Sardegna, Lazio. Restano da leggere le altre regioni."
  ],
  "cats": [
   {
@@ -833,6 +834,60 @@
      "t": "Fiera dell'Epifania · L'Aquila · 5/01/2027",
      "d": "Nel 2026 (76ª ed.) circa 295 bancarelle. Data 2027 da confermare. L'Aquila è Capitale Italiana della Cultura 2026.",
      "l": "https://lifeinabruzzo.com/whatsonabruzzo-5-11-jan-26/"
+    },
+    {
+     "r": "SAR",
+     "t": "Autunno in Barbagia · Atzara 21–22/11, Gadoni e Oniferi 29–30/11, Fonni 6–8/12/2026",
+     "d": "Paesi aperti con prodotti tipici.",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
+    },
+    {
+     "r": "SAR",
+     "t": "Sagra delle Olive · Gonnosfanadiga · 20–22/11/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
+    },
+    {
+     "r": "SAR",
+     "t": "Sagra dello Zafferano · Turri · 22/11/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
+    },
+    {
+     "r": "SAR",
+     "t": "Mercatini di Natale di Cagliari · da 1/12/2026",
+     "d": "Piazza Yenne e corso Vittorio Emanuele II, con Villaggio di Natale in piazza del Carmine. Ingresso libero.",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
+    },
+    {
+     "r": "SAR",
+     "t": "Weekend dei Gusti, delle Arti e dei Mestieri · Sassari · 5–11/12/2026 (19ª ed.)",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
+    },
+    {
+     "r": "SAR",
+     "t": "Notte de Chelu · Berchidda · 5–6/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
+    },
+    {
+     "r": "LAZ",
+     "t": "Sagra della Polenta · Proceno (VT) · 21–22/11/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/lazio"
+    },
+    {
+     "r": "LAZ",
+     "t": "Il Vino Novello e Le Cantine del Borgo · Strangolagalli (FR) · 21–22/11/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/lazio"
+    },
+    {
+     "r": "TAA",
+     "t": "Mercatini di Natale minori · Arco, Riva, Pergine, Levico, Ala, Lavarone, Merano, Vipiteno, Lana, San Candido",
+     "d": "Elenco ampio su Giraitalia, dicembre 2026.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
     }
    ],
    "links": [
@@ -1013,9 +1068,74 @@
      "t": "Natale nei Beni FAI (castelli, ville, abbazie)",
      "d": "Nel 2025: 22/11 – 6/01 in 20 Beni. Programma 2026 non ancora trovato.",
      "l": "https://fondoambiente.it/news/viviamo-insieme-il-natale-nei-beni-del-fai-in-tutta-italia"
+    },
+    {
+     "r": "TAA",
+     "t": "Ossana (TN) · «Borgo dei 1000 Presepi» · dicembre 2026",
+     "d": "Segnalato da Giraitalia da inizio dicembre (1–5/12 nel calendario letto).",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Chiusa (BZ) · borgo natalizio · dicembre 2026",
+     "d": "Date indicate: 4/12 e per bambini 4–8 e 19–20/12.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Forte di Tenna (TN) · Natale al Forte · 5/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Storo (TN) · Natale nel borgo · 5/12/2026",
+     "d": "Via delle Barche e Baitoni in strada.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Castello Neuhaus, Gais (BZ) · escursione con lanterne · 4, 11 e 26/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Castel Welsperg, Monguelfo (BZ) · «Magia d'inverno» · 27–28/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Castelbello-Ciardes (BZ) · Fiera d'Avvento al Castello · 18/12/2026 ore 17",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "SAR",
+     "t": "Rebeccu (Bonorva) · Atmosfere Medievali · edizione 8/11/2026 già passata",
+     "d": "Borgo medievale: edizione 2027 da verificare.",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
+    },
+    {
+     "r": "LAZ",
+     "t": "Viterbo Christmas Experience 2026/27 · dal 21/11/2026",
+     "d": "Centro storico medievale di Viterbo.",
+     "l": "https://www.giraitalia.com/eventi/lazio"
+    },
+    {
+     "r": "LAZ",
+     "t": "Gaeta · «Favole di Luce» · 20–22/11/2026",
+     "d": "Borgo medievale sul mare.",
+     "l": "https://www.giraitalia.com/eventi/lazio"
     }
    ],
-   "links": []
+   "links": [
+    [
+     "Giraitalia · eventi per regione e mese",
+     "https://www.giraitalia.com/eventi/lombardia"
+    ]
+   ]
   },
   {
    "id": "altri",
@@ -1093,6 +1213,36 @@
      "t": "Coppa del Mondo telemark · Carezza · 14–15/01/2027",
      "d": "",
      "l": "https://www.suedtirol.info/it/it/esperienze-eventi/plp-eventi/o/gare-coppa-del-mondo-alto-adige.page1"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo combinata nordica · Predazzo · 11–13/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo ski cross · San Candido · 19–20/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "Coppa del Mondo telemark · Pinzolo · 18–19/12/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "TAA",
+     "t": "BOclassic · Bolzano · 31/12/2026",
+     "d": "Corsa di fine anno.",
+     "l": "https://www.giraitalia.com/link__eventi-mese/regione__trentino-alto-adige/mese__2026-12"
+    },
+    {
+     "r": "SAR",
+     "t": "Cronoscalata di Tandalò · Buddusò · 19–21/11/2026",
+     "d": "",
+     "l": "https://www.giraitalia.com/eventi/sardegna"
     }
    ],
    "links": [
