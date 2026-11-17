@@ -76,7 +76,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v22</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v23</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -117,6 +117,7 @@ function render(){
   $("#tabs").innerHTML=[{id:"all",name:"Tutte",emoji:"📰",n:data.topics.reduce((a,t)=>a+t.items.length,0)},
     ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length})),{id:"meteo",name:"Meteo e neve",emoji:"🌤️",n:""},{id:"viaggi",name:"Viaggi",emoji:"✈️",n:""},{id:"eventi",name:"Eventi",emoji:"🎪",n:""}]
     .map(t=>`<button class="tab ${t.id===cur?"on":""}" data-id="${t.id}">${t.emoji} ${esc(t.name)}<small>${t.n}</small></button>`).join("");
+  {const a=$("#tabs").querySelector(".tab.on");if(a){const b=$("#tabs");b.scrollLeft=a.offsetLeft-(b.clientWidth-a.offsetWidth)/2}}
   $("#off").classList.toggle("on",onlyOff);
   $("#upd").textContent=data.updated?"Aggiornato "+new Date(data.updated).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"";
   const days=[...new Set(items(true).map(i=>dkey(new Date(i.d))))].sort().reverse();
