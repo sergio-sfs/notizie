@@ -72,7 +72,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v14</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v15</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -215,6 +215,7 @@ function parse(md,title){
     }
     if(good.length>=(st>=0?60:15))break;
   }
+  if(good.length<2){const alt=src.filter(x=>x.length>=40&&!JUNK.test(x)&&!/^#{1,4} /.test(x)).slice(0,30);if(alt.length>good.length)return alt}
   return good;
 }
 async function toggle(a){
@@ -233,7 +234,7 @@ async function toggle(a){
     const ps=parse(await r.text(),a.querySelector(".t").textContent);
     const w=ps.join(" ").toLowerCase().match(/[a-zàèéìòù']+/g)||[],IT=new Set("il lo la gli le di del della dei da con per che non si alla nel come più sono ha hanno questo".split(" ")),EN=new Set("the of and to in for on with at by from is are was were be has have will this that after".split(" "));
     let ni=0,ne=0;w.forEach(x=>{if(IT.has(x))ni++;if(EN.has(x))ne++});
-    if(ne>ni)throw "en";if(ps.length<2)throw 0;
+    if(ne>ni)throw "en";if(ps.length<1)throw 0;
     cache[u]=ps.map(x=>/^#{1,4} /.test(x)?`<h3>${esc(x.replace(/^#+ /,""))}</h3>`:`<p>${esc(x)}</p>`).join("");
     b.innerHTML=SB+cache[u]+link;
   }catch(e){b.innerHTML=e==="en"?en+tr+link:'<p style="color:var(--mu)">Impossibile leggere qui (sito a pagamento o protetto).</p>'+link}
