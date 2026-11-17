@@ -77,7 +77,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v31</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v32</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -116,7 +116,7 @@ function items(skipDay){
 }
 function render(){
   $("#tabs").innerHTML=[{id:"all",name:"Tutte",emoji:"📰",n:data.topics.reduce((a,t)=>a+t.items.length,0)},
-    ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length})),{id:"meteo",name:"Meteo e neve",emoji:"🌤️",n:""},{id:"viaggi",name:"Viaggi",emoji:"✈️",n:""},{id:"eventi",name:"Eventi",emoji:"🎪",n:""}]
+    ...data.topics.map(t=>({id:t.id,name:t.name,emoji:t.emoji,n:t.items.length})),{id:"meteo",name:"Meteo e neve",emoji:"🌤️",n:""},{id:"viaggi",name:"Viaggi",emoji:"✈️",n:""},{id:"eventi",name:"Eventi",emoji:"🎪",n:""},{id:"svizzera",name:"Svizzera",emoji:"🇨🇭",n:""}]
     .map(t=>`<button class="tab ${t.id===cur?"on":""}" data-id="${t.id}">${t.emoji} ${esc(t.name)}<small>${t.n}</small></button>`).join("");
   {const a=$("#tabs").querySelector(".tab.on");if(a){const b=$("#tabs");b.scrollLeft=a.offsetLeft-(b.clientWidth-a.offsetWidth)/2}}
   $("#off").classList.toggle("on",onlyOff);
@@ -125,8 +125,8 @@ function render(){
   if(dayF&&!days.includes(dayF))dayF="";
   $("#day").innerHTML='<option value="">📅 Tutti i giorni</option>'+days.map(k=>{const d=new Date(k+"T12:00:00");return`<option value="${k}">📅 ${dayLabel(d)}${dayLabel(d)==="Oggi"||dayLabel(d)==="Ieri"?" · "+d.toLocaleDateString("it-IT",{day:"numeric",month:"short"}):""}</option>`}).join("");
   $("#day").value=dayF;$("#sort").value=sortM;
-  const isW=cur==="meteo"||cur==="viaggi"||cur==="eventi";$(".bar2").style.display=isW?"none":"";$("#off").style.display=isW?"none":"";$("#q").style.display=isW?"none":"";
-  if(isW){cur==="viaggi"?renderTravel():cur==="eventi"?renderEvents():renderWeather();return}
+  const isW=cur==="meteo"||cur==="viaggi"||cur==="eventi"||cur==="svizzera";$(".bar2").style.display=isW?"none":"";$("#off").style.display=isW?"none":"";$("#q").style.display=isW?"none":"";
+  if(isW){cur==="viaggi"?renderTravel():cur==="eventi"?renderEvents():cur==="svizzera"?renderSwiss():renderWeather();return}
   const L=items();let last="",h="";
   if(sortM==="cat"&&cur==="all"){const ord=Object.fromEntries(data.topics.map((t,k)=>[t.id,k]));L.sort((a,b)=>ord[a.tp.id]-ord[b.tp.id]||b.d.localeCompare(a.d))}
   L.forEach(i=>{
@@ -209,6 +209,24 @@ async function renderEvents(){
   });
   L.innerHTML=h;
   L.querySelectorAll("button[data-r]").forEach(a=>a.onclick=()=>{evR=a.dataset.r;renderEvents()});
+}
+let sv=null,svM=new Date().getMonth()+1;
+async function renderSwiss(){
+  const L=$("#list");
+  if(!sv){L.innerHTML='<div class="empty">Carico la Svizzera…</div>';
+    try{const r=await fetch("svizzera.json?"+Date.now());if(!r.ok)throw 0;sv=await r.json()}catch(e){L.innerHTML='<div class="empty">Svizzera non disponibile.</div>';return}}
+  if(cur!=="svizzera")return;
+  const MN=["Gen","Feb","Mar","Apr","Mag","Giu","Lug","Ago","Set","Ott","Nov","Dic"],c0=new Date().getMonth();
+  const mb=[[0,"Tutti"]].concat(Array.from({length:12},(_,k)=>{const m=(c0+k)%12;return[m+1,MN[m]]}));
+  let h=`<div class="day">🇨🇭 Svizzera · controllo del ${esc(sv.updated)}</div>`+sv.notes.map(n=>`<div class="note">${esc(n)}</div>`).join("");
+  h+='<div style="display:flex;flex-wrap:wrap;gap:6px;margin:8px 0">'+mb.map(x=>{const on=x[0]===svM;return `<button data-m="${x[0]}" style="border:1px solid #d32f2f;border-radius:14px;padding:4px 10px;font-size:13px;cursor:pointer;background:${on?"#d32f2f":"transparent"};color:${on?"#fff":"#d32f2f"}">${esc(x[1])}</button>`}).join("")+"</div>";
+  sv.cats.forEach(c=>{
+    const it=c.items.filter(i=>!svM||i.m.includes(svM));
+    h+=`<div class="day">${c.emoji} ${esc(c.name)}</div><div class="wc">`+(it.length?it.map(i=>`<div class="tv"><b>${esc(i.t)}</b>${i.d?`<div>${esc(i.d)}</div>`:""}${i.l?`<a href="${esc(i.l)}" target="_blank" rel="noopener noreferrer">↗ Apri</a>`:""}</div>`).join(""):'<div class="tv"><div>Nulla di verificato per questo mese.</div></div>')
+     +((c.links||[]).length?`<div class="tv"><b>🔎 Siti consultati</b><div>`+c.links.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener noreferrer">${esc(x[0])}</a>`).join(" · ")+`</div></div>`:"")+"</div>";
+  });
+  L.innerHTML=h;
+  L.querySelectorAll("button[data-m]").forEach(a=>a.onclick=()=>{svM=+a.dataset.m;renderSwiss()});
 }
 let tv=null;
 async function renderTravel(){

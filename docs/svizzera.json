@@ -1,0 +1,622 @@
+{
+ "updated": "2026-11-17",
+ "area": "Svizzera",
+ "notes": [
+  "Controllo del 17 nov 2026. Fonti ufficiali per prime (ticino.ch, MySwitzerland, Lugano, Basilea); dove ho solo siti secondari lo scrivo («da verificare»).",
+  "Scegli il mese con i bottoni rossi: parte dal mese in corso. Prezzi in franchi svizzeri (CHF). Per aggiornare scrivimi «aggiorna Svizzera».",
+  "Settembre e ottobre 2027: calendari non ancora pubblicati, nessuna voce verificata."
+ ],
+ "cats": [
+  {
+   "id": "natale",
+   "name": "Natale e mercatini",
+   "emoji": "🎄",
+   "items": [
+    {
+     "m": [
+      11,
+      12,
+      1
+     ],
+     "t": "Winterland Ascona–Locarno",
+     "d": "19/11/2026–6/1/2027, 10:00–02:00. Pista di ghiaccio, Zip line, Fondue Chalet, nuova Casa di Babbo Natale; per la prima volta unisce Locarno e Ascona (lungolago).",
+     "l": "https://www.ticino.ch/it/events/details/winterland-2026-27/10074.html"
+    },
+    {
+     "m": [
+      11,
+      12,
+      1
+     ],
+     "t": "Natale in Piazza · Lugano",
+     "d": "Mercatino 26/11/2026–6/1/2027 (Piazza della Riforma, luci e chalet); programma fino al 10/1. Novità: LAC Winter Village in Piazza Luini (pista, mercato, food court) 27/11–10/1.",
+     "l": "https://www.ticino.ch/en/events/details/christmas-in-lugano/10978.html"
+    },
+    {
+     "m": [
+      12
+     ],
+     "t": "Mercatino di Natale · Locarno Città Vecchia",
+     "d": "Solo martedì 8/12/2026, 10:00–21:00 (Immacolata).",
+     "l": "https://www.ticino.ch/it/events/details/Mercatini-di-Natale-in-Ticino/10028.html"
+    },
+    {
+     "m": [
+      11,
+      12
+     ],
+     "t": "Mercatini minori Ticino",
+     "d": "Morbio Superiore 21/11 (10–17); Brissago 12/12 (11–18); Solduno 13/12 (11–18); Maggia 19/12 (16–21). Elenco completo sul sito ufficiale.",
+     "l": "https://www.ticino.ch/it/events/details/Mercatini-di-Natale-in-Ticino/10028.html"
+    },
+    {
+     "m": [
+      12
+     ],
+     "t": "Mercatini di Natale · Bellinzona",
+     "d": "Centro storico, nelle due domeniche prima di Natale (date 2026 da verificare).",
+     "l": "https://www.ticino.ch/it/events/details/Mercatini-di-Natale-a-Bellinzona/11364.html"
+    },
+    {
+     "m": [
+      11,
+      12
+     ],
+     "t": "Mercatino di Natale · Basilea",
+     "d": "26/11–23/12/2026, ogni giorno 11:00–20:30 (Barfüsserplatz, Münsterplatz, Claraplatz). Fonte: Basel Tourismus / MySwitzerland.",
+     "l": "https://www.basel.com/it/eventi/natale/mercatino-di-natale"
+    },
+    {
+     "m": [
+      11,
+      12
+     ],
+     "t": "Mercatini di Natale · Zurigo",
+     "d": "19/11–24/12/2026 (date previste; stazione centrale Christkindlimarkt, Wienachtsdorf, Werdmühleplatz). Da verificare sui siti ufficiali.",
+     "l": "https://travel.thewom.it/svizzera/zurigo/mercatini-natale-zurigo.html"
+    },
+    {
+     "m": [
+      11,
+      12
+     ],
+     "t": "Montreux Noël",
+     "d": "20/11–24/12/2026 sul lungolago (circa 50 chalet, pista; fonte secondaria, da verificare).",
+     "l": "https://radicalstorage.com/travel/it/?p=89502"
+    },
+    {
+     "m": [
+      11,
+      12
+     ],
+     "t": "Noël au Quai · Ginevra",
+     "d": "Quai du Mont-Blanc, ~21/11–24/12 (fonte secondaria, da verificare).",
+     "l": "https://siviaggia.it/idee-di-viaggio/mercatini-natale-svizzera/489460/"
+    },
+    {
+     "m": [
+      11,
+      12
+     ],
+     "t": "Mercati di Natale di Einsiedeln",
+     "d": "27/11–6/12/2026.",
+     "l": "https://www.myswitzerland.com/it-it/scoprire-la-svizzera/manifestazioni/manifestazioni-ricerca/?rubrik=mercatinidinataleeavvento"
+    },
+    {
+     "m": [
+      11,
+      12
+     ],
+     "t": "Itinerario classico in treno (5–7 giorni)",
+     "d": "Basilea, Zurigo, Lucerna, Berna, Montreux con Swiss Travel Pass; le città distano circa un'ora di treno l'una dall'altra. 21–31/12 molto caro e affollato.",
+     "l": "https://www.tour-switzerland.ch/it/guides/svizzera-a-dicembre/"
+    }
+   ],
+   "links": [
+    [
+     "MySwitzerland · mercatini e Avvento 2026",
+     "https://www.myswitzerland.com/it-it/scoprire-la-svizzera/manifestazioni/manifestazioni-ricerca/?rubrik=mercatinidinataleeavvento"
+    ],
+    [
+     "Ticino Turismo · mercatini",
+     "https://www.ticino.ch/it/events/details/Mercatini-di-Natale-in-Ticino/10028.html"
+    ],
+    [
+     "Lugano · mercati speciali",
+     "https://www.lugano.ch/vivere-lugano/cultura-e-tempo-libero/mercati-mercatini/mercati-speciali/"
+    ]
+   ]
+  },
+  {
+   "id": "neve",
+   "name": "Neve e sci",
+   "emoji": "⛷️",
+   "items": [
+    {
+     "m": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "t": "Zermatt · Cervino (ghiacciaio)",
+     "d": "Stagione 1/11/2026–2/5/2027, giornaliero da ~89 CHF; Magic Pass valido dal 31/10 (fonte secondaria, 10/11). Date soggette alla neve.",
+     "l": "https://pixidia.com/?p=98659"
+    },
+    {
+     "m": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "t": "Verbier · 4 Vallées",
+     "d": "Skipass 4 Vallées dal 12/12/2026 al 18/4/2027; Verbier–La Tzoumaz dal 5/12 al 25/4 (fonte secondaria, da verificare).",
+     "l": "https://pixidia.com/?p=98659"
+    },
+    {
+     "m": [
+      2
+     ],
+     "t": "Mondiali di sci · Crans-Montana",
+     "d": "1–14/2/2027. Prevedere prezzi alti e alloggi esauriti.",
+     "l": "https://www.swissactivities.com/en-ch/festivals/february/"
+    },
+    {
+     "m": [
+      2
+     ],
+     "t": "Coppa del Mondo donne · Lenzerheide",
+     "d": "20–21/2/2027 (Audi FIS).",
+     "l": "https://www.swissactivities.com/en-ch/festivals/february/"
+    },
+    {
+     "m": [
+      2
+     ],
+     "t": "White Turf · St. Moritz",
+     "d": "6–21/2/2027, corse di cavalli sul lago ghiacciato.",
+     "l": "https://www.swissactivities.com/en-ch/festivals/february/"
+    },
+    {
+     "m": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "t": "Racchette e passeggiate invernali in Ticino",
+     "d": "Sentieri SvizzeraMobile per ciaspole a Sonogno, Campra, Airolo, Campo Blenio; passeggiata facile in Valle Verzasca (Lavertezzo) in bassa stagione.",
+     "l": "https://www.ticino.ch/en/explore/excursions/winter-excursions.html"
+    }
+   ],
+   "links": []
+  },
+  {
+   "id": "treni",
+   "name": "Treni panoramici e vette",
+   "emoji": "🚂",
+   "items": [
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Trenino rosso del Bernina",
+     "d": "Linea UNESCO Coira–Tirano (o St. Moritz–Tirano), in funzione tutto l'anno; in inverno paesaggi innevati e ghiacciai.",
+     "l": "https://travel.thewom.it/svizzera/trenino-rosso-del-bernina-in-inverno.html"
+    },
+    {
+     "m": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "t": "Glacier Express (Zermatt–St. Moritz)",
+     "d": "Pausa 11/10–4/12/2026, poi riprende; da 159 CHF in 2ª classe + prenotazione obbligatoria 54 CHF (fonte secondaria). Circa 8 ore.",
+     "l": "https://loudavymkrokem.cz/it/svizzera-treno-panoramico/"
+    },
+    {
+     "m": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "t": "Gotthard Panorama Express",
+     "d": "Stagione 2026: 18/4–18/10. Date 2027 da verificare.",
+     "l": "https://loudavymkrokem.cz/it/svizzera-treno-panoramico/"
+    },
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Jungfraujoch (Top of Europe)",
+     "d": "Da Interlaken Ost circa 1h30 (via Eiger Express da Grindelwald ~45 min). Tariffe e orari sul sito Jungfraubahnen.",
+     "l": "https://everyrail.com/it/svizzera/jungfrau-railways-jungfraubahnen/"
+    },
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Rigi (cremagliera da Vitznau e Goldau)",
+     "d": "Battello sul lago di Lucerna + cremagliera; in inverno sentieri per escursioni invernali.",
+     "l": "https://switzerlandtravelcentre.com/en/p/winter-panorama-and-mountain-peaks"
+    },
+    {
+     "m": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "t": "Monte Generoso · ferrovia a cremagliera (Capolago)",
+     "d": "5/12/2026–28/3/2027 solo weekend e festivi (anche 7, 8, 25, 26/12, 1 e 6/1, 19/3); tutti i giorni 21/12–6/1 e 29/3–30/4/2027. Treno a vapore 1890: 22/5, 26/6, 24/7, 14/8, 18/9/2027. Alta stagione dal 1° maggio.",
+     "l": "https://montegeneroso.ch/en/ferrovia/low-season-timetable"
+    },
+    {
+     "m": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Monte Brè e San Salvatore (Lugano)",
+     "d": "Funicolare Monte Brè: stagione marzo–dicembre. San Salvatore: marzo–novembre secondo MySwitzerland (ticino.ch indica apertura anche d'inverno dal 2019, da verificare).",
+     "l": "https://www.myswitzerland.com/en-ch/experiences/monte-bre/"
+    },
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Swiss Travel Pass",
+     "d": "Copre treni, battelli e oltre 500 musei; vale la pena per itinerari di più giorni.",
+     "l": "https://loudavymkrokem.cz/it/svizzera-treno-panoramico/"
+    }
+   ],
+   "links": []
+  },
+  {
+   "id": "castelli",
+   "name": "Castelli e città",
+   "emoji": "🏰",
+   "items": [
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Castelli di Bellinzona (UNESCO)",
+     "d": "Stagione 2026: 28/3–8/11, 10–18. In inverno Montebello e Sasso Corbaro sono visitabili solo nelle corti. Fortezza Pass (3 castelli) da 28 CHF. Orari 2027 da verificare.",
+     "l": "https://www.ticino.ch/it/commons/details/Castello-di-Montebello/2796.html"
+    },
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Bellinzona · Salame dei Castelli",
+     "d": "Il salame dei Castelli di Bellinzona stagiona nel Castello di Montebello.",
+     "l": "https://www.ticino.ch/it/commons/details/Castello-di-Montebello/2796.html"
+    },
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Montreux e Castello di Chillon",
+     "d": "Città sul Lemano, tappa tipica di itinerari invernali (mercatino, lungolago). Orari di Chillon da verificare.",
+     "l": "https://www.tour-switzerland.ch/it/guides/svizzera-a-dicembre/"
+    },
+    {
+     "m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "t": "Berna, Lucerna, Basilea",
+     "d": "Città vecchie facili in treno: Berna (Bundesplatz), Lucerna (lago, Ponte della Cappella), Basilea (Münsterplatz).",
+     "l": "https://www.tour-switzerland.ch/it/guides/svizzera-a-dicembre/"
+    }
+   ],
+   "links": [
+    [
+     "Ticino Turismo",
+     "https://www.ticino.ch/it"
+    ],
+    [
+     "Fortezza Bellinzona",
+     "https://www.fortezzabellinzona.ch"
+    ]
+   ]
+  },
+  {
+   "id": "feste",
+   "name": "Feste, carnevali e festival",
+   "emoji": "🎭",
+   "items": [
+    {
+     "m": [
+      12
+     ],
+     "t": "Fête de l'Escalade · Ginevra",
+     "d": "10–12/12 circa (fonte secondaria, da verificare): sfilata con torce e costumi d'epoca.",
+     "l": "https://www.ricksteves.com/europe/switzerland/festivals"
+    },
+    {
+     "m": [
+      1
+     ],
+     "t": "Festival internazionale delle mongolfiere · Château-d'Oex",
+     "d": "23–31/1 (fonte secondaria, da verificare).",
+     "l": "https://www.ricksteves.com/europe/switzerland/festivals"
+    },
+    {
+     "m": [
+      1,
+      2
+     ],
+     "t": "Carnevali di paese · Ticino",
+     "d": "Decine di carnevali nel Bellinzonese tra gennaio e febbraio (elenco 2026 su MySwitzerland, date 2027 da verificare).",
+     "l": "https://www.myswitzerland.com/pl/zainteresowania/wydarzenia/carnival-2026-bellinzona-region-and-valleys"
+    },
+    {
+     "m": [
+      2
+     ],
+     "t": "Art on Ice · Zurigo",
+     "d": "4–6/2/2027.",
+     "l": "https://www.swissactivities.com/en-ch/festivals/february/"
+    },
+    {
+     "m": [
+      2
+     ],
+     "t": "Rabadan · Carnevale di Bellinzona",
+     "d": "4–9/2/2027: sfilate, Guggenmusik, risotto e luganighe nel centro storico. Biglietti online.",
+     "l": "https://www.myswitzerland.com/it-it/scoprire-la-svizzera/manifestazioni/carnevale-rabadan/"
+    },
+    {
+     "m": [
+      2
+     ],
+     "t": "Fasnacht · Soletta, Zurigo, Basilea",
+     "d": "Soletta 4–10/2; Zurigo 12–14/2; Basilea 15–17/2/2027 (Morgenstreich lunedì 15/2 alle 4:00, UNESCO).",
+     "l": "https://www.basel.com/en/carnival-in-basel/dates-carnival-basel"
+    },
+    {
+     "m": [
+      3
+     ],
+     "t": "Esposizione delle camelie · Locarno",
+     "d": "17–21/3/2027, Parco delle Camelie (oltre 200 varietà). In primavera fioriscono anche magnolie e azalee.",
+     "l": "https://www.ticino.ch/en/events/details/locarno-camellia-exhibition/10020.html"
+    },
+    {
+     "m": [
+      4
+     ],
+     "t": "Sechseläuten · Zurigo",
+     "d": "Lunedì 19/4/2027 alle 15:00, rogo del Böögg in Sechseläutenplatz.",
+     "l": "https://www.myswitzerland.com/en-ie/experiences/events/sechselaeuten-2027-zurichs-spring-festival/"
+    },
+    {
+     "m": [
+      5
+     ],
+     "t": "Festa del formaggio di Gruyères",
+     "d": "2/5 (fonte secondaria).",
+     "l": "https://www.swissholidayco.com/More-Information/Calendar-of-events"
+    },
+    {
+     "m": [
+      5
+     ],
+     "t": "Festival degli artisti di strada · Ascona",
+     "d": "14–16/5 secondo una fonte, 21–23/5 secondo un'altra: da verificare.",
+     "l": "https://www.swissholidayco.com/More-Information/Calendar-of-events"
+    },
+    {
+     "m": [
+      5,
+      6
+     ],
+     "t": "Fioritura dei narcisi · Montreux",
+     "d": "Da maggio a inizio giugno (fonte secondaria).",
+     "l": "https://www.swissholidayco.com/More-Information/Calendar-of-events"
+    },
+    {
+     "m": [
+      6,
+      7
+     ],
+     "t": "JazzAscona",
+     "d": "24/6–3/7/2027.",
+     "l": "https://www.myswitzerland.com/it/scoprire-la-svizzera/manifestazioni/jazzascona/"
+    },
+    {
+     "m": [
+      7
+     ],
+     "t": "Montreux Jazz Festival",
+     "d": "2–17/7/2027.",
+     "l": "https://www.montreuxriviera.com/en/P1075/montreux-jazz-festival"
+    },
+    {
+     "m": [
+      7
+     ],
+     "t": "Basel Tattoo e Paléo Festival (Nyon)",
+     "d": "Basel Tattoo 16–24/7; Paléo 19–25/7/2027.",
+     "l": "https://www.swissactivities.com/en-ch/festivals/"
+    },
+    {
+     "m": [
+      8
+     ],
+     "t": "Locarno Film Festival",
+     "d": "4–14/8/2027, proiezioni in Piazza Grande.",
+     "l": "https://www.myswitzerland.com/en-ie/experiences/events/locarno-film-festival/"
+    },
+    {
+     "m": [
+      8
+     ],
+     "t": "Street Parade · Zurigo",
+     "d": "14/8/2027, circa 900.000 partecipanti.",
+     "l": "https://www.swissactivities.com/en-ch/festivals/"
+    }
+   ],
+   "links": [
+    [
+     "Swissactivities · festival 2027",
+     "https://www.swissactivities.com/en-ch/festivals/"
+    ],
+    [
+     "MySwitzerland · manifestazioni",
+     "https://www.myswitzerland.com/it/scoprire-la-svizzera/manifestazioni/"
+    ]
+   ]
+  },
+  {
+   "id": "natura",
+   "name": "Laghi, giardini e natura",
+   "emoji": "🏞️",
+   "items": [
+    {
+     "m": [
+      3,
+      4,
+      5
+     ],
+     "t": "Parco delle Camelie e giardini fioriti · Locarno",
+     "d": "Fioritura di camelie, magnolie, azalee e rododendri in primavera; Isole di Brissago e Parco botanico del Gambarogno.",
+     "l": "https://www.ticino.ch/en/discover/seasons/spring.html"
+    },
+    {
+     "m": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "t": "Valle Verzasca in inverno",
+     "d": "Sentiero piano da Sonogno al ponte a due archi di Lavertezzo, poca gente in bassa stagione.",
+     "l": "https://www.ticino.ch/en/itineraries/details/Winter-walk-Valle-Verzasca/144117.html"
+    }
+   ],
+   "links": []
+  }
+ ]
+}
