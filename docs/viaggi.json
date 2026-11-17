@@ -11,7 +11,7 @@
    "id": "noci",
    "name": "Noci (BA)",
    "emoji": "📍",
-   "est": "Stima A/R da Milano: circa 120–130 € (volo 113–117 € + bus/treno Bari–Noci circa 8–12 € A/R). Via Brindisi: volo da 120 € + trasferimento da verificare.",
+   "est": "Stima A/R da Milano: volo su Bari circa 120–130 € (113–117 + bus/treno FSE); treno Milano–Bari A/R circa 150–280 € + 10 €.",
    "modes": [
     {
      "title": "✈️ Voli A/R verso Bari (BRI)",
@@ -49,6 +49,21 @@
      ]
     },
     {
+     "title": "🚆 Treno Milano → Bari",
+     "items": [
+      {
+       "t": "Frecciarossa/Italo/Intercity · Milano Centrale → Bari Centrale",
+       "d": "Circa 7–8h (più rapido 6h45–7h25), 16–26 treni al giorno, diretti e con 1 cambio. Es. 06:10→14:23 diretto. Prezzi da circa 30–45 € fino a 100–130 €; medio 68–133 € a tratta secondo la fonte. Ritorno es. 10:30→18:30 diretto, 05:20→12:30.",
+       "l": "https://www.omio.it/treni/milano/bari"
+      },
+      {
+       "t": "Poi Bari → Noci",
+       "d": "Bus o treno FSE (vedi sotto). A/R completo in treno: circa 150–280 € + 10 €.",
+       "l": "https://www.kombo.co/it/treno-Milano-Bari"
+      }
+     ]
+    },
+    {
      "title": "🚌 Da Bari a Noci",
      "items": [
       {
@@ -60,10 +75,16 @@
        "t": "Treno Ferrovie del Sud Est · Bari Centrale → Noci",
        "d": "Circa 1h40–1h55 con 1 cambio (es. 08:21→10:04, 16:06→18:01), circa 5 €. Noci → Bari: 14:01→15:40 diretto.",
        "l": "https://www.omio.it/treni/bari/noci-9orhk"
-      },
+      }
+     ]
+    },
+    {
+     "title": "✈️ Brindisi → Noci",
+     "items": [
       {
-       "t": "Da Brindisi a Noci e Milano → Bari in treno",
-       "d": "Non ancora verificati."
+       "t": "Nessun collegamento diretto trovato",
+       "d": "L'aeroporto di Brindisi non ha stazione: serve prima il centro (bus STP o navetta Air&Port link treno+bus, circa 15 min). Poi nessun orario verificato per Noci: da cercare (via Bari, o noleggio auto/taxi). Il volo su Bari resta più comodo.",
+       "l": "https://www.trenitalia.com/it/regionale/collegamenti-regionale/brindisi-air-port-link.html"
       }
      ]
     }
