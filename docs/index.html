@@ -111,12 +111,17 @@ function parse(md,title){
   let st=k?bl.findIndex(x=>/^#{1,4} /.test(x)&&x.toLowerCase().replace(/\W+/g," ").includes(k)):-1;
   const src=st>=0?bl.slice(st+1):bl;
   const tw=new Set((title||"").toLowerCase().match(/[a-zàèéìòù]{4,}/g)||[]);
-  const good=[];
+  const good=[],vo=new Set([...tw].filter(y=>y.length>=5));
   for(const x of src){
     const hd=/^#{1,4} /.test(x);
     if((hd||x.length<60)&&STOP.test(x))break;
     if(hd&&good.length>=2){const w=x.toLowerCase().match(/[a-zàèéìòù]{4,}/g)||[];if(w.length>=3&&!w.some(y=>tw.has(y)))break}
-    if(x.length>=70&&!JUNK.test(x))good.push(x);
+    if(x.length>=70&&!JUNK.test(x)){
+      const w=x.toLowerCase().match(/[a-zàèéìòù]{5,}/g)||[];
+      if(good.length>=3&&!w.some(y=>vo.has(y)))break;
+      good.push(x);
+      if(good.length<=3)w.forEach(y=>vo.add(y));
+    }
     if(good.length>=(st>=0?60:15))break;
   }
   return good;
