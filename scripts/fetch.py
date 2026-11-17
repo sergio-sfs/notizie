@@ -32,8 +32,9 @@ TOPICS = [
 # feed RSS diretti (link diretti agli articoli); se falliscono resta la ricerca Bing
 FEEDS = {
  "ansa": ["https://www.ansa.it/sito/ansait_rss.xml"],
- "corriere": ["https://xml2.corriereobjects.it/rss/homepage.xml"],
+ "corriere": ["https://xml2.corriereobjects.it/rss/homepage.xml", "https://www.corriere.it/rss/homepage.xml", "https://www.corriere.it/rss/cronache.xml", "https://www.corriere.it/rss/politica.xml", "https://www.corriere.it/rss/economia.xml", "https://www.corriere.it/rss/sport.xml"],
 }
+REQUIRE = {"noci": r"\bnoci\b", "cadorago": r"cadorago", "guanzate": r"guanzate"}
 MAXN = {"ansa": 150, "corriere": 100}
 
 def get(url):
@@ -118,6 +119,8 @@ def main():
             k = norm(i["t"])
             if k in seen: continue
             seen[k] = i; uniq.append(i)
+        if tid in REQUIRE:
+            uniq = [i for i in uniq if re.search(REQUIRE[tid], i["t"] + " " + i.get("x", ""), re.I)]
         uniq = [i for i in uniq if datetime.fromisoformat(i["d"]) >= cutoff]
         uniq.sort(key=lambda x: x["d"], reverse=True)
         result.append({"id": tid, "name": name, "emoji": emoji, "items": uniq[:MAXN.get(tid, MAX_PER_TOPIC)]})
