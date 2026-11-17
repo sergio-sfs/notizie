@@ -31,7 +31,7 @@ input[type=search]{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--bd
 .bar{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:12px;padding:4px 0}
 main{max-width:720px;margin:0 auto;padding:8px 12px 40px}
 .day{font-size:13px;font-weight:700;color:var(--ac);text-transform:uppercase;letter-spacing:.04em;margin:14px 2px 6px}
-div.n{display:block;cursor:pointer;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;margin-bottom:8px;color:inherit;text-decoration:none}
+div.n{--c:var(--ac);display:block;cursor:pointer;background:var(--card);border:2px solid color-mix(in srgb,var(--c) 70%,var(--bd));border-radius:12px;padding:10px 12px;margin-bottom:8px;color:inherit;text-decoration:none}
 div.n:active{opacity:.85}
 .n.read .t{color:var(--mu);font-weight:400}
 .t{font-weight:600;font-size:15.5px}
@@ -44,7 +44,8 @@ div.n:active{opacity:.85}
 .b .go{display:inline-block;margin:4px 14px 2px 0;color:var(--ac);font-weight:600;text-decoration:none}
 .ext.sh{background:none;font:inherit;font-size:12px;cursor:pointer}
 .ext{color:var(--ac);font-weight:600;text-decoration:none;border:1px solid var(--bd);border-radius:6px;padding:0 6px}
-.n.open{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 14%,var(--card));box-shadow:0 0 0 2px var(--ac)}
+.n.open{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--card));box-shadow:0 0 0 2px var(--c)}
+.cat{color:var(--c);background:color-mix(in srgb,var(--c) 18%,transparent);border-radius:6px;padding:0 7px;font-weight:700}
 .bar2{display:flex;gap:6px;flex-wrap:nowrap;padding:2px 0 4px}
 .bar2 select{flex:1;min-width:0;text-overflow:ellipsis;font-size:13px;padding:6px 8px}
 .sm{font-size:12px;padding:2px 8px;margin-left:4px}
@@ -71,7 +72,7 @@ div.n:active{opacity:.85}
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
   <div class="bar2"><select class="chip" id="day"><option value="">📅 Tutti i giorni</option></select><select class="chip" id="sort"><option value="day">↕ Per giorno</option><option value="cat">↕ Per categoria</option></select></div>
-  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v12</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span><span id="upd"></span> <small style="opacity:.6">v13</small></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Sfondo: Auto</option><option value="light">🎨 Sfondo: Chiaro</option><option value="dark">🎨 Sfondo: Scuro</option><option value="black">🎨 Sfondo: Nero</option><option value="sepia">🎨 Sfondo: Seppia</option><option value="green">🎨 Sfondo: Verde</option><option value="rose">🎨 Sfondo: Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <div class="ov" id="kd" hidden><div class="dlg">
   <h3>🔑 Chiave GitHub</h3>
@@ -98,6 +99,7 @@ function dayLabel(d){
   if(same(d,t))return"Oggi";if(same(d,y))return"Ieri";
   return d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"});
 }
+const COL={cantu:"#f97316",sinner:"#84cc16",como:"#3b82f6",juve:"#a855f7",ansa:"#06b6d4",corriere:"#ef4444",cadorago:"#14b8a6",guanzate:"#eab308",noci:"#ec4899",info:"#818cf8",fisco:"#10b981"};
 const dkey=d=>d.toLocaleDateString("sv-SE");
 function items(skipDay){
   let out=[];
@@ -123,10 +125,10 @@ function render(){
   if(sortM==="cat"&&cur==="all"){const ord=Object.fromEntries(data.topics.map((t,k)=>[t.id,k]));L.sort((a,b)=>ord[a.tp.id]-ord[b.tp.id]||b.d.localeCompare(a.d))}
   L.forEach(i=>{
     const d=new Date(i.d),dl=(sortM==="cat"&&cur==="all")?i.tp.emoji+" "+i.tp.name:dayLabel(d);
-    if(dl!==last){h+=`<div class="day">${dl}</div>`;last=dl}
-    h+=`<div class="n ${read[i.u]?"read":""}" data-u="${esc(i.u)}" data-l="${i.l?1:0}">
+    if(dl!==last){h+=`<div class="day" ${sortM==="cat"&&cur==="all"?`style="color:${COL[i.tp.id]||"var(--ac)"}"`:""}>${dl}</div>`;last=dl}
+    h+=`<div class="n ${read[i.u]?"read":""}" style="--c:${COL[i.tp.id]||"var(--ac)"}" data-u="${esc(i.u)}" data-l="${i.l?1:0}">
       <div class="t">${esc(i.t)}</div>${i.x&&i.x!==i.t?`<div class="x">${esc(i.x)}</div>`:""}
-      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span>${i.l?'<span class="tp">🌐 Lingua straniera</span>':""}<span>${d.toLocaleDateString("it-IT",{day:"numeric",month:"short",year:"numeric"})} · ${fmtT(d)}</span>${cur==="all"?`<span class="tp">${i.tp.emoji} ${esc(i.tp.name)}</span>`:""}<button class="ext sh">⤴ Condividi</button><a class="ext" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer">↗ Sito</a><span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
+      <div class="m">${i.o?'<span class="of">✔ Ufficiale</span>':""}<span>${esc(i.s)}</span>${i.l?'<span class="tp">🌐 Lingua straniera</span>':""}<span>${d.toLocaleDateString("it-IT",{day:"numeric",month:"short",year:"numeric"})} · ${fmtT(d)}</span><span class="cat">${i.tp.emoji} ${esc(i.tp.name)}</span><button class="ext sh">⤴ Condividi</button><a class="ext" href="${esc(i.u)}" target="_blank" rel="noopener noreferrer">↗ Sito</a><span class="caret">▾ Leggi</span></div><div class="b" hidden></div></div>`;
   });
   $("#list").innerHTML=h||'<div class="empty">Nessuna notizia.</div>';
 }
