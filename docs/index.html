@@ -9,6 +9,13 @@
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--tx:#111827;--mu:#6b7280;--ac:#2563eb;--bd:#e5e7eb;--of:#16a34a}
 @media(prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#131c2e;--tx:#e5e7eb;--mu:#94a3b8;--ac:#60a5fa;--bd:#22304a;--of:#4ade80}}
+html[data-theme=light]{--bg:#f6f7f9;--card:#fff;--tx:#111827;--mu:#6b7280;--ac:#2563eb;--bd:#e5e7eb;--of:#16a34a}
+html[data-theme=dark]{--bg:#0b1220;--card:#131c2e;--tx:#e5e7eb;--mu:#94a3b8;--ac:#60a5fa;--bd:#22304a;--of:#4ade80}
+html[data-theme=black]{--bg:#000;--card:#0c0c0c;--tx:#eee;--mu:#8a8a8a;--ac:#5aa9ff;--bd:#222;--of:#4ade80}
+html[data-theme=sepia]{--bg:#f4ecd8;--card:#fbf5e6;--tx:#3b2f1e;--mu:#8a7656;--ac:#9a5b13;--bd:#e0d3b4;--of:#3f7d2a}
+html[data-theme=green]{--bg:#0d1f17;--card:#143024;--tx:#e6f4ec;--mu:#8fb5a0;--ac:#5eead4;--bd:#1f4533;--of:#86efac}
+html[data-theme=rose]{--bg:#fdf2f4;--card:#fff;--tx:#3a1d24;--mu:#9a6b76;--ac:#be185d;--bd:#f5d0d8;--of:#15803d}
+select.chip{appearance:none;-webkit-appearance:none;padding-right:12px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 -apple-system,system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
 header{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 12px 6px;border-bottom:1px solid var(--bd)}
@@ -44,11 +51,14 @@ div.n:active{opacity:.85}
 <header>
   <div class="top"><h1>📰 Notizie</h1><input id="q" type="search" placeholder="Cerca…"></div>
   <div class="tabs" id="tabs"></div>
-  <div class="bar"><span id="upd"></span><span><button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
+  <div class="bar"><span id="upd"></span><span><select class="chip" id="th" title="Sfondo"><option value="auto">🎨 Auto</option><option value="light">☀️ Chiaro</option><option value="dark">🌙 Scuro</option><option value="black">⚫ Nero</option><option value="sepia">📜 Seppia</option><option value="green">🌿 Verde</option><option value="rose">🌸 Rosa</option></select> <button class="chip" id="key" title="Imposta chiave">🔑</button> <button class="chip" id="ref">⟳ Aggiorna</button> <button class="chip" id="off">✔ Solo ufficiali</button></span></div>
 </header>
 <main id="list"><div class="empty">Caricamento…</div></main>
 <script>
 const $=s=>document.querySelector(s);
+(function(){let t="auto";try{t=localStorage.getItem("theme")||"auto"}catch(e){}
+  const el=$("#th");el.value=t;const ap=v=>v==="auto"?document.documentElement.removeAttribute("data-theme"):document.documentElement.setAttribute("data-theme",v);ap(t);
+  el.onchange=()=>{ap(el.value);try{localStorage.setItem("theme",el.value)}catch(e){}}})();
 let data={topics:[]},cur="all",onlyOff=false,q="";
 let read={};try{read=JSON.parse(localStorage.getItem("read")||"{}")}catch(e){}
 const saveRead=()=>{try{localStorage.setItem("read",JSON.stringify(read))}catch(e){}};

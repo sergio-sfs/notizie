@@ -78,7 +78,7 @@ def main():
     cutoff = datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)
     result = []
     for tid, name, emoji, domains, queries in TOPICS:
-        items = [i for i in oldmap.get(tid, []) if "news.google.com" not in i["u"]]
+        items = [i for i in oldmap.get(tid, []) if "news.google.com" not in i["u"] and (i["o"] or not foreign(i["t"] + " " + i.get("x", "")))]
         for q in queries:
             try: items += fetch(q, domains)
             except Exception as e: print(f"! {tid} [{q}]: {e}", file=sys.stderr)
